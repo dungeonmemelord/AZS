@@ -1,0 +1,37 @@
+{
+    "id":"AZS",
+    "title":"Advanced Zabic smoka",
+    "description":"Advanced Zabic smoka do FoundryVTT",
+    "authors": [
+        {
+          "name": "Wojciech Rosiński",
+          "url": "https://iliketoasts.itch.io",
+          "email": "iliketoasts@gmail.com",
+          "discord": "iliketoasts#4440"
+        }
+      ],
+    "version": "0.01",
+    "compatibility": {
+        "minimum": "10",
+        "verified": "10",
+        "maximum": "10"
+      },
+    "esmodules":["AZS.js"],
+    "styles":["AZS.css"],
+    "scripts":[],
+    "packs": [],
+    "languages":[{
+        "lang": "en",
+        "name": "Polski",
+        "path": "lang/pl.json"
+    }    ],
+    "socket": false,
+    "gridDistance": 5,
+    "gridUnits": "m",
+    "primaryTokenAttribute": "zycie",
+    "secondaryTokenAttribute": "mana",
+    "initiative": "1d6 + @szybkosc",
+    "url": "",
+    "manifest": "",
+    "download": ""
+}

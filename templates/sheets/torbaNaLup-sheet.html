@@ -1,0 +1,13 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{actor.name}}" placeholder="{{ localize 'Name' }}"/></h1>
+    </header>
+    <section class = "kosci-skarbow">
+        {{#each kosciSkarbu as |koscSkarbu|}}
+            <div class="item" data-item-id="{{id}}">
+                <a class="rzut-na-skarb" data-label="rzut kością skarbu" data-roll="{{data.data.formula}}">{{name}}</a>
+            </div>
+        {{/each}}
+    </section>
+</form>

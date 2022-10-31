@@ -1,0 +1,40 @@
+<form class="{{cssClass}}" autocomplete="off">
+        <div class="postac-siatka">
+            <div class="postac naglowek">
+                <div><h3>Imię</h3></div>
+                <div><h3>Artchetyp</h3></div>
+                <div><h3>Rasa</h3></div>
+                <div>{{actor.name}}</div>
+                <select name="data.pochodzenie">
+                    {{#select data.data.pochodzenie}}
+                    {{#each config.pochodzenie as |name type|}}
+                    <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+                <select name="data.rasa">
+                    {{#select data.data.rasa}}
+                    {{#each config.rasa as |name type|}}
+                    <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+            </div>
+            <div class="postac atrybuty">{{> "systems/AZS/templates/partials/atrybuty-postaci.hbs"}}</div>
+            <div class="postac bieglosci">{{> "systems/AZS/templates/partials/bieglosci-postaci.hbs"}}</div>
+            <div class="postac portret"><img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/></div> 
+            <div class="postac notatki">
+                <h3>Biografia postaci</h3>
+                <textarea name="data.opis">{{data.opis}}</textarea>
+            </div>
+            <div class="postac poziom">
+                <div class = "opis">Poziom</div>
+                <div class="inputCyferki"><input name="data.poziom" type="text" value="{{data.data.poziom}}" data-dtype="Number"  maxlength="1" size="1"/></div>
+                <div class = "opis">PD</div>
+                <div class="inputCyferki"><input name="data.pd" type="text" value="{{data.data.pd}}" data-dtype="Number"  maxlength="4" size="4"/></div>
+            </div>
+            <div class="postac zasoby">{{> "systems/AZS/templates/partials/zasoby-postaci.hbs"}}</div>
+            <div class="postac plecak">{{> "systems/AZS/templates/partials/plecak-postaci.hbs"}}</div>
+            <div class="postac zasoby2">{{> "systems/AZS/templates/partials/zasoby2-postaci.hbs"}}</div> 
+        </div>
+</form>

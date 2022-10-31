@@ -1,0 +1,23 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
+    </header>
+    <div>
+        <table>
+            <tr>
+                <th>Czar</th>
+                <td>
+                    <select name="data.czar">
+                        {{#select data.data.czar}}
+                        {{#each config.czar as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <textarea name="data.opis">{{data.data.opis}}</textarea>
+    </div>
+</form>

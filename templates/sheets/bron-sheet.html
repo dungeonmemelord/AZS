@@ -1,0 +1,61 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
+    </header>
+    <div class="item sheet-content">
+        <div class="bron_wlasciwosci">
+            <div>{{localize "AZS.bron.bieglosc"}}</div>
+            <div>
+                <select name="data.bieglosc">
+                    {{#select data.bieglosc}}
+                    {{#each config.bieglosc as |name type|}}
+                    <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+            </div>
+            <div>{{localize "AZS.bron.atak"}}</div>
+            <div><input name="data.atak" type=""text" value="{{data.atak}}" data-dtype="Number" maxlength="1" size="1"  /></div>
+            <div>{{localize "AZS.bron.obrona"}}</div>
+            <div><input name="data.obrona" type=""text" value="{{data.obrona}}" data-dtype="Number" maxlength="1" size="1" /></div>
+            <div>
+                <select name="data.specjalne1">
+                    {{#select data.specjalne1}}
+                    {{#each config.bronSpecjalne as |name type|}}
+                    <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+            </div>
+            <div>
+                <select name="data.specjalne2">
+                    {{#select data.specjalne2}}
+                    {{#each config.bronSpecjalne as |name type|}}
+                    <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+            </div>
+            <div>
+                <select name="data.specjalne3">
+                    {{#select data.specjalne3}}
+                    {{#each config.bronSpecjalne as |name type|}}
+                    <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+            </div>
+            <div>
+                <select name="data.specjalne4">
+                    {{#select data.specjalne4}}
+                    {{#each config.bronSpecjalne as |name type|}}
+                    <option value="{{type}}">{{localize name}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+            </div>            
+        </div>
+        {{editor content=data.opis target="data.opis" button=true owner=owner editable=editable}}
+    </div>
+</form>

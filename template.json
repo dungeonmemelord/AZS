@@ -1,0 +1,126 @@
+{
+    "Actor":{
+        "types":["postac", "przeciwnik", "torbaNaLup"],
+        "postac":{
+            "pochodzenie":"",
+            "rasa":"",
+            "poziom":"1",
+            "pd":"0",
+            "sloty":"4",
+
+            "sprawnosc":"1",
+            "sila":"1",
+            "szybkosc":"1",
+            "magia":"1",
+            "ruch":"4",
+            "zycie":{
+                "value":"1",
+                "max":"1"
+            },
+            "mana":{
+                "value":"1",
+                "max":"1"
+            },
+            "pp":{
+                "value":"1",
+                "max":"1"
+            },
+            "zapasy":{
+                "value":"6",
+                "max":"6"
+            },
+            "narzedzia":{
+                "value":"3",
+                "max":"3"
+            },
+            "komponenty":{
+                "value":"3",
+                "max":"3"
+            },
+            "pochodnia":{
+                "value":"4",
+                "max":"4"
+            },
+            "amunicja":{
+                "value":"6",
+                "max":"6"
+            },
+            "rana": false,
+            "zloto": "0",
+
+            "opis": "blablabla"
+       },
+       "przeciwnik":{
+            "zycie":{
+                "value":"1",
+                "max":"1"
+            },
+            "pp":{
+                "value":"1",
+                "max":"1"
+            },
+            "ruch": "0",
+            "st": "10",
+            "atak 1":{
+                "nazwa":"bula",
+                "atak":"0",
+                "obrona":"0",
+                "dystansowy":false
+            },
+            "atak 2":{
+                "nazwa":"bula",
+                "atak":"0",
+                "obrona":"0",
+                "dystansowy":false
+            },
+            "inne zdolnosc":""
+       },
+       "torbaNaLup":{}     
+    },
+    "Item":{
+        "types":[
+            "bron",
+            "zbroja",
+            "tom",
+            "ogolne",
+            "bieglosc",
+            "koscSkarbu"
+        ],
+        "templates":{
+            "podstawoweInformacje":{
+                "opis": "",
+                "sloty": 0
+            }
+        },
+        "bron":{
+            "templates": ["podstawoweInformacje"],
+            "bieglosc": "szermierka",
+            "atak":0,
+            "obrona":0,
+            "specjalne1":"",
+            "specjalne2":"",
+            "specjalne3":"",
+            "specjalne4":""
+        },
+        "tom":{
+            "templates":["podstawoweInformacje"],
+            "czar": "telekineza"
+        },
+        "zbroja":{
+            "templates":["podstawoweInformacje"],
+            "pp":0,
+            "pp max":0
+        },
+        "ogolne":{
+            "templates":["podstawoweInformacje"]
+        },
+        "bieglosc":{
+            "templates":["podstawoweInformacje"],
+            "typBieglosci":"umiejetnosc"
+        },
+        "koscSkarbu":{
+            "templates":["podstawoweInformacje"],
+            "formula":"d6"
+        }
+    }
+}
