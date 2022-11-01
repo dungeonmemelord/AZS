@@ -10,6 +10,10 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
+.item input {
+  background: none;
+  border: none;
+}
 .postac-siatka {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr 2fr;
@@ -59,33 +63,60 @@
   border: 2px solid black;
   grid-area: notatki;
 }
+.postac input {
+  background: none;
+  border: none;
+}
+.postac input.inputStat {
+  font-size: 1.2em;
+  margin: auto;
+  width: 10px;
+}
+.postac input.inputZasob {
+  width: 25px;
+  float: right;
+}
+.postac input.inputZasob2 {
+  width: 25px;
+  float: left;
+}
+.postac input.prawo {
+  text-align: right;
+}
+.postac input.lewo {
+  text-align: left;
+}
+.postac span {
+  padding-top: 4px;
+}
+.postac img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.postac textarea {
+  background: none;
+  border: none;
+  height: 100px;
+}
+.srodek {
+  text-align: center;
+}
 .atrybuty_partial {
   display: grid;
   grid-column-gap: 1px;
   grid-row-gap: 10px;
-  grid-template-columns: 3fr 3fr 1fr 3fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
-.atr.sila.wartosc {
-  grid-column: 2/5;
-}
-.atr.sprawnosc.wartosc {
-  grid-column: 2/5;
-}
-.atr.magia.wartosc {
-  grid-column: 2/5;
-}
-.atr.szybkosc.wartosc {
-  grid-column: 2/5;
-}
-.atr.ruch.wartosc {
-  grid-column: 2/5;
+.zasob {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .zasoby_partial {
   display: grid;
   grid-column-gap: 1px;
-  grid-row-gap: 10px;
-  grid-template-columns: 3fr 1fr 3fr;
+  grid-row-gap: 5px;
+  grid-template-columns: 1fr 1fr fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .zasoby.label {
@@ -109,4 +140,5 @@
 }
 .opis {
   font-size: 1.2em;
+  padding-top: 2.5px;
 }
