@@ -4,33 +4,37 @@
                 <div><h3>Imię</h3></div>
                 <div><h3>Artchetyp</h3></div>
                 <div><h3>Rasa</h3></div>
-                <div>{{actor.name}}</div>
-                <select name="data.pochodzenie">
-                    {{#select data.data.pochodzenie}}
-                    {{#each config.pochodzenie as |name type|}}
-                    <option value="{{type}}">{{localize name}}</option>
-                    {{/each}}
-                    {{/select}}
-                </select>
-                <select name="data.rasa">
-                    {{#select data.data.rasa}}
-                    {{#each config.rasa as |name type|}}
-                    <option value="{{type}}">{{localize name}}</option>
-                    {{/each}}
-                    {{/select}}
-                </select>
+                <div class = "srodek opis">{{actor.name}}</div>
+                <div class="srodek">
+                    <select name="data.pochodzenie" style="width: auto; background: none; border: none; text-align: center;">
+                        {{#select data.data.pochodzenie}}
+                        {{#each config.pochodzenie as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </div>
+                <div class="srodek">
+                    <select name="data.rasa" style="width: auto; background: none; border: none; text-align: center;">
+                        {{#select data.data.rasa}}
+                        {{#each config.rasa as |name type|}}
+                        <option value="{{type}}">{{localize name}}</option>
+                        {{/each}}
+                        {{/select}}
+                    </select>
+                </div>
             </div>
             <div class="postac atrybuty">{{> "systems/AZS/templates/partials/atrybuty-postaci.hbs"}}</div>
             <div class="postac bieglosci">{{> "systems/AZS/templates/partials/bieglosci-postaci.hbs"}}</div>
-            <div class="postac portret"><img src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/></div> 
+            <div class="postac portret"><img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" style="border: none;"/></div> 
             <div class="postac notatki">
                 <h3>Biografia postaci</h3>
                 <textarea name="data.opis">{{data.data.opis}}</textarea>
             </div>
             <div class="postac poziom">
-                <div class = "opis">Poziom</div>
+                <div class = "opis paddingLewo">Poziom</div>
                 <div class = "atr wartosc srodek"><input class = "inputStat" name="data.poziom" type="text" value="{{data.data.poziom}}" data-dtype="Number"  maxlength="1" size="1"/></div>
-                <div class = "opis">PD</div>
+                <div class = "opis paddingLewo">PD</div>
                 <div class="inputCyferki srodek"><input name="data.pd" type="text" value="{{data.data.pd}}" data-dtype="Number"  maxlength="4" size="4"/></div>
             </div>
             <div class="postac zasoby">{{> "systems/AZS/templates/partials/zasoby-postaci.hbs"}}</div>

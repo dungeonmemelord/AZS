@@ -26,11 +26,11 @@
         "path": "lang/pl.json"
     }    ],
     "socket": false,
-    "gridDistance": 5,
+    "gridDistance": 1,
     "gridUnits": "m",
     "primaryTokenAttribute": "zycie",
     "secondaryTokenAttribute": "mana",
-    "initiative": "1d6 + @szybkosc",
+    "initiative": "(1d6)*@initD + @szybkosc",
     "url": "",
     "manifest": "",
     "download": ""

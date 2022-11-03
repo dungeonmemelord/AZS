@@ -1,6 +1,12 @@
 export default class AZSActorSheet   extends ActorSheet {
-        
-     get template() {
+    
+    static get defaultOptions(){
+        return  mergeObject(super.defaultOptions, {
+            classes: ["AZS", "sheet", "actor"]
+        });
+    }
+
+    get template() {
         return `systems/AZS/templates/sheets/${this.actor.data.type}-sheet.html`;
     }
 
@@ -13,13 +19,14 @@ export default class AZSActorSheet   extends ActorSheet {
             data: baseData.actor.data,
             config: CONFIG.AZS,
             bieglosci: baseData.actor.data.items.filter(function(item) {return item.type == "bieglosc"}),
-            itemy: baseData.actor.data.items.filter(function(item) {return item.type != "bieglosc" && item.type != "koscSkarbu"}),
-            kosciSkarbu: baseData.actor.data.items.filter(function(item) {return item.type == "koscSkarbu"})
+            itemy: baseData.actor.data.items.filter(function(item) {return item.type == "bron" || item.type == "ogolne" || item.type == "zbroja" || item.type == "tom" }),
+            kosciSkarbu: baseData.actor.data.items.filter(function(item) {return item.type == "koscSkarbu"}),
+            zdolnosciPrzeciwnika: baseData.actor.data.items.filter(function(item) {return item.type == "zdolnoscPrzeciwnika"})
         }
         return sheetData;
     }
 
-    activateListeners(html){
+    activateListeners(html) {
         html.find(".item-create").click(this._onItemCreate.bind(this));
         html.find(".item-edit").click(this._onItemEdit.bind(this));
         html.find(".item-delete").click(this._onItemDelete.bind(this));

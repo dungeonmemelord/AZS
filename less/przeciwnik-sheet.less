@@ -1,0 +1,65 @@
+.przeciwnik-siatka{
+    display: grid;
+    grid-template-columns: 100px 250px;
+    grid-template-rows: 100px 250px;
+    grid-gap: 5px;
+    grid-template-areas:
+    "portret info"
+    "zdolnosci zdolnosci"
+}
+
+.przeciwnik-staty{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.przeciwnik{
+    &.info{
+        grid-area: info;
+    }
+    &.portret{
+        grid-area: portret;
+    }
+    &.zdolnosci{
+        grid-area: zdolnosci;
+    }
+    &.ramka{
+        border: 2px solid black;
+    }
+    input{
+        background: none;
+        border: none;
+        &.inputStat{
+            font-size: 1.2em;
+            margin: auto;
+            width: 10px;
+        }
+        &.inputStat2{
+            font-size: 1.2em;
+            margin: auto;
+            width: 25px;
+        }
+        &.inputZasob{
+            width: 25px;
+            float: right;
+        }
+        &.inputZasob2{
+            width: 25px;
+            float: left;
+        }
+        &.prawo{
+            text-align: right;
+        }
+        &.lewo{
+            text-align: left;
+        }
+    }
+    span{
+            padding-top: 4px;
+    }
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}

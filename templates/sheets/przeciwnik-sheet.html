@@ -1,0 +1,34 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <div class ="przeciwnik-siatka">
+        <div class="ramka przeciwnik portret"><img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" style="border: none;"/></div> 
+        <div class = "ramka przeciwnik info srodek">
+            <div class="opis">{{actor.name}}</div>
+            <div class="przeciwnik-staty">
+                <div class="opis srodek">Życie</div>
+                <div class="opis srodek">Pancerz</div>
+                <div class="opis srodek">Ruch</div>
+                <div class="opis srodek">ST</div>
+                <div class="srodek zasob">
+                    <input class = "inputZasob prawo" name="data.zycie.value" type="text" value="{{data.data.zycie.value}}" data-dtype="Number"  maxlength="2" size="2"/>
+                    <span> / </span>
+                    <input class = "inputZasob lewo" name="data.zycie.max" type="text" value="{{data.data.zycie.max}}" data-dtype="Number"  maxlength="2" size="2"/>
+                </div>
+                <div class="srodek zasob">
+                    <input class = "inputZasob prawo" name="data.pp.value" type="text" value="{{data.data.pp.value}}" data-dtype="Number"  maxlength="2" size="2"/>
+                    <span> / </span>
+                    <input class = "inputZasob lewo" name="data.pp.max" type="text" value="{{data.data.pp.max}}" data-dtype="Number"  maxlength="2" size="2"/>
+                </div>
+                <div class="srodek wartosc">
+                    <input class = "inputStat" name="data.szybkosc" type="text" value="{{data.data.szybkosc}}" data-dtype="Number"  maxlength="1" size="1"/>
+                </div>
+                <div class="srodek wartosc">
+                    <input class = "inputStat2" name="data.st" type="text" value="{{data.data.st}}" data-dtype="Number"  maxlength="2" size="2"/>
+                </div>
+            </div>
+        </div>
+        <div class = "ramka przeciwnik zdolnosci">
+            <div class="srodek"><h3>Zdolności</h3></div>
+            {{> "systems/AZS/templates/partials/zdolnosci-przeciwnika.hbs"}}
+        </div>
+    </div>
+</form>

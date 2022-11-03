@@ -2,6 +2,7 @@
     "Actor":{
         "types":["postac", "przeciwnik", "torbaNaLup"],
         "postac":{
+            "initD": "1",
             "pochodzenie":"",
             "rasa":"",
             "poziom":"1",
@@ -26,16 +27,22 @@
                 "max":"1"
             },
             "zapasy":{
-                "value":"6",
-                "max":"6"
+                "zapas1": "true",
+                "zapas2": "true",
+                "zapas3": "true",
+                "zapas4": "true",
+                "zapas5": "true",
+                "zapas6": "true"
             },
             "narzedzia":{
-                "value":"3",
-                "max":"3"
+                "narzedzie1":"true",
+                "narzedzie2":"true",
+                "narzedzie3":"true"
             },
             "komponenty":{
-                "value":"3",
-                "max":"3"
+                "komponent1":"true",
+                "komponent2":"true",
+                "komponent3":"true"
             },
             "pochodnia":{
                 "value":"4",
@@ -55,25 +62,14 @@
                 "value":"1",
                 "max":"1"
             },
+            "initD": "0",
             "pp":{
                 "value":"1",
                 "max":"1"
             },
-            "ruch": "0",
+            "szybkosc": "1",
             "st": "10",
-            "atak 1":{
-                "nazwa":"bula",
-                "atak":"0",
-                "obrona":"0",
-                "dystansowy":false
-            },
-            "atak 2":{
-                "nazwa":"bula",
-                "atak":"0",
-                "obrona":"0",
-                "dystansowy":false
-            },
-            "inne zdolnosc":""
+            "exp":"0"
        },
        "torbaNaLup":{}     
     },
@@ -84,7 +80,8 @@
             "tom",
             "ogolne",
             "bieglosc",
-            "koscSkarbu"
+            "koscSkarbu",
+            "zdolnoscPrzeciwnika"
         ],
         "templates":{
             "podstawoweInformacje":{
@@ -110,6 +107,9 @@
             "templates":["podstawoweInformacje"],
             "pp":0,
             "pp max":0
+        },
+        "zdolnoscPrzeciwnika":{
+            "templates":["podstawoweInformacje"]
         },
         "ogolne":{
             "templates":["podstawoweInformacje"]

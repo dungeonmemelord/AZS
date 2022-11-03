@@ -9,7 +9,7 @@ async function preloadHandlebarsTemplates(){
         "systems/AZS/templates/partials/zasoby-postaci.hbs",
         "systems/AZS/templates/partials/zasoby2-postaci.hbs",
         "systems/AZS/templates/partials/plecak-postaci.hbs",
-        "systems/AZS/templates/partials/karta-przedmiotu.hbs"
+        "systems/AZS/templates/partials/zdolnosci-przeciwnika.hbs"
     ];
 
     return loadTemplates(templatePaths);
