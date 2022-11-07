@@ -2,19 +2,20 @@
     <div class ="przeciwnik-siatka">
         <div class="ramka przeciwnik portret"><img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" style="border: none;"/></div> 
         <div class = "ramka przeciwnik info srodek">
-            <div class="opis">{{actor.name}}</div>
+            <div style = "font-size: 1.6em; padding-top: 5px; padding-bottom: 5px; font-weight: bold;">{{actor.name}}</div>
             <div class="przeciwnik-staty">
                 <div class="opis srodek">Życie</div>
                 <div class="opis srodek">Pancerz</div>
                 <div class="opis srodek">Ruch</div>
-                <div class="opis srodek">ST</div>
-                <div class="srodek zasob">
-                    <input class = "inputZasob prawo" name="data.zycie.value" type="text" value="{{data.data.zycie.value}}" data-dtype="Number"  maxlength="2" size="2"/>
+                <div class="opis srodek">SW</div>
+                <div class="opis srodek">EXP</div>
+                <div class="srodek zasobPotwor2">
+                    <div class="prawo"><input class = "inputZasob" name="data.zycie.value" type="text" value="{{data.data.zycie.value}}" data-dtype="Number"  maxlength="2" size="2"/></div>
                     <span> / </span>
                     <input class = "inputZasob lewo" name="data.zycie.max" type="text" value="{{data.data.zycie.max}}" data-dtype="Number"  maxlength="2" size="2"/>
                 </div>
-                <div class="srodek zasob">
-                    <input class = "inputZasob prawo" name="data.pp.value" type="text" value="{{data.data.pp.value}}" data-dtype="Number"  maxlength="2" size="2"/>
+                <div class="srodek zasobPotwor">
+                    <div class="prawo"><input class = "inputZasob prawo" name="data.pp.value" type="text" value="{{data.data.pp.value}}" data-dtype="Number"  maxlength="2" size="2"/></div>
                     <span> / </span>
                     <input class = "inputZasob lewo" name="data.pp.max" type="text" value="{{data.data.pp.max}}" data-dtype="Number"  maxlength="2" size="2"/>
                 </div>
@@ -24,10 +25,19 @@
                 <div class="srodek wartosc">
                     <input class = "inputStat2" name="data.st" type="text" value="{{data.data.st}}" data-dtype="Number"  maxlength="2" size="2"/>
                 </div>
+                <div class="srodek wartosc">
+                    <input class = "srodek" name="data.exp" type="text" value="{{data.data.exp}}" data-dtype="Number"  maxlength="4" size="4"/>
+                </div>
             </div>
         </div>
         <div class = "ramka przeciwnik zdolnosci">
-            <div class="srodek"><h3>Zdolności</h3></div>
+            <div class="srodek" style="padding-top: 2px;">
+                <h3>Zdolności
+                    <a class="item-create" data-type="zdolnoscPrzeciwnika" title="{{localize "AZS.kartaPostaci.dodajPrzedmiot"}}">
+                        <i class="fa-regular fa-plus" style="float: right; font-size: 14px; padding-top: 3px; padding-right: 5px;"></i>
+                    </a>
+                </h3>    
+            </div>
             {{> "systems/AZS/templates/partials/zdolnosci-przeciwnika.hbs"}}
         </div>
     </div>

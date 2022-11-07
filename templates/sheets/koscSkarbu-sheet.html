@@ -1,9 +1,16 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <header class="sheet-header">
-        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
-        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
-    </header>
-    <div>
-        <textarea name="data.formula">{{data.formula}}</textarea>
+    <div class = "ogolne-content">
+        <div style="border-right: 2px solid black; border-bottom: 2px solid black;">
+            <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="auto" width="auto" style="border: none"/>
+        </div>
+        <div class = "item centrowanie srodek nazwaPrzedmiotu" style= "border-bottom: 2px solid black;">
+            <input class = "nazwaPrzedmiotu" name="name" type="text" value="{{item.name}}"/> 
+        </div>
+        <div class="srodekKolumn">
+            <div class="srodek wiekszyFont">Formuła rzutu</div>
+            <div style="padding-right: 5px; padding-left: 5px;">
+                <textarea name="data.formula" style="background: none; border: none; height: 75px; width: 285px;">{{data.formula}}</textarea>
+            </div>
+        </div>
     </div>
 </form>

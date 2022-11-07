@@ -1,13 +1,16 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <header class="sheet-header">
-        <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="64" width="64"/>
-        <h1><input name="name" type="text" value="{{actor.name}}" placeholder="{{ localize 'Name' }}"/></h1>
-    </header>
-    <section class = "kosci-skarbow">
-        {{#each kosciSkarbu as |koscSkarbu|}}
-            <div class="item" data-item-id="{{id}}">
-                <a class="rzut-na-skarb" data-label="rzut kością skarbu" data-roll="{{data.data.formula}}">{{name}}</a>
-            </div>
-        {{/each}}
-    </section>
+    <div class="torba-na-lupy-content">
+        <div class="torba-nazwa" style = "font-size: 1.6em; padding-top: 10px; font-weight: bold;">
+            <i class="fa-regular fa-sack"></i>   {{actor.name}}
+        </div>
+        <div class="torba-kosci">
+            <section class = "kosci-skarbow">
+                {{#each kosciSkarbu as |koscSkarbu|}}
+                    <div class="item" data-item-id="{{id}}" style = "padding-top: 5px; font-size: 1.2em;">
+                        <a class="rzut-na-skarb" data-label="rzut kością skarbu" data-roll="{{data.data.formula}}"><i class="fa-regular fa-dice"></i> {{name}}</a>
+                    </div>
+                {{/each}}
+            </section>
+        </div>
+    </div>
 </form>

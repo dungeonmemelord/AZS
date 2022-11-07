@@ -71,7 +71,9 @@
             "st": "10",
             "exp":"0"
        },
-       "torbaNaLup":{}     
+       "torbaNaLup":{
+        
+       }     
     },
     "Item":{
         "types":[

@@ -1,23 +1,26 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <header class="sheet-header">
-        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
-        <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'Name' }}"/></h1>
-    </header>
-    <div>
-        <table>
-            <tr>
-                <th>Czar</th>
-                <td>
-                    <select name="data.czar">
-                        {{#select data.data.czar}}
-                        {{#each config.czar as |name type|}}
-                        <option value="{{type}}">{{localize name}}</option>
-                        {{/each}}
-                        {{/select}}
-                    </select>
-                </td>
-            </tr>
-        </table>
-        <textarea name="data.opis">{{data.data.opis}}</textarea>
+    <div class = "tom-content">
+        <div style="border-right: 2px solid black; border-bottom: 2px solid black;">
+            <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="auto" width="auto" style="border: none"/>
+        </div>
+        <div class = "item centrowanie srodek nazwaPrzedmiotu" style= "border-bottom: 2px solid black;">
+            <input class = "nazwaPrzedmiotu" name="name" type="text" value="{{item.name}}"/> 
+        </div>
+        <div class="srodekKolumn centrowanie" style= "border-bottom: 2px solid black; display: grid; grid-template-columns: 1fr 1fr;">
+            <div class="wiekszyFont">Biegłość: </div>
+            <select class="itemSelect" name="data.czar">
+            {{#select data.data.czar}}
+            {{#each config.czar as |name type|}}
+                <option value="{{type}}">{{localize name}}</option>
+            {{/each}}
+            {{/select}}
+            </select>
+        </div>
+        <div class="srodekKolumn">
+            <div class="srodek wiekszyFont">Opis</div>
+            <div style="padding-right: 5px; padding-left: 5px;">
+                <textarea name="data.opis" style="background: none; border: none; height: 75px; width: 285px;">{{data.opis}}</textarea>
+            </div>
+        </div>
     </div>
 </form>
