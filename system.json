@@ -19,7 +19,62 @@
     "esmodules":["AZS.js"],
     "styles":["AZS.css"],
     "scripts":[],
-    "packs": [],
+    "packs": [
+      {
+        "label": "Kości skarbów",
+        "type": "Item",
+        "name": "kosci-skarbow",
+        "path": "packs/kosci-skarbow.db",
+        "system": "AZS",
+        "private": false,
+        "flags": {}
+      },
+      {
+        "label": "Broń",
+        "type": "Item",
+        "name": "bron",
+        "path": "packs/bron.db",
+        "system": "AZS",
+        "private": false,
+        "flags": {}
+      },
+      {
+        "label": "Zbroje",
+        "type": "Item",
+        "name": "zbroje",
+        "path": "packs/zbroje.db",
+        "system": "AZS",
+        "private": false,
+        "flags": {}
+      },
+      {
+        "label": "Umiejętności",
+        "type": "Item",
+        "name": "umiejetnosci",
+        "path": "packs/umiejetnosci.db",
+        "system": "AZS",
+        "private": false,
+        "flags": {}
+      },
+      {
+        "label": "Czary",
+        "type": "Item",
+        "name": "czary",
+        "path": "packs/czary.db",
+        "system": "AZS",
+        "private": false,
+        "flags": {}
+      },
+      {
+        "label": "Przedmioty",
+        "type": "Item",
+        "name": "przedmioty",
+        "path": "packs/przedmioty.db",
+        "system": "AZS",
+        "private": false,
+        "flags": {}
+      }
+    ],
     "languages":[{
         "lang": "en",
         "name": "Polski",

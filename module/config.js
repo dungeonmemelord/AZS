@@ -39,7 +39,9 @@ AZS.bronSpecjalne = {
     przeladowywana:"AZS.bronSpecjalne.przeladowywana",
     rzucana:"AZS.bronSpecjalne.rzucana",
     poreczna:"AZS.bronSpecjalne.poreczna",
-    magiczna:"AZS.bronSpecjalne.magiczna"
+    magiczna:"AZS.bronSpecjalne.magiczna",
+    dungfu: "dung-fu",
+    bezsily: "nie używa siły"
 }
 
 AZS.kartaPostaci =

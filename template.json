@@ -87,7 +87,7 @@
         ],
         "templates":{
             "podstawoweInformacje":{
-                "opis": "",
+                "opis": "Opis przedmiotu",
                 "sloty": 0
             }
         },
@@ -108,7 +108,8 @@
         "zbroja":{
             "templates":["podstawoweInformacje"],
             "pp":0,
-            "pp max":0
+            "ppmax":0,
+            "sloty":1
         },
         "zdolnoscPrzeciwnika":{
             "templates":["podstawoweInformacje"]

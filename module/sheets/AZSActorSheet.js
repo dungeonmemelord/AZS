@@ -2,7 +2,9 @@ export default class AZSActorSheet   extends ActorSheet {
     
     static get defaultOptions(){
         return  mergeObject(super.defaultOptions, {
-            classes: ["AZS", "sheet", "actor"]
+            classes: ["AZS", "sheet", "actor"],
+            width: 'auto',
+            height: 'auto'
         });
     }
 
