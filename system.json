@@ -10,7 +10,7 @@
           "discord": "iliketoasts#4440"
         }
       ],
-    "version": "0.01",
+    "version": "1.00",
     "compatibility": {
         "minimum": "10",
         "verified": "10",
@@ -70,6 +70,50 @@
         "type": "Item",
         "name": "przedmioty",
         "path": "packs/przedmioty.db",
+        "system": "AZS",
+        "private": false,
+        "flags": {}
+      },
+      {
+        "label": "Torba z łupem",
+        "type": "Actor",
+        "name": "torba-z-lupem",
+        "path": "packs/torba-z-lupem.db",
+        "system": "AZS",
+        "private": false,
+        "flags": {}
+      },
+      {
+        "label": "Skarby",
+        "type": "RollTable",
+        "name": "skarby",
+        "path": "packs/skarby.db",
+        "system": "AZS",
+        "private": false,
+        "flags": {},
+        "id": "world.skarby",
+        "packageType": "world",
+        "packageName": "azs-test",
+        "index": []
+      },
+      {
+        "label": "Tworzenie postaci",
+        "type": "RollTable",
+        "name": "tworzenie-postaci",
+        "path": "packs/tworzenie-postaci.db",
+        "system": "AZS",
+        "private": false,
+        "flags": {},
+        "id": "world.tworzenie-postaci",
+        "packageType": "world",
+        "packageName": "azs-test",
+        "index": []
+      },
+      {
+        "label": "Handouty",
+        "type": "Scene",
+        "name": "handouty",
+        "path": "packs/handouty.db",
         "system": "AZS",
         "private": false,
         "flags": {}
