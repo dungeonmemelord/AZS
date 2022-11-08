@@ -1,0 +1,65 @@
+{
+    "AZS": {
+        "bieglosc":{
+            "brak": "",
+            "szermierka":"szermierka",
+            "bronDrzewcowa":"broń drzewcowa",
+            "topory":"topory",
+            "mloty":"młoty",
+            "dungFu":"dung-fu",
+            "strzelectwo":"strzelectwo",
+            "sztylety":"sztylety"
+        },
+        "czar":{
+            "telekineza":"telekineza",
+            "telepatia":"telepatia",
+            "pirmoancja":"piromancja",
+            "polymorfia":"polymorfia",
+            "nekromanca":"nekromancja"
+        },
+        "bron": {
+            "bieglosc":"biegłość",
+            "atak": "atak",
+            "obrona":"obrona"
+        },
+        "bronSpecjalne": {
+            "dystansowa":"dystansowa",
+            "obureczna":"obureczna",
+            "przebijajaca":"przebijająca",
+            "przeladowywana":"przeładowywana",
+            "rzucana":"rzucana",
+            "poreczna":"poręczna",
+            "magiczna":"magiczna"
+        },
+        "tom":{
+            "czar":"czar"
+        },
+        "zbroja":{
+            "pancerz":"pancerz",
+            "pp":"PP",
+            "ppmax":"PP max"
+        },
+        "ogolne":{
+        },
+        "rasa":{
+            "czlowiek":"człowiek",
+            "elf":"elf",
+            "ork":"ork",
+            "krasnolud":"krasnolud"
+        },
+        "pochodzenie":{
+            "wojownik":"wojownik",
+            "lotr":"łotr",
+            "mag":"mag",
+            "podroznik":"podróżnik"
+        },
+        "kartaPostaci":{
+            "dodajPrzedmiot":"Dodaj przedmiot",
+            "nowyPrzedmiot":"Nowy przedmiot"
+        },
+        "typBieglosci":{
+            "umiejetnosc":"umiejętność",
+            "czar":"czar"
+        }
+    }
+}
