@@ -1,5 +1,7 @@
 {
     "id":"AZS",
+    "name":"AZS",
+    "minimumCoreVersion": 9,
     "title":"Advanced Zabic smoka",
     "description":"Advanced Zabic smoka do FoundryVTT",
     "authors": [
@@ -10,7 +12,7 @@
           "discord": "iliketoasts#4440"
         }
       ],
-    "version": "1.02",
+    "version": "1.03",
     "compatibility": {
         "minimum": "10",
         "verified": "10",
@@ -18,7 +20,6 @@
       },
     "esmodules":["AZS.js"],
     "styles":["AZS.css"],
-    "scripts":[],
     "packs": [
       {
         "label": "Kości skarbów",
@@ -102,6 +103,6 @@
     "primaryTokenAttribute": "zycie",
     "secondaryTokenAttribute": "mana",
     "initiative": "(1d6)*@initD + @szybkosc",
-    "manifest": "https://github.com/dungeonmemelord/AZS/releases/download/v1.02/system.json",
-    "download": "https://github.com/dungeonmemelord/AZS/archive/refs/tags/v1.02.zip"
+    "manifest": "https://github.com/dungeonmemelord/AZS/releases/download/v1.03/system.json",
+    "download": "https://github.com/dungeonmemelord/AZS/archive/refs/tags/v1.03.zip"
 }
