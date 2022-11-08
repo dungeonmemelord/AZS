@@ -25,102 +25,74 @@
         "type": "Item",
         "name": "kosci-skarbow",
         "path": "packs/kosci-skarbow.db",
-        "system": "AZS",
-        "private": false,
-        "flags": {}
+        "private": false
       },
       {
         "label": "Broń",
         "type": "Item",
         "name": "bron",
         "path": "packs/bron.db",
-        "system": "AZS",
-        "private": false,
-        "flags": {}
+        "private": false
       },
       {
         "label": "Zbroje",
         "type": "Item",
         "name": "zbroje",
         "path": "packs/zbroje.db",
-        "system": "AZS",
-        "private": false,
-        "flags": {}
+        "private": false
       },
       {
         "label": "Umiejętności",
         "type": "Item",
         "name": "umiejetnosci",
         "path": "packs/umiejetnosci.db",
-        "system": "AZS",
-        "private": false,
-        "flags": {}
+        "private": false
       },
       {
         "label": "Czary",
         "type": "Item",
         "name": "czary",
         "path": "packs/czary.db",
-        "system": "AZS",
-        "private": false,
-        "flags": {}
+        "private": false
       },
       {
         "label": "Przedmioty",
         "type": "Item",
         "name": "przedmioty",
         "path": "packs/przedmioty.db",
-        "system": "AZS",
-        "private": false,
-        "flags": {}
+        "private": false
       },
       {
         "label": "Torba z łupem",
         "type": "Actor",
         "name": "torba-z-lupem",
         "path": "packs/torba-z-lupem.db",
-        "system": "AZS",
-        "private": false,
-        "flags": {}
+        "private": false
       },
       {
         "label": "Skarby",
         "type": "RollTable",
         "name": "skarby",
         "path": "packs/skarby.db",
-        "system": "AZS",
-        "private": false,
-        "flags": {},
-        "id": "world.skarby",
-        "packageType": "world",
-        "packageName": "azs-test",
-        "index": []
+        "private": false
       },
       {
         "label": "Tworzenie postaci",
         "type": "RollTable",
         "name": "tworzenie-postaci",
         "path": "packs/tworzenie-postaci.db",
-        "system": "AZS",
-        "private": false,
-        "flags": {},
-        "id": "world.tworzenie-postaci",
-        "packageType": "world",
-        "packageName": "azs-test",
-        "index": []
+        "private": false
       },
       {
         "label": "Handouty",
         "type": "Scene",
         "name": "handouty",
         "path": "packs/handouty.db",
-        "system": "AZS",
-        "private": false,
-        "flags": {}
+        "private": false
       }
     ],
     "languages":[{
-        "lang": "en",
+        "lang": "pl",
         "name": "Polski",
         "path": "lang/pl.json"
     }    ],
@@ -131,6 +103,6 @@
     "secondaryTokenAttribute": "mana",
     "initiative": "(1d6)*@initD + @szybkosc",
     "url": "",
-    "manifest": "",
-    "download": ""
+    "manifest": "https://github.com/dungeonmemelord/AZS/releases/download/v1.00/system.json",
+    "download": "https://github.com/dungeonmemelord/AZS/archive/refs/tags/v1.00.zip"
 }
