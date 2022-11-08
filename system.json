@@ -103,6 +103,6 @@
     "primaryTokenAttribute": "zycie",
     "secondaryTokenAttribute": "mana",
     "initiative": "(1d6)*@initD + @szybkosc",
-    "manifest": "https://github.com/dungeonmemelord/AZS/releases/download/v1.03/system.json",
+    "manifest": "https://github.com/dungeonmemelord/AZS/blob/master/system.json",
     "download": "https://github.com/dungeonmemelord/AZS/archive/refs/tags/v1.03.zip"
 }
