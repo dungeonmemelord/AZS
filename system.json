@@ -10,7 +10,7 @@
           "discord": "iliketoasts#4440"
         }
       ],
-    "version": "1.00",
+    "version": "1.01",
     "compatibility": {
         "minimum": "10",
         "verified": "10",
@@ -103,6 +103,6 @@
     "secondaryTokenAttribute": "mana",
     "initiative": "(1d6)*@initD + @szybkosc",
     "url": "",
-    "manifest": "https://github.com/dungeonmemelord/AZS/releases/download/v1.00/system.json",
-    "download": "https://github.com/dungeonmemelord/AZS/archive/refs/tags/v1.00.zip"
+    "manifest": "https://github.com/dungeonmemelord/AZS/releases/download/v1.01/system.json",
+    "download": "https://github.com/dungeonmemelord/AZS/archive/refs/tags/v1.01.zip"
 }
