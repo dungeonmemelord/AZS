@@ -10,11 +10,11 @@
             <div class="srodek wiekszyFont">Atak</div>
             <div class="srodek wiekszyFont">Obrona</div>
             <div class="srodek wiekszyFont">Typ</div>
-            <div class="srodek item wiekszyFont"><input name="data.atak" type="text" value="{{data.atak}}" data-dtype="Number" maxlength="1" size="1"/></div>
-            <div class="srodek item wiekszyFont"><input name="data.obrona" type="text" value="{{data.obrona}}" data-dtype="Number" maxlength="1" size="1" /></div>
+            <div class="srodek item wiekszyFont"><input name="system.atak" type="text" value="{{item.system.atak}}" data-dtype="Number" maxlength="1" size="1"/></div>
+            <div class="srodek item wiekszyFont"><input name="system.obrona" type="text" value="{{item.system.obrona}}" data-dtype="Number" maxlength="1" size="1" /></div>
             <div class="srodek item">
-                <select name="data.bieglosc" style="width: auto; background: none; border: none; text-align: center;">
-                    {{#select data.bieglosc}}
+                <select name="system.bieglosc" style="width: auto; background: none; border: none; text-align: center;">
+                    {{#select item.system.bieglosc}}
                     {{#each config.bieglosc as |name type|}}
                     <option value="{{type}}">{{localize name}}</option>
                     {{/each}}
@@ -25,8 +25,8 @@
         <div class = "bron-wlasciwosci">
             <div class="srodek wiekszyFont srodekKolumn">Cechy</div>
             <div>
-                <select class="itemSelect" name="data.specjalne1">
-                    {{#select data.specjalne1}}
+                <select class="itemSelect" name="system.specjalne1">
+                    {{#select item.system.specjalne1}}
                     {{#each config.bronSpecjalne as |name type|}}
                     <option value="{{type}}">{{localize name}}</option>
                     {{/each}}
@@ -34,8 +34,8 @@
                 </select>
             </div>
             <div>
-                <select class="itemSelect" name="data.specjalne2">
-                    {{#select data.specjalne2}}
+                <select class="itemSelect" name="system.specjalne2">
+                    {{#select item.system.specjalne2}}
                     {{#each config.bronSpecjalne as |name type|}}
                     <option value="{{type}}">{{localize name}}</option>
                     {{/each}}
@@ -43,8 +43,8 @@
                 </select>
             </div>
             <div>
-                <select class="itemSelect" name="data.specjalne3">
-                    {{#select data.specjalne3}}
+                <select class="itemSelect" name="system.specjalne3">
+                    {{#select item.system.specjalne3}}
                     {{#each config.bronSpecjalne as |name type|}}
                     <option value="{{type}}">{{localize name}}</option>
                     {{/each}}
@@ -52,8 +52,8 @@
                 </select>
             </div>
             <div>
-                <select class="itemSelect" name="data.specjalne4">
-                    {{#select data.specjalne4}}
+                <select class="itemSelect" name="system.specjalne4">
+                    {{#select item.system.specjalne4}}
                     {{#each config.bronSpecjalne as |name type|}}
                     <option value="{{type}}">{{localize name}}</option>
                     {{/each}}
@@ -64,7 +64,7 @@
         <div class = "bron-opis ">
             <div class="srodek wiekszyFont">Opis</div>
             <div style="padding-right: 5px; padding-left: 5px;">
-                <textarea name="data.opis" style="background: none; border: none; height: 75px; width: 285px;">{{data.opis}}</textarea>
+                <textarea name="system.opis" style="background: none; border: none; height: 75px; width: 285px;">{{item.system.opis}}</textarea>
             </div>
         </div>
     </div>

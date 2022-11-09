@@ -1,7 +1,7 @@
 export default class AZSItemSheet   extends ItemSheet {
 
     get template() {
-        return `systems/AZS/templates/sheets/${this.item.data.type}-sheet.html`;
+        return `systems/AZS/templates/sheets/${this.item.type}-sheet.html`;
     }
 
     static get defaultOptions(){

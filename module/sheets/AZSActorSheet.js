@@ -9,7 +9,7 @@ export default class AZSActorSheet   extends ActorSheet {
     }
 
     get template() {
-        return `systems/AZS/templates/sheets/${this.actor.data.type}-sheet.html`;
+        return `systems/AZS/templates/sheets/${this.actor.type}-sheet.html`;
     }
 
     getData() {
@@ -18,7 +18,7 @@ export default class AZSActorSheet   extends ActorSheet {
             owner: this.actor.isOwner,
             editable: this.isEditable,
             actor: baseData.actor,
-            data: baseData.actor.data,
+            data: baseData.actor.system,
             config: CONFIG.AZS,
             bieglosci: baseData.actor.data.items.filter(function(item) {return item.type == "bieglosc"}),
             itemy: baseData.actor.data.items.filter(function(item) {return item.type == "bron" || item.type == "ogolne" || item.type == "zbroja" || item.type == "tom" }),
@@ -67,8 +67,8 @@ export default class AZSActorSheet   extends ActorSheet {
 
             if (dataset.typ == "umiejetnosc"){
                 let RollData = {
-                    atrybut: this.actor.data.data.sprawnosc,
-                    poziom: this.actor.data.data.poziom
+                    atrybut: this.actor.system.sprawnosc,
+                    poziom: this.actor.system.poziom
                 };
                 let roll = new Roll(dataset.roll, RollData);
                 roll.toMessage({
@@ -79,8 +79,8 @@ export default class AZSActorSheet   extends ActorSheet {
                 return roll;
                 } else {
                     let RollData = {
-                        atrybut: this.actor.data.data.magia,
-                        poziom: this.actor.data.data.poziom
+                        atrybut: this.actor.system.magia,
+                        poziom: this.actor.system.poziom
                     };
                     let roll = new Roll(dataset.roll, RollData);
                     roll.toMessage({

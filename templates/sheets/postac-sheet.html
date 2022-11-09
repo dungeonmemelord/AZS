@@ -6,8 +6,8 @@
                 <div><h3>Rasa</h3></div>
                 <div class = "srodek opis">{{actor.name}}</div>
                 <div class="srodek">
-                    <select name="data.pochodzenie" style="width: auto; background: none; border: none; text-align: center;">
-                        {{#select data.data.pochodzenie}}
+                    <select name="system.pochodzenie" style="width: auto; background: none; border: none; text-align: center;">
+                        {{#select actor.system.pochodzenie}}
                         {{#each config.pochodzenie as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
@@ -15,8 +15,8 @@
                     </select>
                 </div>
                 <div class="srodek">
-                    <select name="data.rasa" style="width: auto; background: none; border: none; text-align: center;">
-                        {{#select data.data.rasa}}
+                    <select name="system.rasa" style="width: auto; background: none; border: none; text-align: center;">
+                        {{#select actor.system.rasa}}
                         {{#each config.rasa as |name type|}}
                         <option value="{{type}}">{{localize name}}</option>
                         {{/each}}
@@ -29,13 +29,13 @@
             <div class="postac portret"><img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" style="border: none;"/></div> 
             <div class="postac notatki">
                 <h3>Biografia postaci</h3>
-                <textarea name="data.opis" style="background: none; border: none; height: 110px; width: 175px;">{{data.data.opis}}</textarea>
+                <textarea name="actor.system.opis" style="background: none; border: none; height: 110px; width: 175px;">{{actor.system.opis}}</textarea>
             </div>
             <div class="postac poziom">
                 <div class = "opis paddingLewo">Poziom</div>
-                <div class = "atr wartosc srodek"><input class = "inputStat" name="data.poziom" type="text" value="{{data.data.poziom}}" data-dtype="Number"  maxlength="1" size="1"/></div>
+                <div class = "atr wartosc srodek"><input class = "inputStat" name="system.poziom" type="text" value="{{actor.system.poziom}}" data-dtype="Number"  maxlength="1" size="1"/></div>
                 <div class = "opis paddingLewo">PD</div>
-                <div class="inputCyferki srodek"><input name="data.pd" type="text" value="{{data.data.pd}}" data-dtype="Number"  maxlength="4" size="4"/></div>
+                <div class="inputCyferki srodek"><input name="system.pd" type="text" value="{{actor.system.pd}}" data-dtype="Number"  maxlength="4" size="4"/></div>
             </div>
             <div class="postac zasoby">{{> "systems/AZS/templates/partials/zasoby-postaci.hbs"}}</div>
             <div class="postac plecak">{{> "systems/AZS/templates/partials/plecak-postaci.hbs"}}</div>

@@ -8,8 +8,8 @@
         </div>
         <div class="srodekKolumn centrowanie" style= "border-bottom: 2px solid black; display: grid; grid-template-columns: 1fr 1fr;">
             <div class="wiekszyFont" style="padding-left: 5px;">Typ: </div>
-            <select class = "itemSelect" name="data.typBieglosci">
-                {{#select data.typBieglosci}}
+            <select class = "itemSelect" name="system.typBieglosci">
+                {{#select item.system.typBieglosci}}
                 {{#each config.typBieglosci as |name type|}}
                 <option value="{{type}}">{{localize name}}</option>
                 {{/each}}
@@ -19,7 +19,7 @@
         <div class="srodekKolumn">
             <div class="srodek wiekszyFont">Opis</div>
             <div style="padding-right: 5px; padding-left: 5px; height: auto">
-                {{editor content=data.opis target="data.opis" button=true editable=editable}}
+                {{editor content=item.system.opis target="system.opis" button=true editable=editable}}
             </div>
         </div>
     </div>
