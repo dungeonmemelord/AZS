@@ -20,10 +20,10 @@ export default class AZSActorSheet   extends ActorSheet {
             actor: baseData.actor,
             data: baseData.actor.system,
             config: CONFIG.AZS,
-            bieglosci: baseData.actor.data.items.filter(function(item) {return item.type == "bieglosc"}),
-            itemy: baseData.actor.data.items.filter(function(item) {return item.type == "bron" || item.type == "ogolne" || item.type == "zbroja" || item.type == "tom" }),
-            kosciSkarbu: baseData.actor.data.items.filter(function(item) {return item.type == "koscSkarbu"}),
-            zdolnosciPrzeciwnika: baseData.actor.data.items.filter(function(item) {return item.type == "zdolnoscPrzeciwnika"})
+            bieglosci: baseData.actor.items.filter(function(item) {return item.type == "bieglosc"}),
+            itemy: baseData.actor.items.filter(function(item) {return item.type == "bron" || item.type == "ogolne" || item.type == "zbroja" || item.type == "tom" }),
+            kosciSkarbu: baseData.actor.items.filter(function(item) {return item.type == "koscSkarbu"}),
+            zdolnosciPrzeciwnika: baseData.actor.items.filter(function(item) {return item.type == "zdolnoscPrzeciwnika"})
         }
         return sheetData;
     }

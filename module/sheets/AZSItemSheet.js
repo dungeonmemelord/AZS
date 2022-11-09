@@ -18,7 +18,7 @@ export default class AZSItemSheet   extends ItemSheet {
             owner: this.item.isOwner,
             editable: this.isEditable,
             item: baseData.item,
-            data: baseData.item.data.data,
+            data: baseData.item.system,
             config: CONFIG.AZS
         }
         return sheetData;
