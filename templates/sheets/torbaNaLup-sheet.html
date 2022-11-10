@@ -8,7 +8,7 @@
             <section class = "srodek kosci-skarbow" style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
                 {{#each kosciSkarbu as |koscSkarbu|}}
                     <div class="item" data-item-id="{{id}}" style = "padding-top: 5px; padding-left: 5px; padding-right: 5px; font-size: 1.2em;">
-                        <a class="rzut-na-skarb" data-label="rzut kością skarbu" data-roll="{{data.data.formula}}"><i class="fa-regular fa-dice"></i> {{name}}</a>
+                        <a class="rzut-na-skarb" data-label="rzut kością skarbu" data-roll="{{system.formula}}"><i class="fa-regular fa-dice"></i> {{name}}</a>
                     </div>
                 {{/each}}
             </section>
