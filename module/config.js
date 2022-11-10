@@ -16,7 +16,22 @@ AZS.czar = {
     telepatia:"AZS.czar.telepatia",
     pirmoancja:"AZS.czar.piromancja",
     polymorfia:"AZS.czar.polymorfia",
-    nekromanca:"AZS.czar.nekromancja"
+    nekromancja:"AZS.czar.nekromancja",
+    uzdrowienie:"AZS.czar.uzdrowienie",
+    bariera:"AZS.czar.bariera",
+    eletromancja:"AZS.czar.elektromancja",
+    petryfikacja:"AZS.czar.petryfikacja",
+    iluzja:"AZS.czar.iluzja",
+    egzorcyzm:"AZS.czar.egzorcyzm",
+    ukrycie:"AZS.czar.ukrycie",
+    wrozba:"AZS.czar.wrozba",
+    teleportacja:"AZS.czar.teleportacja",
+    aeromancja:"AZS.czar.aeromancja",
+    chronomancja:"AZS.czar.chronomancja",
+    akwamancja:"AZS.czar.akwamancja",
+    druidyzm:"AZS.czar.druidyzm",
+    oczarowanie:"AZS.czar.oczarowanie",
+    przyzwanie:"AZS.czar.przyzwanie"
 },
 AZS.rasa = {
     czlowiek:"AZS.rasa.czlowiek",

@@ -13,9 +13,24 @@
         "czar":{
             "telekineza":"telekineza",
             "telepatia":"telepatia",
-            "pirmoancja":"piromancja",
+            "piromancja":"piromancja",
             "polymorfia":"polymorfia",
-            "nekromanca":"nekromancja"
+            "nekromancja":"nekromancja",
+            "uzdrowienie":"uzdrowienie",
+            "bariera":"bariera",
+            "elektromancja":"elektromancja",
+            "petryfikacja":"petryfikacja",
+            "iluzja":"iluzja",
+            "egzorcyzm":"egzorcyzm",
+            "ukrycie":"ukrycie",
+            "wrozba":"wróżba",
+            "teleportacja":"teleportacja",
+            "aeromancja":"aeromancja",
+            "chronomancja":"chronomancja",
+            "akwamancja":"akwamancja",
+            "druidyzm":"druidyzm",
+            "oczarowanie":"oczarowanie",
+            "przyzwanie":"przyzwanie"
         },
         "bron": {
             "bieglosc":"biegłość",
