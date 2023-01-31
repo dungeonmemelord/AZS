@@ -256,7 +256,7 @@ h3 {
   background: none;
   border: none;
 }
-input[type=checkbox] {
+.actor input[type=checkbox] {
   display: none;
 }
 .czekbox {
