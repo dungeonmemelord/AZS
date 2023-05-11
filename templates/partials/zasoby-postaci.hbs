@@ -1,16 +1,63 @@
-<div class = "zasoby_partial">
-    <div class = "zasoby label opis srodek" style="padding-top: 10px;">Amunicja</div>
-    <div class = "zasobInputDiv"><input class = "inputZasob prawo" name="system.amunicja.value" type="text" value="{{actor.system.amunicja.value}}" data-dtype="Number"  maxlength="1" size="1"/></div>
-    <div class = "srodek" style="padding-top: 4px;">/</div>
-    <div class = "lewo" style="padding-top: 4px;">{{actor.system.amunicja.max}}</div>
-    <div class = "zasoby label opis srodek">Pancerz</div>
-    <div class = "zasobInputDiv"><input class = "inputZasob prawo" name="system.pp.value" type="text" value="{{actor.system.pp.value}}" data-dtype="Number"  maxlength="1" size="1"/></div>
-    <div class = "srodek" style="padding-top: 4px;">/</div>
-    <div class = "zasobInputDiv"><input class = "inputZasob2 lewo" name="system.pp.max" type="text" value="{{actor.system.pp.max}}" data-dtype="Number"  maxlength="1" size="1"/></div>
-    <div class = "zasoby label opis srodek">Pochodnia</div>
-    <div class = "zasobInputDiv"><input class = "inputZasob prawo" name="system.pochodnia.value" type="text" value="{{actor.system.pochodnia.value}}" data-dtype="Number"  maxlength="1" size="1"/></div>
-    <div class = "srodek" style="padding-top: 4px;">/</div>
-    <div class = "lewo" style="padding-top: 4px;">{{actor.system.pochodnia.max}}</div>
-    <div class = "zasoby label opis srodek">Rana</div>
-    <div class = "zasoby label srodek"><label><input name="system.rana" type="checkbox" {{checked actor.system.rana}}/><span class="czekbox2"><i class="opis fa-regular fa-hand"></i></span></label></div>
+<div class='zasoby-partial'>
+  <div
+    class='zasoby label opis srodek'
+    style='padding-top: 10px;'
+  >Amunicja</div>
+  <div class='zasobInputDiv'><input
+      class='input-zasob prawo'
+      name='system.amunicja.value'
+      type='text'
+      value='{{actor.system.amunicja.value}}'
+      data-dtype='Number'
+      maxlength='1'
+      size='1'
+    /></div>
+  <div class='srodek' style='padding-top: 4px;'>/</div>
+  <div
+    class='lewo'
+    style='padding-top: 4px;'
+  >{{actor.system.amunicja.max}}</div>
+  <div class='zasoby label opis srodek'>Pancerz</div>
+  <div class='zasobInputDiv'><input
+      class='input-zasob prawo'
+      name='system.pp.value'
+      type='text'
+      value='{{actor.system.pp.value}}'
+      data-dtype='Number'
+      maxlength='1'
+      size='1'
+    /></div>
+  <div class='srodek' style='padding-top: 4px;'>/</div>
+  <div class='zasobInputDiv'><input
+      class='input-zasob-2 lewo'
+      name='system.pp.max'
+      type='text'
+      value='{{actor.system.pp.max}}'
+      data-dtype='Number'
+      maxlength='1'
+      size='1'
+    /></div>
+  <div class='zasoby label opis srodek'>Pochodnia</div>
+  <div class='zasobInputDiv'><input
+      class='input-zasob prawo'
+      name='system.pochodnia.value'
+      type='text'
+      value='{{actor.system.pochodnia.value}}'
+      data-dtype='Number'
+      maxlength='1'
+      size='1'
+    /></div>
+  <div class='srodek' style='padding-top: 4px;'>/</div>
+  <div
+    class='lewo'
+    style='padding-top: 4px;'
+  >{{actor.system.pochodnia.max}}</div>
+  <div class='zasoby label opis srodek'>Rana</div>
+  <div class='zasoby label srodek'><label><input
+        name='system.rana'
+        type='checkbox'
+        {{checked actor.system.rana}}
+      /><span class='czekbox2'><i
+          class='opis fa-regular fa-hand'
+        ></i></span></label></div>
 </div>

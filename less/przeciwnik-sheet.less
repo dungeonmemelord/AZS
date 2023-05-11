@@ -1,75 +1,87 @@
-.przeciwnik-siatka{
-    display: grid;
-    grid-template-columns: 100px 280px;
-    grid-template-rows: 100px 200px;
-    grid-gap: 5px;
-    grid-template-areas:
-    "portret info"
-    "zdolnosci zdolnosci"
+.przeciwnik-siatka {
+  display: grid;
+  grid-template-columns: 100px 280px;
+  grid-template-rows: 100px 200px;
+  grid-gap: 5px;
+  grid-template-areas:
+    'portret info'
+    'zdolnosci zdolnosci';
 }
 
-.przeciwnik-staty{
-    display: grid;
-    grid-template-columns: 55px 75px 50px 50px 50px;
-    grid-template-rows: 1fr 1fr;
+.przeciwnik-staty {
+  display: grid;
+  grid-template-columns: 55px 75px 50px 50px 50px;
+  grid-template-rows: 1fr 1fr;
 }
 
-.zasobPotwor{
-    display: grid;
-    grid-template-columns: 35px 5px 35px;
+.zasob-potwor {
+  display: grid;
+  grid-template-columns: 35px 5px 35px;
 }
 
-.zasobPotwor2{
-    display: grid;
-    grid-template-columns: 25px 5px 25px;
+.zasob-potwor-2 {
+  display: grid;
+  grid-template-columns: 25px 5px 25px;
 }
 
-.przeciwnik{
-    &.info{
-        grid-area: info;
+.przeciwnik {
+  &.info {
+    grid-area: info;
+  }
+
+  &.portret {
+    grid-area: portret;
+  }
+
+  &.zdolnosci {
+    grid-area: zdolnosci;
+  }
+
+  &.ramka {
+    border: 2px solid black;
+  }
+
+  input {
+    background: none;
+    border: none;
+
+    &.input-stat {
+      font-size: 1.2em;
+      margin: auto;
+      width: 10px;
     }
-    &.portret{
-        grid-area: portret;
+
+    &.input-stat-2 {
+      font-size: 1.2em;
+      margin: auto;
+      width: 25px;
     }
-    &.zdolnosci{
-        grid-area: zdolnosci;
+
+    &.input-zasob {
+      width: 25px;
+      float: right;
     }
-    &.ramka{
-        border: 2px solid black;
+
+    &.input-zasob-2 {
+      width: 25px;
+      float: left;
     }
-    input{
-        background: none;
-        border: none;
-        &.inputStat{
-            font-size: 1.2em;
-            margin: auto;
-            width: 10px;
-        }
-        &.inputStat2{
-            font-size: 1.2em;
-            margin: auto;
-            width: 25px;
-        }
-        &.inputZasob{
-            width: 25px;
-            float: right;
-        }
-        &.inputZasob2{
-            width: 25px;
-            float: left;
-        }
-        &.prawo{
-            text-align: right;
-        }
-        &.lewo{
-            text-align: left;
-        }
+
+    &.prawo {
+      text-align: right;
     }
-    span{
-            padding-top: 4px;
+
+    &.lewo {
+      text-align: left;
     }
-    img {
-        max-width: 100%;
-        max-height: 100%;
-    }
+  }
+
+  span {
+    padding-top: 4px;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
 }

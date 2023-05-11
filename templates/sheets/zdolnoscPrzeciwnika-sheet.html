@@ -1,16 +1,36 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <div class = "ogolne-content">
-        <div style="border-right: 2px solid black; border-bottom: 2px solid black;">
-            <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="auto" width="auto" style="border: none"/>
-        </div>
-        <div class = "item centrowanie srodek nazwaPrzedmiotu" style= "border-bottom: 2px solid black;">
-            <input class = "nazwaPrzedmiotu" name="name" type="text" value="{{item.name}}"/> 
-        </div>
-        <div class="srodekKolumn">
-            <div class="srodek wiekszyFont">Opis</div>
-            <div style="padding-right: 5px; padding-left: 5px;">
-                <textarea name="data.opis" style="background: none; border: none; height: 75px; width: 285px;">{{data.opis}}</textarea>
-            </div>
-        </div>
+  <div class="ogolne-content">
+    <div style="border-right: 2px solid black; border-bottom: 2px solid black">
+      <img
+        src="{{item.img}}"
+        data-edit="img"
+        title="{{item.name}}"
+        height="auto"
+        width="auto"
+        style="border: none"
+      />
     </div>
+    <div
+      class="item centrowanie srodek nazwa-przedmiotu"
+      style="border-bottom: 2px solid black"
+    >
+      <input
+        class="nazwa-przedmiotu"
+        name="name"
+        type="text"
+        value="{{item.name}}"
+      />
+    </div>
+    <div class="srodek-kolumn">
+      <div class="srodek wiekszy-font">Opis</div>
+      <div style="padding-right: 5px; padding-left: 5px">
+        <textarea
+          name="data.opis"
+          style="background: none; border: none; height: 75px; width: 285px"
+        >
+{{data.opis}}</textarea
+        >
+      </div>
+    </div>
+  </div>
 </form>

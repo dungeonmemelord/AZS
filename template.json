@@ -1,129 +1,127 @@
 {
-    "Actor":{
-        "types":["postac", "przeciwnik", "torbaNaLup"],
-        "postac":{
-            "initD": "1",
-            "pochodzenie":"",
-            "rasa":"",
-            "poziom":"1",
-            "pd":"0",
-            "sloty":"4",
+  "Actor": {
+    "types": ["postac", "przeciwnik", "torbaNaLup"],
+    "postac": {
+      "initD": "1",
+      "pochodzenie": "",
+      "rasa": "",
+      "poziom": "1",
+      "pd": "0",
+      "sloty": "4",
 
-            "sprawnosc":"1",
-            "sila":"1",
-            "szybkosc":"1",
-            "magia":"1",
-            "ruch":"4",
-            "zycie":{
-                "value":"1",
-                "max":"1"
-            },
-            "mana":{
-                "value":"1",
-                "max":"1"
-            },
-            "pp":{
-                "value":"1",
-                "max":"1"
-            },
-            "zapasy":{
-                "zapas1": "true",
-                "zapas2": "true",
-                "zapas3": "true",
-                "zapas4": "true",
-                "zapas5": "true",
-                "zapas6": "true"
-            },
-            "narzedzia":{
-                "narzedzie1":"true",
-                "narzedzie2":"true",
-                "narzedzie3":"true"
-            },
-            "komponenty":{
-                "komponent1":"true",
-                "komponent2":"true",
-                "komponent3":"true"
-            },
-            "pochodnia":{
-                "value":"4",
-                "max":"4"
-            },
-            "amunicja":{
-                "value":"6",
-                "max":"6"
-            },
-            "rana": false,
-            "zloto": "0",
+      "sprawnosc": "1",
+      "sila": "1",
+      "szybkosc": "1",
+      "magia": "1",
+      "ruch": "4",
+      "zycie": {
+        "value": "1",
+        "max": "1"
+      },
+      "mana": {
+        "value": "1",
+        "max": "1"
+      },
+      "pp": {
+        "value": "1",
+        "max": "1"
+      },
+      "zapasy": {
+        "zapas1": "true",
+        "zapas2": "true",
+        "zapas3": "true",
+        "zapas4": "true",
+        "zapas5": "true",
+        "zapas6": "true"
+      },
+      "narzedzia": {
+        "narzedzie1": "true",
+        "narzedzie2": "true",
+        "narzedzie3": "true"
+      },
+      "komponenty": {
+        "komponent1": "true",
+        "komponent2": "true",
+        "komponent3": "true"
+      },
+      "pochodnia": {
+        "value": "4",
+        "max": "4"
+      },
+      "amunicja": {
+        "value": "6",
+        "max": "6"
+      },
+      "rana": false,
+      "zloto": "0",
 
-            "opis": "blablabla"
-       },
-       "przeciwnik":{
-            "zycie":{
-                "value":"1",
-                "max":"1"
-            },
-            "initD": "0",
-            "pp":{
-                "value":"1",
-                "max":"1"
-            },
-            "szybkosc": "1",
-            "st": "10",
-            "exp":"0"
-       },
-       "torbaNaLup":{
-        
-       }     
+      "opis": "blablabla"
     },
-    "Item":{
-        "types":[
-            "bron",
-            "zbroja",
-            "tom",
-            "ogolne",
-            "bieglosc",
-            "koscSkarbu",
-            "zdolnoscPrzeciwnika"
-        ],
-        "templates":{
-            "podstawoweInformacje":{
-                "opis": "Opis przedmiotu",
-                "sloty": 0
-            }
-        },
-        "bron":{
-            "templates": ["podstawoweInformacje"],
-            "bieglosc": "szermierka",
-            "atak":0,
-            "obrona":0,
-            "specjalne1":"",
-            "specjalne2":"",
-            "specjalne3":"",
-            "specjalne4":""
-        },
-        "tom":{
-            "templates":["podstawoweInformacje"],
-            "czar": "telekineza"
-        },
-        "zbroja":{
-            "templates":["podstawoweInformacje"],
-            "pp":0,
-            "ppmax":0,
-            "sloty":1
-        },
-        "zdolnoscPrzeciwnika":{
-            "templates":["podstawoweInformacje"]
-        },
-        "ogolne":{
-            "templates":["podstawoweInformacje"]
-        },
-        "bieglosc":{
-            "templates":["podstawoweInformacje"],
-            "typBieglosci":"umiejetnosc"
-        },
-        "koscSkarbu":{
-            "templates":["podstawoweInformacje"],
-            "formula":"d6"
-        }
+    "przeciwnik": {
+      "zycie": {
+        "value": "1",
+        "max": "1"
+      },
+      "initD": "0",
+      "pp": {
+        "value": "1",
+        "max": "1"
+      },
+      "szybkosc": "1",
+      "st": "10",
+      "exp": "0"
+    },
+    "torbaNaLup": {}
+  },
+  "Item": {
+    "types": [
+      "bron",
+      "zbroja",
+      "tom",
+      "ogolne",
+      "bieglosc",
+      "koscSkarbu",
+      "zdolnoscPrzeciwnika"
+    ],
+    "templates": {
+      "podstawoweInformacje": {
+        "opis": "Opis przedmiotu",
+        "sloty": 0
+      }
+    },
+    "bron": {
+      "templates": ["podstawoweInformacje"],
+      "bieglosc": "szermierka",
+      "atak": 0,
+      "obrona": 0,
+      "specjalne1": "",
+      "specjalne2": "",
+      "specjalne3": "",
+      "specjalne4": ""
+    },
+    "tom": {
+      "templates": ["podstawoweInformacje"],
+      "czar": "telekineza"
+    },
+    "zbroja": {
+      "templates": ["podstawoweInformacje"],
+      "pp": 0,
+      "ppmax": 0,
+      "sloty": 1
+    },
+    "zdolnoscPrzeciwnika": {
+      "templates": ["podstawoweInformacje"]
+    },
+    "ogolne": {
+      "templates": ["podstawoweInformacje"]
+    },
+    "bieglosc": {
+      "templates": ["podstawoweInformacje"],
+      "typBieglosci": "umiejetnosc"
+    },
+    "koscSkarbu": {
+      "templates": ["podstawoweInformacje"],
+      "formula": "d6"
     }
+  }
 }

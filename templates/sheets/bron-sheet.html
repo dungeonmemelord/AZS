@@ -1,71 +1,109 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <div class = "bron-content">
-        <div class = "bron-image">
-            <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="auto" width="auto" style="border: none"/>
-        </div>
-        <div class = "item bron-nazwa centrowanie srodek nazwaPrzedmiotu">
-            <input class = "nazwaPrzedmiotu" name="name" type="text" value="{{item.name}}"/> 
-        </div>
-        <div class = "bron-staty">
-            <div class="srodek wiekszyFont">Atak</div>
-            <div class="srodek wiekszyFont">Obrona</div>
-            <div class="srodek wiekszyFont">Typ</div>
-            <div class="srodek item wiekszyFont"><input name="system.atak" type="text" value="{{item.system.atak}}" data-dtype="Number" maxlength="1" size="1"/></div>
-            <div class="srodek item wiekszyFont"><input name="system.obrona" type="text" value="{{item.system.obrona}}" data-dtype="Number" maxlength="1" size="1" /></div>
-            <div class="srodek item">
-                <select name="system.bieglosc" style="width: auto; background: none; border: none; text-align: center;">
-                    {{#select item.system.bieglosc}}
-                    {{#each config.bieglosc as |name type|}}
-                    <option value="{{type}}">{{localize name}}</option>
-                    {{/each}}
-                    {{/select}}
-                </select>
-            </div>
-        </div>
-        <div class = "bron-wlasciwosci">
-            <div class="srodek wiekszyFont srodekKolumn">Cechy</div>
-            <div>
-                <select class="itemSelect" name="system.specjalne1">
-                    {{#select item.system.specjalne1}}
-                    {{#each config.bronSpecjalne as |name type|}}
-                    <option value="{{type}}">{{localize name}}</option>
-                    {{/each}}
-                    {{/select}}
-                </select>
-            </div>
-            <div>
-                <select class="itemSelect" name="system.specjalne2">
-                    {{#select item.system.specjalne2}}
-                    {{#each config.bronSpecjalne as |name type|}}
-                    <option value="{{type}}">{{localize name}}</option>
-                    {{/each}}
-                    {{/select}}
-                </select>
-            </div>
-            <div>
-                <select class="itemSelect" name="system.specjalne3">
-                    {{#select item.system.specjalne3}}
-                    {{#each config.bronSpecjalne as |name type|}}
-                    <option value="{{type}}">{{localize name}}</option>
-                    {{/each}}
-                    {{/select}}
-                </select>
-            </div>
-            <div>
-                <select class="itemSelect" name="system.specjalne4">
-                    {{#select item.system.specjalne4}}
-                    {{#each config.bronSpecjalne as |name type|}}
-                    <option value="{{type}}">{{localize name}}</option>
-                    {{/each}}
-                    {{/select}}
-                </select>
-            </div>             
-        </div>
-        <div class = "bron-opis ">
-            <div class="srodek wiekszyFont">Opis</div>
-            <div style="padding-right: 5px; padding-left: 5px;">
-                <textarea name="system.opis" style="background: none; border: none; height: 75px; width: 285px;">{{item.system.opis}}</textarea>
-            </div>
-        </div>
+  <div class="bron-content">
+    <div class="bron-image">
+      <img
+        src="{{item.img}}"
+        data-edit="img"
+        title="{{item.name}}"
+        height="auto"
+        width="auto"
+        style="border: none"
+      />
     </div>
+    <div class="item bron-nazwa centrowanie srodek nazwa-przedmiotu">
+      <input
+        class="nazwa-przedmiotu"
+        name="name"
+        type="text"
+        value="{{item.name}}"
+      />
+    </div>
+    <div class="bron-staty">
+      <div class="srodek wiekszy-font">Atak</div>
+      <div class="srodek wiekszy-font">Obrona</div>
+      <div class="srodek wiekszy-font">Typ</div>
+      <div class="srodek item wiekszy-font">
+        <input
+          name="system.atak"
+          type="text"
+          value="{{item.system.atak}}"
+          data-dtype="Number"
+          maxlength="1"
+          size="1"
+        />
+      </div>
+      <div class="srodek item wiekszy-font">
+        <input
+          name="system.obrona"
+          type="text"
+          value="{{item.system.obrona}}"
+          data-dtype="Number"
+          maxlength="1"
+          size="1"
+        />
+      </div>
+      <div class="srodek item">
+        <select
+          name="system.bieglosc"
+          style="
+            width: auto;
+            background: none;
+            border: none;
+            text-align: center;
+          "
+        >
+          {{#select item.system.bieglosc}} {{#each config.bieglosc as |name
+          type|}}
+          <option value="{{type}}">{{localize name}}</option>
+          {{/each}} {{/select}}
+        </select>
+      </div>
+    </div>
+    <div class="bron-wlasciwosci">
+      <div class="srodek wiekszy-font srodek-kolumn">Cechy</div>
+      <div>
+        <select class="item-select" name="system.specjalne1">
+          {{#select item.system.specjalne1}} {{#each config.bronSpecjalne as
+          |name type|}}
+          <option value="{{type}}">{{localize name}}</option>
+          {{/each}} {{/select}}
+        </select>
+      </div>
+      <div>
+        <select class="item-select" name="system.specjalne2">
+          {{#select item.system.specjalne2}} {{#each config.bronSpecjalne as
+          |name type|}}
+          <option value="{{type}}">{{localize name}}</option>
+          {{/each}} {{/select}}
+        </select>
+      </div>
+      <div>
+        <select class="item-select" name="system.specjalne3">
+          {{#select item.system.specjalne3}} {{#each config.bronSpecjalne as
+          |name type|}}
+          <option value="{{type}}">{{localize name}}</option>
+          {{/each}} {{/select}}
+        </select>
+      </div>
+      <div>
+        <select class="item-select" name="system.specjalne4">
+          {{#select item.system.specjalne4}} {{#each config.bronSpecjalne as
+          |name type|}}
+          <option value="{{type}}">{{localize name}}</option>
+          {{/each}} {{/select}}
+        </select>
+      </div>
+    </div>
+    <div class="bron-opis">
+      <div class="srodek wiekszy-font">Opis</div>
+      <div style="padding-right: 5px; padding-left: 5px">
+        <textarea
+          name="system.opis"
+          style="background: none; border: none; height: 75px; width: 285px"
+        >
+{{item.system.opis}}</textarea
+        >
+      </div>
+    </div>
+  </div>
 </form>

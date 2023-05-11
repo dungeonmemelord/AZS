@@ -1,7 +1,25 @@
 {
+  "scripts": {
+    "lint": "npm run lint:code && npm run lint:styles && npm run format",
+    "lint:code": "npx eslint module --fix",
+    "lint:styles": "npx stylelint \"**/*.less\" --fix",
+    "format": "npx prettier --write ."
+  },
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-less": "^5.0.0",
     "gulp-sass": "^5.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "prettier": "2.8.8",
+    "stylelint": "^15.6.1",
+    "stylelint-config-standard": "^33.0.0",
+    "stylelint-less": "^1.0.6"
   }
 }

@@ -1,24 +1,79 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <div class = "zbroja-content">
-        <div style="border-right: 2px solid black; border-bottom: 2px solid black;">
-            <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="auto" width="auto" style="border: none"/>
-        </div>
-        <div class = "item centrowanie srodek nazwaPrzedmiotu" style= "border-bottom: 2px solid black;">
-            <input class = "nazwaPrzedmiotu" name="name" type="text" value="{{item.name}}"/> 
-        </div>
-        <div class="srodekKolumn centrowanie" style= "border-bottom: 2px solid black; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr;">
-            <div class="srodek wiekszyFont">PP</div>
-            <div class="srodek wiekszyFont">PP max</div>
-            <div class="srodek wiekszyFont">sloty</div>
-            <div class="srodek item wiekszyFont"><input name="data.pp" type="text" value="{{data.pp}}" data-dtype="Number" maxlength="1" size="1"/></div>
-            <div class="srodek item wiekszyFont"><input name="data.ppmax" type="text" value="{{data.ppmax}}" data-dtype="Number" maxlength="1" size="1" /></div>
-            <div class="srodek item wiekszyFont"><input name="data.sloty" type="text" value="{{data.sloty}}" data-dtype="Number" maxlength="1" size="1" /></div>    
-        </div>
-        <div class="srodekKolumn">
-            <div class="srodek wiekszyFont">Opis</div>
-            <div style="padding-right: 5px; padding-left: 5px;">
-                <textarea name="data.opis" style="background: none; border: none; height: 75px; width: 285px;">{{data.opis}}</textarea>
-            </div>
-        </div>
+  <div class="zbroja-content">
+    <div style="border-right: 2px solid black; border-bottom: 2px solid black">
+      <img
+        src="{{item.img}}"
+        data-edit="img"
+        title="{{item.name}}"
+        height="auto"
+        width="auto"
+        style="border: none"
+      />
     </div>
+    <div
+      class="item centrowanie srodek nazwa-przedmiotu"
+      style="border-bottom: 2px solid black"
+    >
+      <input
+        class="nazwa-przedmiotu"
+        name="name"
+        type="text"
+        value="{{item.name}}"
+      />
+    </div>
+    <div
+      class="srodek-kolumn centrowanie"
+      style="
+        border-bottom: 2px solid black;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+      "
+    >
+      <div class="srodek wiekszy-font">PP</div>
+      <div class="srodek wiekszy-font">PP max</div>
+      <div class="srodek wiekszy-font">sloty</div>
+      <div class="srodek item wiekszy-font">
+        <input
+          name="data.pp"
+          type="text"
+          value="{{data.pp}}"
+          data-dtype="Number"
+          maxlength="1"
+          size="1"
+        />
+      </div>
+      <div class="srodek item wiekszy-font">
+        <input
+          name="data.ppmax"
+          type="text"
+          value="{{data.ppmax}}"
+          data-dtype="Number"
+          maxlength="1"
+          size="1"
+        />
+      </div>
+      <div class="srodek item wiekszy-font">
+        <input
+          name="data.sloty"
+          type="text"
+          value="{{data.sloty}}"
+          data-dtype="Number"
+          maxlength="1"
+          size="1"
+        />
+      </div>
+    </div>
+    <div class="srodek-kolumn">
+      <div class="srodek wiekszy-font">Opis</div>
+      <div style="padding-right: 5px; padding-left: 5px">
+        <textarea
+          name="data.opis"
+          style="background: none; border: none; height: 75px; width: 285px"
+        >
+{{data.opis}}</textarea
+        >
+      </div>
+    </div>
+  </div>
 </form>
