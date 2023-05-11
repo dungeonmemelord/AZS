@@ -1,6 +1,7 @@
 {
   "scripts": {
     "lint": "npx eslint module --fix",
+    "lint:styles": "npx stylelint \"**/*.less\" --fix",
     "format": "npx prettier --write ."
   },
   "dependencies": {
@@ -15,6 +16,9 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^15.7.0",
     "eslint-plugin-promise": "^6.1.1",
-    "prettier": "2.8.8"
+    "prettier": "2.8.8",
+    "stylelint": "^15.6.1",
+    "stylelint-config-standard": "^33.0.0",
+    "stylelint-less": "^1.0.6"
   }
 }

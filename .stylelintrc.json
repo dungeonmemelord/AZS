@@ -1,0 +1,9 @@
+{
+  "plugins": ["stylelint-less"],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "color-no-invalid-hex": true,
+    "less/color-no-invalid-hex": true
+  },
+  "extends": ["stylelint-config-standard"]
+}
