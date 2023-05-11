@@ -1,6 +1,7 @@
 import { AZS } from './module/config.js';
 import AZSItemSheet from './module/sheets/AZSItemSheet.js';
 import AZSActorSheet from './module/sheets/AZSActorSheet.js';
+import zsActor from './module/zs-actor.js';
 
 async function preloadHandlebarsTemplates() {
   const templatePaths = [
@@ -19,6 +20,8 @@ Hooks.once('init', function () {
   console.log('AZS | Wczytywanie systemu Advanced Zabić smoka');
 
   CONFIG.AZS = AZS;
+  CONFIG.Actor.entityClass = zsActor;
+  CONFIG.Actor.documentClass = zsActor;
 
   Items.unregisterSheet('core', ItemSheet);
   Items.registerSheet('AZS', AZSItemSheet, { makeDefault: true });

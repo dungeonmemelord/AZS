@@ -57,52 +57,35 @@ export default class AZSActorSheet extends ActorSheet {
     const element = event.currentTarget;
     const dataset = element.dataset;
 
-    if (dataset.roll) {
-      const label = dataset.label ? `${dataset.label}` : '';
-      const roll = new Roll(dataset.roll, this.actor.getRollData());
-      roll.toMessage({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        flavor: label,
-        rollMode: game.settings.get('core', 'rollMode'),
-      });
-      return roll;
-    }
+    this.actor.rollAbility(this.actor, dataset);
   }
 
   _onBiegloscRoll(event) {
     event.preventDefault();
+    const info = this.getData();
     const element = event.currentTarget;
     const dataset = element.dataset;
+    const poziom = info.data.poziom;
+    const bieglosct = dataset.typ;
+    const sprawnosc = info.data.sprawnosc;
+    const sila = info.data.sila;
+    const magia = info.data.magia;
+    const szybkosc = info.data.szybkosc;
+    const biegloscn = dataset.name;
+    console.log(biegloscn, dataset);
 
-    if (dataset.roll) {
-      const label = dataset.label ? `${dataset.label}` : '';
-
-      if (dataset.typ === 'umiejetnosc') {
-        const RollData = {
-          atrybut: this.actor.system.sprawnosc,
-          poziom: this.actor.system.poziom,
-        };
-        const roll = new Roll(dataset.roll, RollData);
-        roll.toMessage({
-          speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-          flavor: label,
-          rollMode: game.settings.get('core', 'rollMode'),
-        });
-        return roll;
-      } else {
-        const RollData = {
-          atrybut: this.actor.system.magia,
-          poziom: this.actor.system.poziom,
-        };
-        const roll = new Roll(dataset.roll, RollData);
-        roll.toMessage({
-          speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-          flavor: label,
-          rollMode: game.settings.get('core', 'rollMode'),
-        });
-        return roll;
-      }
-    }
+    const opis = dataset.label;
+    this.actor.rollskill(
+      this.actor,
+      poziom,
+      bieglosct,
+      sprawnosc,
+      sila,
+      magia,
+      szybkosc,
+      opis,
+      biegloscn
+    );
   }
 
   _onSkarbRoll(event) {
