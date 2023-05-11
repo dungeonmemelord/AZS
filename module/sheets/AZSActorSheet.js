@@ -1,3 +1,4 @@
+
 export default class AZSActorSheet   extends ActorSheet {
     
     static get defaultOptions(){
@@ -40,59 +41,35 @@ export default class AZSActorSheet   extends ActorSheet {
         super.activateListeners(html);
     }
 
-    _onAtrybutRoll(event) {
-        event.preventDefault();
-        const element = event.currentTarget;
-        const dataset = element.dataset;
+   
+        _onAtrybutRoll(event) {
+            event.preventDefault();
+    const element = event.currentTarget;
+    const dataset = element.dataset;
+    
+    this.actor.rollAbility(this.actor, dataset);
 
-        if (dataset.roll) {
-            let label = dataset.label ? `${dataset.label}` : '';
-            let roll = new Roll(dataset.roll, this.actor.getRollData());
-            roll.toMessage({
-                speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-                flavor: label,
-                rollMode: game.settings.get('core', 'rollMode'),
-            });
-        return roll;
         }
-    }
+    
 
     _onBiegloscRoll(event) {
-        event.preventDefault();
+        
+              event.preventDefault();
+              let info=this.getData();
         const element = event.currentTarget;
         const dataset = element.dataset;
-
-        if (dataset.roll) {
-            let label = dataset.label ? `${dataset.label}` : '';
-
-            if (dataset.typ == "umiejetnosc"){
-                let RollData = {
-                    atrybut: this.actor.system.sprawnosc,
-                    poziom: this.actor.system.poziom
-                };
-                let roll = new Roll(dataset.roll, RollData);
-                roll.toMessage({
-                    speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-                    flavor: label,
-                    rollMode: game.settings.get('core', 'rollMode'),
-                 });
-                return roll;
-                } else {
-                    let RollData = {
-                        atrybut: this.actor.system.magia,
-                        poziom: this.actor.system.poziom
-                    };
-                    let roll = new Roll(dataset.roll, RollData);
-                    roll.toMessage({
-                        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-                        flavor: label,
-                        rollMode: game.settings.get('core', 'rollMode'),
-                     });
-                    return roll;    
+      let  poziom = info.data.poziom;
+      let bieglosct =dataset.typ;
+      let sprawnosc = info.data.sprawnosc;
+      let sila = info.data.sila;
+      let magia = info.data.magia;
+      let szybkosc = info.data.szybkosc;
+      let biegloscn =dataset.name;
+      console.log(biegloscn,dataset);
+   
+         let opis= dataset.label;          
+        this.actor.rollskill(this.actor, poziom, bieglosct, sprawnosc, sila, magia, szybkosc, opis, biegloscn);   
                 }
-            return roll;
-        }
-    }
 
     _onSkarbRoll(event) {
         event.preventDefault();
