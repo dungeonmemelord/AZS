@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: 'standard',
+  extends: ['standard', 'prettier'],
   overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
@@ -14,7 +14,7 @@ module.exports = {
     quotes: ['error', 'single', { avoidEscape: true }],
     'no-trailing-spaces': 'error',
     'object-curly-spacing': ['error', 'always'],
-    semi: 'error',
+    semi: ['error', 'always'],
     'semi-style': ['error', 'last'],
     'max-len': [
       'error',
