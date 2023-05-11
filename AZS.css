@@ -221,7 +221,7 @@ h3 {
   display: grid;
   grid-column-gap: 1px;
   grid-row-gap: 5px;
-  grid-template-columns: 1fr 1fr fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .plecak_partial {
@@ -391,9 +391,9 @@ input[type='checkbox']:checked + .czekbox2:after {
   grid-template-areas: 'torba-nazwa' 'torba-kosci';
 }
 .torba-nazwa {
+  grid-area: torba-nazwa;
   border-bottom: 2px solid black;
   text-align: center;
-  grid-area: torba-nazwa;
 }
 .torba-kosci {
   grid-area: torba-kosci;
