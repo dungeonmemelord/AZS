@@ -1,80 +1,79 @@
 {
-    "AZS": {
-        "bieglosc":{
-            "brak": "",
-            "szermierka":"szermierka",
-            "bronDrzewcowa":"broń drzewcowa",
-            "topory":"topory",
-            "mloty":"młoty",
-            "dungFu":"dung-fu",
-            "strzelectwo":"strzelectwo",
-            "sztylety":"sztylety"
-        },
-        "czar":{
-            "telekineza":"telekineza",
-            "telepatia":"telepatia",
-            "piromancja":"piromancja",
-            "polymorfia":"polymorfia",
-            "nekromancja":"nekromancja",
-            "uzdrowienie":"uzdrowienie",
-            "bariera":"bariera",
-            "elektromancja":"elektromancja",
-            "petryfikacja":"petryfikacja",
-            "iluzja":"iluzja",
-            "egzorcyzm":"egzorcyzm",
-            "ukrycie":"ukrycie",
-            "wrozba":"wróżba",
-            "teleportacja":"teleportacja",
-            "aeromancja":"aeromancja",
-            "chronomancja":"chronomancja",
-            "akwamancja":"akwamancja",
-            "druidyzm":"druidyzm",
-            "oczarowanie":"oczarowanie",
-            "przyzwanie":"przyzwanie"
-        },
-        "bron": {
-            "bieglosc":"biegłość",
-            "atak": "atak",
-            "obrona":"obrona"
-        },
-        "bronSpecjalne": {
-            "dystansowa":"dystansowa",
-            "obureczna":"obureczna",
-            "przebijajaca":"przebijająca",
-            "przeladowywana":"przeładowywana",
-            "rzucana":"rzucana",
-            "poreczna":"poręczna",
-            "magiczna":"magiczna"
-        },
-        "tom":{
-            "czar":"czar"
-        },
-        "zbroja":{
-            "pancerz":"pancerz",
-            "pp":"PP",
-            "ppmax":"PP max"
-        },
-        "ogolne":{
-        },
-        "rasa":{
-            "czlowiek":"człowiek",
-            "elf":"elf",
-            "ork":"ork",
-            "krasnolud":"krasnolud"
-        },
-        "pochodzenie":{
-            "wojownik":"wojownik",
-            "lotr":"łotr",
-            "mag":"mag",
-            "podroznik":"podróżnik"
-        },
-        "kartaPostaci":{
-            "dodajPrzedmiot":"Dodaj przedmiot",
-            "nowyPrzedmiot":"Nowy przedmiot"
-        },
-        "typBieglosci":{
-            "umiejetnosc":"umiejętność",
-            "czar":"czar"
-        }
+  "AZS": {
+    "bieglosc": {
+      "brak": "",
+      "szermierka": "szermierka",
+      "bronDrzewcowa": "broń drzewcowa",
+      "topory": "topory",
+      "mloty": "młoty",
+      "dungFu": "dung-fu",
+      "strzelectwo": "strzelectwo",
+      "sztylety": "sztylety"
+    },
+    "czar": {
+      "telekineza": "telekineza",
+      "telepatia": "telepatia",
+      "piromancja": "piromancja",
+      "polymorfia": "polymorfia",
+      "nekromancja": "nekromancja",
+      "uzdrowienie": "uzdrowienie",
+      "bariera": "bariera",
+      "elektromancja": "elektromancja",
+      "petryfikacja": "petryfikacja",
+      "iluzja": "iluzja",
+      "egzorcyzm": "egzorcyzm",
+      "ukrycie": "ukrycie",
+      "wrozba": "wróżba",
+      "teleportacja": "teleportacja",
+      "aeromancja": "aeromancja",
+      "chronomancja": "chronomancja",
+      "akwamancja": "akwamancja",
+      "druidyzm": "druidyzm",
+      "oczarowanie": "oczarowanie",
+      "przyzwanie": "przyzwanie"
+    },
+    "bron": {
+      "bieglosc": "biegłość",
+      "atak": "atak",
+      "obrona": "obrona"
+    },
+    "bronSpecjalne": {
+      "dystansowa": "dystansowa",
+      "obureczna": "obureczna",
+      "przebijajaca": "przebijająca",
+      "przeladowywana": "przeładowywana",
+      "rzucana": "rzucana",
+      "poreczna": "poręczna",
+      "magiczna": "magiczna"
+    },
+    "tom": {
+      "czar": "czar"
+    },
+    "zbroja": {
+      "pancerz": "pancerz",
+      "pp": "PP",
+      "ppmax": "PP max"
+    },
+    "ogolne": {},
+    "rasa": {
+      "czlowiek": "człowiek",
+      "elf": "elf",
+      "ork": "ork",
+      "krasnolud": "krasnolud"
+    },
+    "pochodzenie": {
+      "wojownik": "wojownik",
+      "lotr": "łotr",
+      "mag": "mag",
+      "podroznik": "podróżnik"
+    },
+    "kartaPostaci": {
+      "dodajPrzedmiot": "Dodaj przedmiot",
+      "nowyPrzedmiot": "Nowy przedmiot"
+    },
+    "typBieglosci": {
+      "umiejetnosc": "umiejętność",
+      "czar": "czar"
     }
+  }
 }

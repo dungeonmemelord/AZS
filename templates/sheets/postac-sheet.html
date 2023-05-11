@@ -1,44 +1,99 @@
 <form class="{{cssClass}}" autocomplete="off">
-        <div class="postac-siatka">
-            <div class="postac naglowek">
-                <div><h3>Imię</h3></div>
-                <div><h3>Artchetyp</h3></div>
-                <div><h3>Rasa</h3></div>
-                <div class = "srodek opis">{{actor.name}}</div>
-                <div class="srodek">
-                    <select name="system.pochodzenie" style="width: auto; background: none; border: none; text-align: center;">
-                        {{#select actor.system.pochodzenie}}
-                        {{#each config.pochodzenie as |name type|}}
-                        <option value="{{type}}">{{localize name}}</option>
-                        {{/each}}
-                        {{/select}}
-                    </select>
-                </div>
-                <div class="srodek">
-                    <select name="system.rasa" style="width: auto; background: none; border: none; text-align: center;">
-                        {{#select actor.system.rasa}}
-                        {{#each config.rasa as |name type|}}
-                        <option value="{{type}}">{{localize name}}</option>
-                        {{/each}}
-                        {{/select}}
-                    </select>
-                </div>
-            </div>
-            <div class="postac atrybuty">{{> "systems/AZS/templates/partials/atrybuty-postaci.hbs"}}</div>
-            <div class="postac bieglosci">{{> "systems/AZS/templates/partials/bieglosci-postaci.hbs"}}</div>
-            <div class="postac portret"><img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" style="border: none;"/></div> 
-            <div class="postac notatki">
-                <h3>Biografia postaci</h3>
-                <textarea name="actor.system.opis" style="background: none; border: none; height: 110px; width: 175px;">{{actor.system.opis}}</textarea>
-            </div>
-            <div class="postac poziom">
-                <div class = "opis paddingLewo">Poziom</div>
-                <div class = "atr wartosc srodek"><input class = "inputStat" name="system.poziom" type="text" value="{{actor.system.poziom}}" data-dtype="Number"  maxlength="1" size="1"/></div>
-                <div class = "opis paddingLewo">PD</div>
-                <div class="inputCyferki srodek"><input name="system.pd" type="text" value="{{actor.system.pd}}" data-dtype="Number"  maxlength="4" size="4"/></div>
-            </div>
-            <div class="postac zasoby">{{> "systems/AZS/templates/partials/zasoby-postaci.hbs"}}</div>
-            <div class="postac plecak">{{> "systems/AZS/templates/partials/plecak-postaci.hbs"}}</div>
-            <div class="postac zasoby2">{{> "systems/AZS/templates/partials/zasoby2-postaci.hbs"}}</div> 
-        </div>
+  <div class="postac-siatka">
+    <div class="postac naglowek">
+      <div><h3>Imię</h3></div>
+      <div><h3>Artchetyp</h3></div>
+      <div><h3>Rasa</h3></div>
+      <div class="srodek opis">{{actor.name}}</div>
+      <div class="srodek">
+        <select
+          name="system.pochodzenie"
+          style="
+            width: auto;
+            background: none;
+            border: none;
+            text-align: center;
+          "
+        >
+          {{#select actor.system.pochodzenie}} {{#each config.pochodzenie as
+          |name type|}}
+          <option value="{{type}}">{{localize name}}</option>
+          {{/each}} {{/select}}
+        </select>
+      </div>
+      <div class="srodek">
+        <select
+          name="system.rasa"
+          style="
+            width: auto;
+            background: none;
+            border: none;
+            text-align: center;
+          "
+        >
+          {{#select actor.system.rasa}} {{#each config.rasa as |name type|}}
+          <option value="{{type}}">{{localize name}}</option>
+          {{/each}} {{/select}}
+        </select>
+      </div>
+    </div>
+    <div class="postac atrybuty">
+      {{> "systems/AZS/templates/partials/atrybuty-postaci.hbs"}}
+    </div>
+    <div class="postac bieglosci">
+      {{> "systems/AZS/templates/partials/bieglosci-postaci.hbs"}}
+    </div>
+    <div class="postac portret">
+      <img
+        src="{{actor.img}}"
+        data-edit="img"
+        title="{{actor.name}}"
+        style="border: none"
+        alt=""
+      />
+    </div>
+    <div class="postac notatki">
+      <h3>Biografia postaci</h3>
+      <textarea
+        name="actor.system.opis"
+        style="background: none; border: none; height: 110px; width: 175px"
+      >
+{{actor.system.opis}}</textarea
+      >
+    </div>
+    <div class="postac poziom">
+      <div class="opis paddingLewo">Poziom</div>
+      <div class="atr wartosc srodek">
+        <input
+          class="inputStat"
+          name="system.poziom"
+          type="text"
+          value="{{actor.system.poziom}}"
+          data-dtype="Number"
+          maxlength="1"
+          size="1"
+        />
+      </div>
+      <div class="opis paddingLewo">PD</div>
+      <div class="inputCyferki srodek">
+        <input
+          name="system.pd"
+          type="text"
+          value="{{actor.system.pd}}"
+          data-dtype="Number"
+          maxlength="4"
+          size="4"
+        />
+      </div>
+    </div>
+    <div class="postac zasoby">
+      {{> "systems/AZS/templates/partials/zasoby-postaci.hbs"}}
+    </div>
+    <div class="postac plecak">
+      {{> "systems/AZS/templates/partials/plecak-postaci.hbs"}}
+    </div>
+    <div class="postac zasoby2">
+      {{> "systems/AZS/templates/partials/zasoby2-postaci.hbs"}}
+    </div>
+  </div>
 </form>

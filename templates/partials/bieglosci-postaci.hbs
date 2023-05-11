@@ -1,22 +1,24 @@
-<div class = "bieglosci_partial">
-    <h3>Biegłości</h3>
-    <section class = "lista-bieglosci">
-        {{#each bieglosci as |bieglosc|}}
-            <div class="item paddingLewo" data-item-id="{{id}}" >
-                
-                
-               <a class="rzut-na-bieglosc" data-atrybut="{{actor.system.sprawnosc}}"data-poziom="{{actor.system.poziom}}" data-label="{{system.opis}}" data-name="{{name}}"data-typ="{{system.typBieglosci}}">{{name}}</a> 
-                 
-                 
-              
-                
-                <a class="item-delete">
-                    <i class="fa-regular fa-xmark"></i>
-               
-                </a>
-            </div>
-        {{/each}}
+<div class='bieglosci_partial'>
+  <h3>Biegłości</h3>
+  <section class='lista-bieglosci'>
+    {{#each bieglosci as |bieglosc|}}
+      <div class='item paddingLewo' data-item-id='{{id}}'>
 
-        
-    </section>
+        <a
+          class='rzut-na-bieglosc'
+          data-atrybut='{{actor.system.sprawnosc}}'
+          data-poziom='{{actor.system.poziom}}'
+          data-label='{{system.opis}}'
+          data-name='{{name}}'
+          data-typ='{{system.typBieglosci}}'
+        >{{name}}</a>
+
+        <a class='item-delete'>
+          <i class='fa-regular fa-xmark'></i>
+
+        </a>
+      </div>
+    {{/each}}
+
+  </section>
 </div>

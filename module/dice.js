@@ -1,84 +1,82 @@
 export async function azsroll({
   actor = this,
   atrybut = 0,
-  atrybutname = "",
+  atrybutname = '',
   opis,
 } = {}) {
   if (!atrybut) {
     atrybut = 0;
   }
 
-  let text = `${atrybutname} <br>atrybut  o wartosci ${atrybut}`;
+  const text = `${atrybutname} <br>atrybut  o wartosci ${atrybut}`;
 
-  atrybut = parseInt(atrybut, 10)
+  atrybut = parseInt(atrybut, 10);
 
-  let rollTool = new Dialog({
-    title: "Rzut",
+  const rollTool = new Dialog({
+    title: 'Rzut',
     text: opis,
     buttons: {
       utrudnienie: {
-        label: "Utrudnienie",
+        label: 'Utrudnienie',
         callback: () => {
-          const sdroll = new Roll(`2d20kl`).evaluate({ async: false });
-          let droll = parseInt(daroll.result, 10);
-          let dn = droll + atrybut;
+          const sdroll = new Roll('2d20kl').evaluate({ async: false });
+          const droll = parseInt(daroll.result, 10);
+          const dn = droll + atrybut;
           if (droll == 1 || droll == 20) {
             Dialog.prompt({
-              title: "Zdobywasz PD",
+              title: 'Zdobywasz PD',
               content: `Dopisz 25PD za wyrucenie ${aroll}`,
-              label: "OK"
-            })
+              label: 'OK',
+            });
           }
-          sdroll._total = dn
+          sdroll._total = dn;
           sdroll.toMessage({
             flavor: text,
-            speaker: ChatMessage.getSpeaker({ actor })
-          })
+            speaker: ChatMessage.getSpeaker({ actor }),
+          });
         },
       },
       normal: {
-        label: "Normalny",
+        label: 'Normalny',
         callback: () => {
-          const snroll = new Roll(`1d20`).evaluate({ async: false });
-          let nroll = snroll.terms[0].results[0].result;
-          let sn = nroll + atrybut;
+          const snroll = new Roll('1d20').evaluate({ async: false });
+          const nroll = snroll.terms[0].results[0].result;
+          const sn = nroll + atrybut;
           if (nroll == 1 || nroll == 20) {
             Dialog.prompt({
-              title: "Zdobywasz PD",
+              title: 'Zdobywasz PD',
               content: `Dopisz 25PD za wyrucenie ${aroll}`,
-              label: "OK"
-            })
+              label: 'OK',
+            });
           }
-          snroll._total = sn
+          snroll._total = sn;
           snroll.toMessage({
             flavor: text,
-            speaker: ChatMessage.getSpeaker({ actor })
-          })
-
+            speaker: ChatMessage.getSpeaker({ actor }),
+          });
         },
       },
       ulatwienie: {
-        label: "Ułatwienie",
+        label: 'Ułatwienie',
         callback: () => {
-          const saroll = new Roll(`2d20kh`).evaluate({ async: false });
-          let aroll = parseInt(saroll.result, 10);
-          let sa = aroll + atrybut;
+          const saroll = new Roll('2d20kh').evaluate({ async: false });
+          const aroll = parseInt(saroll.result, 10);
+          const sa = aroll + atrybut;
           if (aroll == 1 || aroll == 20) {
             Dialog.prompt({
-              title: "Zdobywasz PD",
+              title: 'Zdobywasz PD',
               content: `Dopisz 25PD za wyrucenie ${aroll}`,
-              label: "OK"
-            })
+              label: 'OK',
+            });
           }
-          saroll._total = sa
+          saroll._total = sa;
           saroll.toMessage({
             flavor: text,
-            speaker: ChatMessage.getSpeaker({ actor })
-          })
-
+            speaker: ChatMessage.getSpeaker({ actor }),
+          });
         },
-      }
-    }
+      },
+    },
   });
 
   rollTool.render(true);
@@ -94,19 +92,21 @@ export async function szsroll({
   opis,
   biegloscn,
 } = {}) {
-  console.log( poziom,
+  console.log(
+    poziom,
     bieglosct,
     sprawnosc,
     sila,
     magia,
     szybkosc,
     opis,
-    biegloscn,)
+    biegloscn
+  );
   const abilityvalue = [sila, magia, sprawnosc, szybkosc];
 
-  const abilitySelection = ["sila", "magia", "sprawnosc", "szybkosc"];
+  const abilitySelection = ['sila', 'magia', 'sprawnosc', 'szybkosc'];
   opis = String(opis);
-  console.log(opis)
+  console.log(opis);
 
   const skillTemplate = `${opis}
       <br>
@@ -114,7 +114,9 @@ export async function szsroll({
       <option value='sprawnosc' ${abilitySelection[2]}>
         Sprawność
       </option>
-      <option ${bieglosct === 'czar' ? 'selected' : null} value='magia' ${abilitySelection[1]}>
+      <option ${bieglosct === 'czar' ? 'selected' : null} value='magia' ${
+    abilitySelection[1]
+  }>
         Magia
       </option>
       <option value='sila' ${abilitySelection[0]}>
@@ -127,90 +129,93 @@ export async function szsroll({
       <br>
       <br>
       <br>`;
-  let rollTool = new Dialog({
-    title: "Rzut",
-    resizable:true,
+  const rollTool = new Dialog({
+    title: 'Rzut',
+    resizable: true,
     content: skillTemplate,
     buttons: {
       utrudnienie: {
-        label: "Utrudnienie",
+        label: 'Utrudnienie',
         callback: () => {
-          let atrybutind = $("#pickToolsAbility option:selected").index()
-          let atrybut=abilityvalue[atrybutind];
+          const atrybutind = $('#pickToolsAbility option:selected').index();
+          const atrybut = abilityvalue[atrybutind];
           console.log({
             abilityvalue,
             poziom,
             atrybut,
-            atrybutind
+            atrybutind,
           });
-          const sdroll = new Roll(`2d20kl+${atrybut}+${poziom}`).evaluate({ async: false });
-          let droll = parseInt(sdroll.result, 10);
-          let sd = droll + atrybut + poziom;
+          const sdroll = new Roll(`2d20kl+${atrybut}+${poziom}`).evaluate({
+            async: false,
+          });
+          const droll = parseInt(sdroll.result, 10);
+          const sd = droll + atrybut + poziom;
           if (droll == 1 || droll == 20) {
             Dialog.prompt({
-              title: "Zdobywasz PD",
+              title: 'Zdobywasz PD',
               content: `Dopisz 25PD za wyrucenie ${droll}`,
-              label: "OK"
-            })
+              label: 'OK',
+            });
           }
-          let text = `Test ${biegloscn} z <br> atrybutu  o wartosci ${atrybut} i bieglosci równej ${poziom}`;
-          sdroll._total = sd
+          const text = `Test ${biegloscn} z <br> atrybutu  o wartosci ${atrybut} i bieglosci równej ${poziom}`;
+          sdroll._total = sd;
           sdroll.toMessage({
             flavor: text,
-            speaker: ChatMessage.getSpeaker({ actor })
-          })
-
+            speaker: ChatMessage.getSpeaker({ actor }),
+          });
         },
       },
       normal: {
-        label: "Normalny",
+        label: 'Normalny',
         callback: () => {
-          let atrybutind = $("#pickToolsAbility").index();
-          let atrybut=abilityvalue[atrybutind];
-          const snroll = new Roll(`1d20+${atrybut}+${poziom}`).evaluate({ async: false });
-          let nroll = parseInt(snroll.result, 10);
-          let sn = nroll + atrybut + poziom;
+          const atrybutind = $('#pickToolsAbility').index();
+          const atrybut = abilityvalue[atrybutind];
+          const snroll = new Roll(`1d20+${atrybut}+${poziom}`).evaluate({
+            async: false,
+          });
+          const nroll = parseInt(snroll.result, 10);
+          const sn = nroll + atrybut + poziom;
           if (nroll == 1 || nroll == 20) {
             Dialog.prompt({
-              title: "Zdobywasz PD",
+              title: 'Zdobywasz PD',
               content: `Dopisz 25PD za wyrucenie ${nroll}`,
-              label: "OK"
-            })
+              label: 'OK',
+            });
           }
-          let text = `Test ${biegloscn} z <br> atrybutu  o wartosci ${atrybut} i bieglosci równej ${poziom}`;
-          snroll._total = sn
+          const text = `Test ${biegloscn} z <br> atrybutu  o wartosci ${atrybut} i bieglosci równej ${poziom}`;
+          snroll._total = sn;
           snroll.toMessage({
             flavor: text,
-            speaker: ChatMessage.getSpeaker({ actor })
-          })
-
+            speaker: ChatMessage.getSpeaker({ actor }),
+          });
         },
       },
       ulatwienie: {
-        label: "Ułatwienie",
+        label: 'Ułatwienie',
         callback: () => {
-          let atrybutind = $("#pickToolsAbility").index();
-          let atrybut=abilityvalue[atrybutind];
-          const saroll = new Roll(`2d20kh+${atrybut}+${poziom}`).evaluate({ async: false });
-          let aroll = parseInt(saroll.result, 10);
-          let sa = aroll + atrybut + poziom;
+          const atrybutind = $('#pickToolsAbility').index();
+          const atrybut = abilityvalue[atrybutind];
+          const saroll = new Roll(`2d20kh+${atrybut}+${poziom}`).evaluate({
+            async: false,
+          });
+          const aroll = parseInt(saroll.result, 10);
+          const sa = aroll + atrybut + poziom;
           if (aroll == 1 || aroll == 20) {
             Dialog.prompt({
-              title: "Zdobywasz PD",
+              title: 'Zdobywasz PD',
               content: `Dopisz 25PD za wyrucenie ${aroll}`,
-              label: "OK"
-            })
+              label: 'OK',
+            });
           }
-          let text = `Test ${biegloscn} z <br> atrybutu  o wartosci ${atrybut} i bieglosci równej ${poziom}`;
-          saroll._total = sa
+          const text = `Test ${biegloscn} z <br> atrybutu  o wartosci ${atrybut} i bieglosci równej ${poziom}`;
+          saroll._total = sa;
           saroll.toMessage({
             flavor: text,
-            speaker: ChatMessage.getSpeaker({ actor })
-          })
-
+            speaker: ChatMessage.getSpeaker({ actor }),
+          });
         },
-      }
-    }
+      },
+    },
   });
 
   rollTool.render(true);

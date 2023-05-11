@@ -10,7 +10,7 @@
   grid-template-rows: 75px 50px 100px 100px;
   grid-template-columns: 75px 223px;
   border: 2px solid black;
-  grid-template-areas: "bron-image bron-nazwa" "bron-staty bron-staty" "bron-wlasciwosci bron-wlasciwosci" "bron-opis bron-opis";
+  grid-template-areas: 'bron-image bron-nazwa' 'bron-staty bron-staty' 'bron-wlasciwosci bron-wlasciwosci' 'bron-opis bron-opis';
 }
 .bron-image {
   border-bottom: 2px solid black;
@@ -81,7 +81,7 @@
   border: 2px solid black;
 }
 .ogolne-content {
-  width: 350;
+  width: 350px;
   display: grid;
   grid-template-rows: 75px 100px;
   grid-template-columns: 75px auto;
@@ -99,7 +99,7 @@
   grid-template-columns: 150px 180px 100px 250px;
   grid-template-rows: 70px 290px 150px;
   grid-gap: 5px;
-  grid-template-areas: "naglowek naglowek poziom plecak" "atrybuty bieglosci zasoby plecak" "portret notatki zasoby2 zasoby2";
+  grid-template-areas: 'naglowek naglowek poziom plecak' 'atrybuty bieglosci zasoby plecak' 'portret notatki zasoby2 zasoby2';
 }
 h3 {
   text-decoration: none;
@@ -143,7 +143,7 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-areas: "zasoby2head zasoby2head zasoby2head" "zapasyNag narzedziaNag komponentyNag" "zapasyVal1 narzedziaVal komponentyVal" "zapasyVal2 narzedziaVal komponentyVal";
+  grid-template-areas: 'zasoby2head zasoby2head zasoby2head' 'zapasyNag narzedziaNag komponentyNag' 'zapasyVal1 narzedziaVal komponentyVal' 'zapasyVal2 narzedziaVal komponentyVal';
 }
 .postac.portret {
   border: 2px solid black;
@@ -226,7 +226,7 @@ h3 {
 }
 .plecak_partial {
   display: grid;
-  grid-row-gap: 0px;
+  grid-row-gap: 0;
   grid-template-rows: 2fr 19fr 2fr;
 }
 .zasoby.label {
@@ -256,7 +256,7 @@ h3 {
   background: none;
   border: none;
 }
-.actor input[type=checkbox] {
+.actor input[type='checkbox'] {
   display: none;
 }
 .czekbox {
@@ -266,27 +266,27 @@ h3 {
   /* background: url("unchecked.png") no-repeat left center; */
   /* padding-left: 15px; */
 }
-input[type=checkbox]:checked + .czekbox {
+input[type='checkbox']:checked + .czekbox {
   position: relative;
   /* background-image: url("checked.png"); */
 }
-input[type=checkbox]:checked + .czekbox:after {
-  content: "\f00d";
+input[type='checkbox']:checked + .czekbox:after {
+  content: '\f00d';
   /* this is your text. You can also use UTF-8 character codes as I do here */
-  font-family: FontAwesome;
+  font-family: FontAwesome, serif;
   left: 4px;
   position: absolute;
   top: 4px;
   font-size: 25px;
 }
-input[type=checkbox]:checked + .czekbox2 {
+input[type='checkbox']:checked + .czekbox2 {
   position: relative;
   /* background-image: url("checked.png"); */
 }
-input[type=checkbox]:checked + .czekbox2:after {
-  content: "\f043";
+input[type='checkbox']:checked + .czekbox2:after {
+  content: '\f043';
   /* this is your text. You can also use UTF-8 character codes as I do here */
-  font-family: FontAwesome;
+  font-family: FontAwesome, serif;
   left: 2px;
   position: absolute;
   top: 10px;
@@ -321,7 +321,7 @@ input[type=checkbox]:checked + .czekbox2:after {
   grid-template-columns: 100px 280px;
   grid-template-rows: 100px 200px;
   grid-gap: 5px;
-  grid-template-areas: "portret info" "zdolnosci zdolnosci";
+  grid-template-areas: 'portret info' 'zdolnosci zdolnosci';
 }
 .przeciwnik-staty {
   display: grid;
@@ -388,7 +388,7 @@ input[type=checkbox]:checked + .czekbox2:after {
   display: grid;
   grid-template-rows: 50px auto;
   border: 2px solid black;
-  grid-template-areas: "torba-nazwa" "torba-kosci";
+  grid-template-areas: 'torba-nazwa' 'torba-kosci';
 }
 .torba-nazwa {
   border-bottom: 2px solid black;
