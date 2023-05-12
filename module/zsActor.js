@@ -3,6 +3,7 @@ export default class zsActor extends Actor {
   async rollAbility(actor, dataset) {
     const atrybut = dataset.value;
     const atrybutname = dataset.label;
+    const opis = '';
 
     azsroll({
       atrybut,

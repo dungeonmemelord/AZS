@@ -20,23 +20,24 @@ export default class AZSActorSheet extends ActorSheet {
       data: baseData.actor.system,
       config: CONFIG.AZS,
       bieglosci: baseData.actor.items.filter(function (item) {
-        return item.type == 'bieglosc';
+        return item.type === 'bieglosc';
       }),
       itemy: baseData.actor.items.filter(function (item) {
         return (
-          item.type == 'bron' ||
-          item.type == 'ogolne' ||
-          item.type == 'zbroja' ||
-          item.type == 'tom'
+          item.type === 'bron' ||
+          item.type === 'ogolne' ||
+          item.type === 'zbroja' ||
+          item.type === 'tom'
         );
       }),
       kosciSkarbu: baseData.actor.items.filter(function (item) {
-        return item.type == 'koscSkarbu';
+        return item.type === 'koscSkarbu';
       }),
       zdolnosciPrzeciwnika: baseData.actor.items.filter(function (item) {
-        return item.type == 'zdolnoscPrzeciwnika';
+        return item.type === 'zdolnoscPrzeciwnika';
       }),
     };
+
     return sheetData;
   }
 
@@ -102,6 +103,7 @@ export default class AZSActorSheet extends ActorSheet {
         flavor: label,
         rollMode: game.settings.get('core', 'rollMode'),
       });
+
       return roll, this.actor.deleteEmbeddedDocuments('Item', [itemId]);
     }
   }
