@@ -15,6 +15,7 @@ h3 {
   text-align: center;
   padding-bottom: 3px;
 }
+
 .postac {
   &.naglowek {
     border: 2px solid black;
@@ -23,6 +24,7 @@ h3 {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
+
   &.poziom {
     border: 2px solid black;
     grid-area: poziom;
@@ -30,22 +32,27 @@ h3 {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
+
   &.plecak {
     border: 2px solid black;
     grid-area: plecak;
   }
+
   &.atrybuty {
     border: 2px solid black;
     grid-area: atrybuty;
   }
+
   &.bieglosci {
     border: 2px solid black;
     grid-area: bieglosci;
   }
+
   &.zasoby {
     border: 2px solid black;
     grid-area: zasoby;
   }
+
   &.zasoby2 {
     border: 2px solid black;
     grid-area: zasoby2;
@@ -58,18 +65,22 @@ h3 {
       'zapasyVal1 narzedziaVal komponentyVal'
       'zapasyVal2 narzedziaVal komponentyVal';
   }
+
   &.portret {
     border: 2px solid black;
     grid-area: portret;
   }
+
   &.notatki {
     border: 2px solid black;
     grid-area: notatki;
   }
+
   div {
     &.odstepdol {
       padding-bottom: 10px;
     }
+
     &.item {
       padding-top: 5px;
       padding-bottom: 5px;
@@ -79,44 +90,54 @@ h3 {
   input {
     background: none;
     border: none;
+
     &.inputStat {
       font-size: 1.2em;
       margin: auto;
       width: 10px;
     }
+
     &.inputZloto {
       font-size: 1em;
       margin: auto;
       width: 50px;
     }
+
     &.inputZasob {
       width: 25px;
       float: right;
     }
+
     &.inputZasob2 {
       width: 25px;
       float: left;
     }
+
     &.prawo {
       text-align: right;
     }
+
     &.lewo {
       text-align: left;
     }
   }
+
   span {
     padding-top: 4px;
   }
+
   img {
     max-width: 100%;
     max-height: 100%;
   }
+
   textarea {
     background: none;
     border: none;
     height: 100px;
   }
 }
+
 .paddingLewo {
   padding-left: 4px;
 }
@@ -127,8 +148,7 @@ h3 {
 
 .atrybuty_partial {
   display: grid;
-  grid-column-gap: 1px;
-  grid-row-gap: 10px;
+  grid-gap: 10px 1px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -140,8 +160,7 @@ h3 {
 
 .zasoby_partial {
   display: grid;
-  grid-column-gap: 1px;
-  grid-row-gap: 5px;
+  grid-gap: 5px 1px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
@@ -151,6 +170,7 @@ h3 {
   grid-row-gap: 0;
   grid-template-rows: 2fr 19fr 2fr;
 }
+
 .zasoby {
   &.label {
     grid-column: 1/4;
@@ -159,18 +179,20 @@ h3 {
 
 .zasoby2_partial {
   display: grid;
-  grid-column-gap: 1px;
-  grid-row-gap: 10px;
+  grid-gap: 10px 1px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
 }
+
 .zasoby2 {
   &.label {
     grid-column: 1/3;
   }
+
   &.label2 {
     grid-column: 3/5;
   }
+
   &.label3 {
     grid-column: 5/7;
   }
@@ -185,23 +207,30 @@ h3 {
   background: none;
   border: none;
 }
+
 .actor {
   input[type='checkbox'] {
     display: none;
   }
 }
+
 .czekbox {
   border: black;
   display: inline-block;
   padding: 3px;
+
   /* background: url("unchecked.png") no-repeat left center; */
+
   /* padding-left: 15px; */
 }
+
 input[type='checkbox']:checked + .czekbox {
   position: relative;
+
   /* background-image: url("checked.png"); */
 }
-input[type='checkbox']:checked + .czekbox:after {
+
+input[type='checkbox']:checked + .czekbox::after {
   content: '\f00d'; /* this is your text. You can also use UTF-8 character codes as I do here */
   font-family: FontAwesome, serif;
   left: 4px;
@@ -212,9 +241,11 @@ input[type='checkbox']:checked + .czekbox:after {
 
 input[type='checkbox']:checked + .czekbox2 {
   position: relative;
+
   /* background-image: url("checked.png"); */
 }
-input[type='checkbox']:checked + .czekbox2:after {
+
+input[type='checkbox']:checked + .czekbox2::after {
   content: '\f043'; /* this is your text. You can also use UTF-8 character codes as I do here */
   font-family: FontAwesome, serif;
   left: 2px;
@@ -226,24 +257,31 @@ input[type='checkbox']:checked + .czekbox2:after {
 .zasoby2head {
   grid-area: zasoby2head;
 }
+
 .zapasyNag {
   grid-area: zapasyNag;
 }
+
 .narzedziaNag {
   grid-area: narzedziaNag;
 }
+
 .komponentyNag {
   grid-area: komponentyNag;
 }
+
 .zapasyVal1 {
   grid-area: zapasyVal1;
 }
+
 .zapasyVal2 {
   grid-area: zapasyVal2;
 }
+
 .komponentyVal {
   grid-area: komponentyVal;
 }
+
 .narzedziaVal {
   grid-area: narzedziaVal;
 }
