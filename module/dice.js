@@ -1,3 +1,9 @@
+const getDropDownSelectedItemIndex = (elementID) => {
+  const selectElement = document.getElementById(elementID);
+
+  return selectElement.selectedIndex;
+};
+
 export async function azsroll({
   actor = this,
   atrybut = 0,
@@ -22,6 +28,7 @@ export async function azsroll({
           const sdroll = new Roll('2d20kl').evaluate({ async: false });
           const droll = parseInt(sdroll.result, 10);
           const dn = droll + atrybut;
+
           if (droll === 1 || droll === 20) {
             Dialog.prompt({
               title: 'Zdobywasz PD',
@@ -29,6 +36,7 @@ export async function azsroll({
               label: 'OK',
             });
           }
+
           sdroll._total = dn;
           sdroll.toMessage({
             flavor: text,
@@ -42,6 +50,7 @@ export async function azsroll({
           const snroll = new Roll('1d20').evaluate({ async: false });
           const nroll = snroll.terms[0].results[0].result;
           const sn = nroll + atrybut;
+
           if (nroll === 1 || nroll === 20) {
             Dialog.prompt({
               title: 'Zdobywasz PD',
@@ -49,6 +58,7 @@ export async function azsroll({
               label: 'OK',
             });
           }
+
           snroll._total = sn;
           snroll.toMessage({
             flavor: text,
@@ -62,6 +72,7 @@ export async function azsroll({
           const saroll = new Roll('2d20kh').evaluate({ async: false });
           const aroll = parseInt(saroll.result, 10);
           const sa = aroll + atrybut;
+
           if (aroll === 1 || aroll === 20) {
             Dialog.prompt({
               title: 'Zdobywasz PD',
@@ -69,6 +80,7 @@ export async function azsroll({
               label: 'OK',
             });
           }
+
           saroll._total = sa;
           saroll.toMessage({
             flavor: text,
@@ -129,6 +141,7 @@ export async function szsroll({
       <br>
       <br>
       <br>`;
+
   const rollTool = new Dialog({
     title: 'Rzut',
     resizable: true,
@@ -137,7 +150,7 @@ export async function szsroll({
       utrudnienie: {
         label: 'Utrudnienie',
         callback: () => {
-          const atrybutind = $('#pickToolsAbility option:selected').index();
+          const atrybutind = getDropDownSelectedItemIndex('pickToolsAbility');
           const atrybut = abilityvalue[atrybutind];
           console.log({
             abilityvalue,
@@ -150,6 +163,7 @@ export async function szsroll({
           });
           const droll = parseInt(sdroll.result, 10);
           const sd = droll + atrybut + poziom;
+
           if (droll === 1 || droll === 20) {
             Dialog.prompt({
               title: 'Zdobywasz PD',
@@ -157,6 +171,7 @@ export async function szsroll({
               label: 'OK',
             });
           }
+
           const text = `Test ${biegloscn} z <br> atrybutu  o wartosci ${atrybut} i bieglosci równej ${poziom}`;
           sdroll._total = sd;
           sdroll.toMessage({
@@ -168,13 +183,14 @@ export async function szsroll({
       normal: {
         label: 'Normalny',
         callback: () => {
-          const atrybutind = $('#pickToolsAbility').index();
+          const atrybutind = getDropDownSelectedItemIndex('pickToolsAbility');
           const atrybut = abilityvalue[atrybutind];
           const snroll = new Roll(`1d20+${atrybut}+${poziom}`).evaluate({
             async: false,
           });
           const nroll = parseInt(snroll.result, 10);
           const sn = nroll + atrybut + poziom;
+
           if (nroll === 1 || nroll === 20) {
             Dialog.prompt({
               title: 'Zdobywasz PD',
@@ -182,6 +198,7 @@ export async function szsroll({
               label: 'OK',
             });
           }
+
           const text = `Test ${biegloscn} z <br> atrybutu  o wartosci ${atrybut} i bieglosci równej ${poziom}`;
           snroll._total = sn;
           snroll.toMessage({
@@ -193,13 +210,14 @@ export async function szsroll({
       ulatwienie: {
         label: 'Ułatwienie',
         callback: () => {
-          const atrybutind = $('#pickToolsAbility').index();
+          const atrybutind = getDropDownSelectedItemIndex('pickToolsAbility');
           const atrybut = abilityvalue[atrybutind];
           const saroll = new Roll(`2d20kh+${atrybut}+${poziom}`).evaluate({
             async: false,
           });
           const aroll = parseInt(saroll.result, 10);
           const sa = aroll + atrybut + poziom;
+
           if (aroll === 1 || aroll === 20) {
             Dialog.prompt({
               title: 'Zdobywasz PD',
@@ -207,6 +225,7 @@ export async function szsroll({
               label: 'OK',
             });
           }
+
           const text = `Test ${biegloscn} z <br> atrybutu  o wartosci ${atrybut} i bieglosci równej ${poziom}`;
           saroll._total = sa;
           saroll.toMessage({
