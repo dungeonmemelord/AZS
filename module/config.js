@@ -11,7 +11,7 @@ AZS.bieglosc = {
   sztylety: 'AZS.bieglosc.sztylety',
 };
 
-(AZS.czar = {
+AZS.czar = {
   telekineza: 'AZS.czar.telekineza',
   telepatia: 'AZS.czar.telepatia',
   pirmoancja: 'AZS.czar.piromancja',
@@ -32,19 +32,21 @@ AZS.bieglosc = {
   druidyzm: 'AZS.czar.druidyzm',
   oczarowanie: 'AZS.czar.oczarowanie',
   przyzwanie: 'AZS.czar.przyzwanie',
-}),
-  (AZS.rasa = {
-    czlowiek: 'AZS.rasa.czlowiek',
-    elf: 'AZS.rasa.elf',
-    ork: 'AZS.rasa.ork',
-    krasnolud: 'AZS.rasa.krasnolud',
-  }),
-  (AZS.pochodzenie = {
-    wojownik: 'AZS.pochodzenie.wojownik',
-    lotr: 'AZS.pochodzenie.lotr',
-    mag: 'AZS.pochodzenie.mag',
-    podroznik: 'AZS.pochodzenie.podroznik',
-  });
+};
+
+AZS.rasa = {
+  czlowiek: 'AZS.rasa.czlowiek',
+  elf: 'AZS.rasa.elf',
+  ork: 'AZS.rasa.ork',
+  krasnolud: 'AZS.rasa.krasnolud',
+};
+
+AZS.pochodzenie = {
+  wojownik: 'AZS.pochodzenie.wojownik',
+  lotr: 'AZS.pochodzenie.lotr',
+  mag: 'AZS.pochodzenie.mag',
+  podroznik: 'AZS.pochodzenie.podroznik',
+};
 
 AZS.bronSpecjalne = {
   brak: '',
