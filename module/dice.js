@@ -135,6 +135,10 @@ export async function szsroll({
       <br>
       <br>
       <br>`;
+
+  const getAttributeIndex = () =>
+    $('#pickToolsAbility option:selected').index();
+
   const rollTool = new Dialog({
     title: 'Rzut',
     resizable: true,
@@ -143,7 +147,7 @@ export async function szsroll({
       utrudnienie: {
         label: 'Utrudnienie',
         callback: () => {
-          const atrybutind = $('#pickToolsAbility option:selected').index();
+          const atrybutind = getAttributeIndex();
           const atrybut = abilityvalue[atrybutind];
           console.log({
             abilityvalue,
@@ -176,7 +180,7 @@ export async function szsroll({
       normal: {
         label: 'Normalny',
         callback: () => {
-          const atrybutind = $('#pickToolsAbility').index();
+          const atrybutind = getAttributeIndex();
           const atrybut = abilityvalue[atrybutind];
           const snroll = new Roll(`1d20+${atrybut}+${poziom}`).evaluate({
             async: false,
@@ -203,7 +207,7 @@ export async function szsroll({
       ulatwienie: {
         label: 'Ułatwienie',
         callback: () => {
-          const atrybutind = $('#pickToolsAbility').index();
+          const atrybutind = getAttributeIndex();
           const atrybut = abilityvalue[atrybutind];
           const saroll = new Roll(`2d20kh+${atrybut}+${poziom}`).evaluate({
             async: false,
