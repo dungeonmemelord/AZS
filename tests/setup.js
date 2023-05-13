@@ -1,3 +1,4 @@
-import ActorSheet from './mocks/actor-sheet.js';
+import { ActorSheet, mergeObject } from './mocks';
 
 global.ActorSheet = ActorSheet;
+global.mergeObject = mergeObject;
