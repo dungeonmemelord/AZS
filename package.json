@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "test": "npx jest --watch",
     "lint": "npm run lint:code && npm run lint:styles && npm run format",
     "lint:code": "npx eslint module --fix",
     "lint:styles": "npx stylelint \"**/*.less\" --fix",
