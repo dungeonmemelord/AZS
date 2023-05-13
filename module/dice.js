@@ -4,6 +4,16 @@ const getDropDownSelectedItemIndex = (elementID) => {
   return selectElement.selectedIndex;
 };
 
+const getExtraXP = (roll) => {
+  if (roll === 1 || roll === 20) {
+    Dialog.prompt({
+      title: 'Zdobywasz PD',
+      content: `Dopisz 25PD za wyrzucenie ${roll}`,
+      label: 'OK',
+    });
+  }
+};
+
 export async function azsroll({
   actor = this,
   atrybut = 0,
@@ -29,14 +39,7 @@ export async function azsroll({
           const droll = parseInt(sdroll.result, 10);
           const dn = droll + atrybut;
 
-          if (droll === 1 || droll === 20) {
-            Dialog.prompt({
-              title: 'Zdobywasz PD',
-              content: `Dopisz 25PD za wyrucenie ${droll}`,
-              label: 'OK',
-            });
-          }
-
+          getExtraXP(droll);
           sdroll._total = dn;
           sdroll.toMessage({
             flavor: text,
@@ -51,14 +54,7 @@ export async function azsroll({
           const nroll = snroll.terms[0].results[0].result;
           const sn = nroll + atrybut;
 
-          if (nroll === 1 || nroll === 20) {
-            Dialog.prompt({
-              title: 'Zdobywasz PD',
-              content: `Dopisz 25PD za wyrucenie ${nroll}`,
-              label: 'OK',
-            });
-          }
-
+          getExtraXP(nroll);
           snroll._total = sn;
           snroll.toMessage({
             flavor: text,
@@ -73,14 +69,7 @@ export async function azsroll({
           const aroll = parseInt(saroll.result, 10);
           const sa = aroll + atrybut;
 
-          if (aroll === 1 || aroll === 20) {
-            Dialog.prompt({
-              title: 'Zdobywasz PD',
-              content: `Dopisz 25PD za wyrucenie ${aroll}`,
-              label: 'OK',
-            });
-          }
-
+          getExtraXP(aroll);
           saroll._total = sa;
           saroll.toMessage({
             flavor: text,
@@ -164,14 +153,7 @@ export async function szsroll({
           const droll = parseInt(sdroll.result, 10);
           const sd = droll + atrybut + poziom;
 
-          if (droll === 1 || droll === 20) {
-            Dialog.prompt({
-              title: 'Zdobywasz PD',
-              content: `Dopisz 25PD za wyrucenie ${droll}`,
-              label: 'OK',
-            });
-          }
-
+          getExtraXP(droll);
           const text = `Test ${biegloscn} z <br> atrybutu  o wartosci ${atrybut} i bieglosci równej ${poziom}`;
           sdroll._total = sd;
           sdroll.toMessage({
@@ -191,14 +173,7 @@ export async function szsroll({
           const nroll = parseInt(snroll.result, 10);
           const sn = nroll + atrybut + poziom;
 
-          if (nroll === 1 || nroll === 20) {
-            Dialog.prompt({
-              title: 'Zdobywasz PD',
-              content: `Dopisz 25PD za wyrucenie ${nroll}`,
-              label: 'OK',
-            });
-          }
-
+          getExtraXP(nroll);
           const text = `Test ${biegloscn} z <br> atrybutu  o wartosci ${atrybut} i bieglosci równej ${poziom}`;
           snroll._total = sn;
           snroll.toMessage({
@@ -218,14 +193,7 @@ export async function szsroll({
           const aroll = parseInt(saroll.result, 10);
           const sa = aroll + atrybut + poziom;
 
-          if (aroll === 1 || aroll === 20) {
-            Dialog.prompt({
-              title: 'Zdobywasz PD',
-              content: `Dopisz 25PD za wyrucenie ${aroll}`,
-              label: 'OK',
-            });
-          }
-
+          getExtraXP(aroll);
           const text = `Test ${biegloscn} z <br> atrybutu  o wartosci ${atrybut} i bieglosci równej ${poziom}`;
           saroll._total = sa;
           saroll.toMessage({
