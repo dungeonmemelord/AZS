@@ -1,1 +1,1 @@
-export default class ActorSheet {}
+export class ActorSheet {}
