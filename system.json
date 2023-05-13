@@ -1,9 +1,15 @@
 {
   "id": "AZS",
   "name": "AZS",
-  "minimumCoreVersion": 10,
   "title": "Zabic Smoka!",
   "description": "Zabic Smoka do FoundryVTT",
+  "minimumCoreVersion": 10,
+  "version": "1.0.9",
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10",
+    "maximum": "10"
+  },
   "authors": [
     {
       "name": "Wojciech Rosiński",
@@ -12,12 +18,6 @@
       "discord": "iliketoasts#4440"
     }
   ],
-  "version": "1.08",
-  "compatibility": {
-    "minimum": "10",
-    "verified": "10",
-    "maximum": "10"
-  },
   "esmodules": ["AZS.js"],
   "styles": ["AZS.css"],
   "background": "systems/AZS/assets/tlo.png",
@@ -102,17 +102,22 @@
   ],
   "languages": [
     {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
       "lang": "pl",
       "name": "Polski",
       "path": "lang/pl.json"
     }
   ],
   "socket": false,
+  "initiative": "(1d6)*@initD + @szybkosc",
   "gridDistance": 1,
   "gridUnits": "m",
   "primaryTokenAttribute": "zycie",
   "secondaryTokenAttribute": "mana",
-  "initiative": "(1d6)*@initD + @szybkosc",
   "manifest": "https://github.com/dungeonmemelord/AZS/raw/master/system.json",
   "download": "https://github.com/dungeonmemelord/AZS/archive/refs/tags/v1.08.zip"
 }

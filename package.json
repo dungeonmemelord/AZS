@@ -1,4 +1,6 @@
 {
+  "name": "advanced-zabic-smoka",
+  "version": "1.0.9",
   "scripts": {
     "lint": "npm run lint:code && npm run lint:styles && npm run format",
     "lint:code": "npx eslint module --fix",
