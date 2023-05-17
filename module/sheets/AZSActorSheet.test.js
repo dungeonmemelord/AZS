@@ -21,4 +21,28 @@ describe('AZSActorSheet', () => {
 
     expect(actorSheet.template).toBe(pathToTheSheet);
   });
+
+  it('gets sheet data', () => {
+    const emptyArray = [];
+    const actorType = 'pc';
+    const options = { editable: true };
+    const actor = new Actor(actorType);
+    const actorSheet = new AZSActorSheet(actor, options);
+
+    const sheetData = actorSheet.getData();
+    const expectedSheetData = {
+      actor,
+      // TODO: Why config is null?
+      config: null,
+      data: null,
+      editable: true,
+      owner: true,
+      bieglosci: emptyArray,
+      itemy: emptyArray,
+      kosciSkarbu: emptyArray,
+      zdolnosciPrzeciwnika: emptyArray,
+    };
+
+    expect(sheetData).toMatchObject(expectedSheetData);
+  });
 });
