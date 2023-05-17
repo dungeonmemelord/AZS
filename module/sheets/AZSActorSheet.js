@@ -44,6 +44,7 @@ export default class AZSActorSheet extends ActorSheet {
     };
   }
 
+  // TODO: Add https://testing-library.com/ and write test emulating clicking
   activateListeners(html) {
     html.find('.item-create').click(this._onItemCreate.bind(this));
     html.find('.item-edit').click(this._onItemEdit.bind(this));
