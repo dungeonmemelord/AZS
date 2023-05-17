@@ -1,4 +1,8 @@
 export default class AZSActorSheet extends ActorSheet {
+  constructor(actor, options) {
+    super(actor, options);
+  }
+
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ['AZS', 'sheet', 'actor'],
