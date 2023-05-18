@@ -1,8 +1,7 @@
-export class Actor {
+export class Item {
   type = '';
   isOwner = true;
   system = null;
-  items = [];
 
   constructor(type) {
     this.type = type;

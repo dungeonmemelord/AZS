@@ -1,4 +1,8 @@
 export default class AZSItemSheet extends ItemSheet {
+  constructor(item, options) {
+    super(item, options);
+  }
+
   get template() {
     return `systems/AZS/templates/sheets/${this.item.type}-sheet.html`;
   }
