@@ -1,18 +1,18 @@
 export default class AZSItemSheet extends ItemSheet {
-  constructor(item, options) {
-    super(item, options);
-  }
-
-  get template() {
-    return `systems/AZS/templates/sheets/${this.item.type}-sheet.html`;
-  }
-
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ['AZS', 'sheet', 'item'],
       width: 'auto',
       height: 'auto',
     });
+  }
+
+  get template() {
+    return `systems/AZS/templates/sheets/${this.item.type}-sheet.html`;
+  }
+
+  constructor(item, options) {
+    super(item, options);
   }
 
   getData() {
