@@ -1,5 +1,5 @@
-import AZSActorSheet from './AZSActorSheet';
 import { Actor } from '../../tests/mocks';
+import AZSActorSheet from './AZSActorSheet';
 
 describe('AZSActorSheet', () => {
   it('exists', () => {
