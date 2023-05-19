@@ -8,6 +8,18 @@ describe('AZSItemSheet', () => {
     expect(AZSItemSheet).toBeDefined();
   });
 
+  it('gets default options', () => {
+    expect(AZSItemSheet.defaultOptions).toBeDefined();
+  });
+
+  it('gets default options which is an object', () => {
+    expect(isObject(AZSItemSheet.defaultOptions)).toBeTruthy();
+  });
+
+  it('gets default options which is NOT an empty object', () => {
+    expect(AZSItemSheet.defaultOptions).not.toEqual({});
+  });
+
   it('gets a template path', () => {
     const itemType = 'weapon';
     const itemSheet = new AZSItemSheet(new Item(itemType));
@@ -26,19 +38,7 @@ describe('AZSItemSheet', () => {
     const itemType = 'weapon';
     const itemSheet = new AZSItemSheet(new Item(itemType));
 
-    expect(itemSheet.template).toContain('.html');
-  });
-
-  it('gets default options', () => {
-    expect(AZSItemSheet.defaultOptions).toBeDefined();
-  });
-
-  it('gets default options which is a object', () => {
-    expect(isObject(AZSItemSheet.defaultOptions)).toBeTruthy();
-  });
-
-  it('gets default options which is NOT an empty object', () => {
-    expect(AZSItemSheet.defaultOptions).not.toEqual({});
+    expect(itemSheet.template.endsWith('.html')).toBeTruthy();
   });
 
   it('gets data', () => {
