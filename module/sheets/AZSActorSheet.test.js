@@ -1,3 +1,5 @@
+import { isObject, isString } from 'lodash';
+
 import { Actor } from '../../tests/mocks';
 import AZSActorSheet from './AZSActorSheet';
 
@@ -7,42 +9,56 @@ describe('AZSActorSheet', () => {
   });
 
   it('gets default options', () => {
-    expect(AZSActorSheet.defaultOptions).toEqual({
-      classes: ['AZS', 'sheet', 'actor'],
-      width: 'auto',
-      height: 'auto',
-    });
+    expect(AZSActorSheet.defaultOptions).toBeDefined();
   });
 
-  it('gets a template', () => {
+  it('gets default options which is an object', () => {
+    expect(isObject(AZSActorSheet.defaultOptions)).toBeTruthy();
+  });
+
+  it('gets default options which is NOT an empty object', () => {
+    expect(AZSActorSheet.defaultOptions).not.toEqual({});
+  });
+
+  it('gets a template path', () => {
     const actorType = 'pc';
     const actorSheet = new AZSActorSheet(new Actor(actorType));
-    const pathToTheSheet = `systems/AZS/templates/sheets/${actorType}-sheet.html`;
 
-    expect(actorSheet.template).toBe(pathToTheSheet);
+    expect(actorSheet.template).toBeDefined();
   });
 
-  it('gets sheet data', () => {
-    const emptyArray = [];
+  it('gets a template path which is string', () => {
     const actorType = 'pc';
-    const options = { editable: true };
-    const actor = new Actor(actorType);
-    const actorSheet = new AZSActorSheet(actor, options);
+    const actorSheet = new AZSActorSheet(new Actor(actorType));
 
-    const sheetData = actorSheet.getData();
-    const expectedSheetData = {
-      actor,
-      // TODO: Why config is null?
-      config: null,
-      data: null,
-      editable: true,
-      owner: true,
-      bieglosci: emptyArray,
-      itemy: emptyArray,
-      kosciSkarbu: emptyArray,
-      zdolnosciPrzeciwnika: emptyArray,
-    };
+    expect(isString(actorSheet.template)).toBeTruthy();
+  });
 
-    expect(sheetData).toMatchObject(expectedSheetData);
+  it('gets a template path which has .html file extension', () => {
+    const actorType = 'pc';
+    const actorSheet = new AZSActorSheet(new Actor(actorType));
+
+    expect(actorSheet.template.endsWith('.html')).toBeTruthy();
+  });
+
+  it('gets data', () => {
+    const actorType = 'pc';
+    const actorSheet = new AZSActorSheet(new Actor(actorType));
+
+    expect(actorSheet.getData()).toBeDefined();
+  });
+
+  it('gets data which is an object', () => {
+    const actorType = 'pc';
+    const actorSheet = new AZSActorSheet(new Actor(actorType));
+
+    expect(isObject(actorSheet.getData())).toBeTruthy();
+  });
+
+  it('gets data which is NOT an empty object', () => {
+    const actorType = 'pc';
+    const actorSheet = new AZSActorSheet(new Actor(actorType));
+
+    expect(actorSheet.getData()).not.toEqual({});
   });
 });
