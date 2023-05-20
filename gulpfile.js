@@ -8,7 +8,6 @@ gulp.task('less', function (cb) {
 });
 
 gulp.task(
-  'default',
   gulp.series('less', function (cb) {
     gulp.watch('less/*.less', gulp.series('less'));
     cb();
