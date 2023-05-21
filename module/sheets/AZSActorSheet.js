@@ -11,10 +11,6 @@ export default class AZSActorSheet extends ActorSheet {
     return `systems/AZS/templates/sheets/${this.actor.type}-sheet.html`;
   }
 
-  constructor(actor, options) {
-    super(actor, options);
-  }
-
   getData() {
     const baseData = super.getData();
 

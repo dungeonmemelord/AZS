@@ -11,10 +11,6 @@ export default class AZSItemSheet extends ItemSheet {
     return `systems/AZS/templates/sheets/${this.item.type}-sheet.html`;
   }
 
-  constructor(item, options) {
-    super(item, options);
-  }
-
   getData() {
     const baseData = super.getData();
 
