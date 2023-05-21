@@ -1,6 +1,10 @@
-<h3>Atrybuty</h3>
+<h3>
+  {{localize 'AZS.pc.sheet.attributes.header'}}
+</h3>
 <div class='atrybuty-partial'>
-  <div class='padding-lewo atr zycie opis'>życie</div>
+  <div class='padding-lewo atr zycie opis'>
+    {{localize 'AZS.pc.sheet.attributes.life'}}
+  </div>
   <div class='atr zycie wartosc zasob'>
     <input
       class='input-zasob prawo'
@@ -22,7 +26,9 @@
       size='2'
     />
   </div>
-  <div class='padding-lewo atr mana opis'>mana</div>
+  <div class='padding-lewo atr mana opis'>
+    {{localize 'AZS.pc.sheet.attributes.mana'}}
+  </div>
   <div class='atr mana wartosc zasob'>
     <input
       class='input-zasob prawo'
@@ -48,7 +54,9 @@
     class='atrybut-roll opis padding-lewo'
     data-roll='d20+{{actor.system.sila}}'
     data-label='Test siły'
-  >siła</a>
+  >
+    {{localize 'AZS.pc.sheet.attributes.strength'}}
+  </a>
   <div class='atr sila wartosc srodek'>
     <input
       class='input-stat'
@@ -64,7 +72,9 @@
     class='atrybut-roll opis padding-lewo'
     data-roll='d20+{{actor.system.sprawnosc}}'
     data-label='Test sprawności'
-  >sprawność</a>
+  >
+    {{localize 'AZS.pc.sheet.attributes.dexterity'}}
+  </a>
   <div class='atr sprawnosc wartosc srodek'>
     <input
       class='input-stat'
@@ -80,7 +90,9 @@
     class='atrybut-roll opis padding-lewo'
     data-roll='d20+{{actor.system.magia}}'
     data-label='Test magii'
-  >magia</a>
+  >
+    {{localize 'AZS.pc.sheet.attributes.magic'}}
+  </a>
   <div class='atr magia wartosc srodek'>
     <input
       class='input-stat'
@@ -96,7 +108,9 @@
     class='atrybut-roll opis padding-lewo'
     data-roll='d20+{{actor.system.szybkosc}}'
     data-label='Test szybkości'
-  >szybkość</a>
+  >
+    {{localize 'AZS.pc.sheet.attributes.speed'}}
+  </a>
   <div class='atr szybkosc wartosc srodek'>
     <input
       class='input-stat'
@@ -108,7 +122,9 @@
       size='1'
     />
   </div>
-  <div class='atr ruch opis padding-lewo'>ruch</div>
+  <div class='atr ruch opis padding-lewo'>
+    {{localize 'AZS.pc.sheet.attributes.move'}}
+  </div>
   <div class='atr ruch wartosc srodek'>
     <input
       class='input-stat'

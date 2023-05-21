@@ -29,7 +29,9 @@
         grid-template-columns: 1fr 1fr;
       "
     >
-      <div class="wiekszy-font">Biegłość:</div>
+      <div class="wiekszy-font">
+        {{localize 'AZS.item.spell-book.sheet.header'}}
+      </div>
       <select class="item-select" name="system.czar">
         {{#select item.system.czar}} {{#each config.czar as |name type|}}
         <option value="{{type}}">{{localize name}}</option>
@@ -37,14 +39,17 @@
       </select>
     </div>
     <div class="srodek-kolumn">
-      <div class="srodek wiekszy-font">Opis</div>
+      <div class="srodek wiekszy-font">
+        {{localize 'AZS.item.spell-book.sheet.description.header'}}
+      </div>
       <div style="padding-right: 5px; padding-left: 5px">
         <textarea
           name="system.opis"
           style="background: none; border: none; height: 75px; width: 285px"
-        >
-{{item.system.opis}}</textarea
-        >
+        >{{>
+          "systems/AZS/templates/partials/description.hbs"
+          description='AZS.item.spell-book.sheet.description.default-content'
+        }}</textarea>
       </div>
     </div>
   </div>

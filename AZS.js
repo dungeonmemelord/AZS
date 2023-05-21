@@ -4,6 +4,7 @@ import AZSActorSheet from './module/sheets/AZSActorSheet.js';
 
 async function preloadHandlebarsTemplates() {
   const templatePaths = [
+    'systems/AZS/templates/partials/description.hbs',
     'systems/AZS/templates/partials/atrybuty-postaci.hbs',
     'systems/AZS/templates/partials/bieglosci-postaci.hbs',
     'systems/AZS/templates/partials/zasoby-postaci.hbs',
