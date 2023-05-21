@@ -1,0 +1,19 @@
+.torba-na-lupy-content {
+  width: 200px;
+  display: grid;
+  grid-template-rows: 50px auto;
+  border: 2px solid black;
+  grid-template-areas:
+    'torba-nazwa'
+    'torba-kosci';
+}
+
+.torba-nazwa {
+  border-bottom: 2px solid black;
+  text-align: center;
+  grid-area: torba-nazwa;
+}
+
+.torba-kosci {
+  grid-area: torba-kosci;
+}

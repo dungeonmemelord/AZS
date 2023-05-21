@@ -3,19 +3,16 @@
   "version": "1.0.9",
   "scripts": {
     "test": "npx jest --watch --notify",
-    "styles": "npx gulp less",
+    "styles": "npx sass src/styles/main.scss AZS.css",
+    "watch:styles": "npm run styles -- --watch",
+    "build:styles": "npm run lint:styles && npm run styles",
     "lint": "npm run lint:code && npm run lint:styles && npm run format",
     "lint:code": "npx eslint module --fix",
-    "lint:styles": "npx stylelint \"**/*.less\" --fix",
+    "lint:styles": "npx stylelint \"src/styles/**/*.scss\" --fix",
     "format": "npx prettier --write .",
     "lint:ci": "npm run lint:code:ci && npm run lint:styles:ci",
     "lint:code:ci": "npx eslint module --fix",
     "lint:styles:ci": "npx stylelint \"**/*.less\" --fix"
-  },
-  "dependencies": {
-    "gulp": "^4.0.2",
-    "gulp-less": "^5.0.0",
-    "gulp-sass": "^5.1.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.21.5",
@@ -30,8 +27,9 @@
     "lodash": "^4.17.21",
     "node-notifier": "^10.0.1",
     "prettier": "2.8.8",
+    "sass": "^1.62.1",
     "stylelint": "^15.6.1",
     "stylelint-config-standard": "^33.0.0",
-    "stylelint-less": "^1.0.6"
+    "stylelint-config-standard-scss": "^9.0.0"
   }
 }
