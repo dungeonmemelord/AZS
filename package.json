@@ -3,6 +3,7 @@
   "version": "1.0.9",
   "scripts": {
     "test": "npx jest --watch --notify",
+    "test:ci": "npx jest",
     "styles": "npx sass src/styles/main.scss AZS.css",
     "watch:styles": "npm run styles -- --watch",
     "build:styles": "npm run lint:styles && npm run styles",
