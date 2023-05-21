@@ -1,0 +1,287 @@
+.postac-siatka {
+  display: grid;
+  grid-template-columns: 150px 180px 100px 250px;
+  grid-template-rows: 70px 290px 150px;
+  grid-gap: 5px;
+  grid-template-areas:
+    'naglowek naglowek poziom plecak'
+    'atrybuty bieglosci zasoby plecak'
+    'portret notatki zasoby2 zasoby2';
+}
+
+h3 {
+  text-decoration: none;
+  border-bottom: 2px solid black;
+  text-align: center;
+  padding-bottom: 3px;
+}
+
+.postac {
+  &.naglowek {
+    border: 2px solid black;
+    grid-area: naglowek;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  &.poziom {
+    border: 2px solid black;
+    grid-area: poziom;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  &.plecak {
+    border: 2px solid black;
+    grid-area: plecak;
+  }
+
+  &.atrybuty {
+    border: 2px solid black;
+    grid-area: atrybuty;
+  }
+
+  &.bieglosci {
+    border: 2px solid black;
+    grid-area: bieglosci;
+  }
+
+  &.zasoby {
+    border: 2px solid black;
+    grid-area: zasoby;
+  }
+
+  &.zasoby2 {
+    border: 2px solid black;
+    grid-area: zasoby2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      'zasoby2head zasoby2head zasoby2head'
+      'zapasyNag narzedziaNag komponentyNag'
+      'zapasyVal1 narzedziaVal komponentyVal'
+      'zapasyVal2 narzedziaVal komponentyVal';
+  }
+
+  &.portret {
+    border: 2px solid black;
+    grid-area: portret;
+  }
+
+  &.notatki {
+    border: 2px solid black;
+    grid-area: notatki;
+  }
+
+  div {
+    &.odstepdol {
+      padding-bottom: 10px;
+    }
+
+    &.item {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+
+  input {
+    background: none;
+    border: none;
+
+    &.input-stat {
+      font-size: 1.2em;
+      margin: auto;
+      width: 10px;
+    }
+
+    &.input-zloto {
+      font-size: 1em;
+      margin: auto;
+      width: 50px;
+    }
+
+    &.input-zasob {
+      width: 25px;
+      float: right;
+    }
+
+    &.input-zasob-2 {
+      width: 25px;
+      float: left;
+    }
+
+    &.prawo {
+      text-align: right;
+    }
+
+    &.lewo {
+      text-align: left;
+    }
+  }
+
+  span {
+    padding-top: 4px;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  textarea {
+    background: none;
+    border: none;
+    height: 100px;
+  }
+}
+
+.padding-lewo {
+  padding-left: 4px;
+}
+
+.srodek {
+  text-align: center;
+}
+
+.atrybuty-partial {
+  display: grid;
+  grid-gap: 10px 1px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.zasob {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.zasoby-partial {
+  display: grid;
+  grid-gap: 5px 1px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.plecak-partial {
+  display: grid;
+  grid-row-gap: 0;
+  grid-template-rows: 2fr 19fr 2fr;
+}
+
+.zasoby {
+  &.label {
+    grid-column: 1/4;
+  }
+}
+
+.zasoby2-partial {
+  display: grid;
+  grid-gap: 10px 1px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.zasoby2 {
+  &.label {
+    grid-column: 1/3;
+  }
+
+  &.label2 {
+    grid-column: 3/5;
+  }
+
+  &.label3 {
+    grid-column: 5/7;
+  }
+}
+
+.opis {
+  font-size: 1.2em;
+  padding-top: 2.5px;
+}
+
+.zasoby-checkbox {
+  background: none;
+  border: none;
+}
+
+.actor {
+  input[type='checkbox'] {
+    display: none;
+  }
+}
+
+.checkbox {
+  border: black;
+  display: inline-block;
+  padding: 3px;
+
+  /* background: url("unchecked.png") no-repeat left center; */
+
+  /* padding-left: 15px; */
+}
+
+input[type='checkbox']:checked + .checkbox {
+  position: relative;
+
+  /* background-image: url("checked.png"); */
+}
+
+input[type='checkbox']:checked + .checkbox::after {
+  content: '\f00d'; /* this is your text. You can also use UTF-8 character codes as I do here */
+  font-family: FontAwesome, serif;
+  left: 4px;
+  position: absolute;
+  top: 4px;
+  font-size: 25px;
+}
+
+input[type='checkbox']:checked + .czekbox2 {
+  position: relative;
+
+  /* background-image: url("checked.png"); */
+}
+
+input[type='checkbox']:checked + .czekbox2::after {
+  content: '\f043'; /* this is your text. You can also use UTF-8 character codes as I do here */
+  font-family: FontAwesome, serif;
+  left: 2px;
+  position: absolute;
+  top: 10px;
+  font-size: 15px;
+}
+
+.zasoby2-head {
+  grid-area: zasoby2head;
+}
+
+.zapasy-nag {
+  grid-area: zapasyNag;
+}
+
+.narzedzia-nag {
+  grid-area: narzedziaNag;
+}
+
+.komponenty-nag {
+  grid-area: komponentyNag;
+}
+
+.zapasy-val-1 {
+  grid-area: zapasyVal1;
+}
+
+.zapasy-val-2 {
+  grid-area: zapasyVal2;
+}
+
+.komponenty-val {
+  grid-area: komponentyVal;
+}
+
+.narzedzia-val {
+  grid-area: narzedziaVal;
+}
