@@ -2,5 +2,6 @@ export default {
   transform: {
     "^.+\\.jsx?$": "babel-jest"
   },
-  setupFiles: ['./tests/setup.js']
+  setupFilesAfterEnv: ['./tests/setup.js'],
+  testEnvironment: 'jest-environment-jsdom',
 };
