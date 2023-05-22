@@ -13,7 +13,7 @@
     "format": "npx prettier --write .",
     "lint:ci": "npm run lint:code:ci && npm run lint:styles:ci",
     "lint:code:ci": "npx eslint module --fix",
-    "lint:styles:ci": "npx stylelint \"**/*.less\" --fix"
+    "lint:styles:ci": "npx stylelint \"src/styles/**/*.scss\""
   },
   "devDependencies": {
     "@babel/preset-env": "^7.21.5",
