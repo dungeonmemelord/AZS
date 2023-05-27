@@ -20,11 +20,21 @@
         {{actor.name}}
       </div>
       <div class="przeciwnik-staty">
-        <div class="opis srodek">Życie</div>
-        <div class="opis srodek">Pancerz</div>
-        <div class="opis srodek">Ruch</div>
-        <div class="opis srodek">SW</div>
-        <div class="opis srodek">EXP</div>
+        <div class="opis srodek">
+          {{localize 'AZS.npc.sheet.life'}}
+        </div>
+        <div class="opis srodek">
+          {{localize 'AZS.npc.sheet.armor'}}
+        </div>
+        <div class="opis srodek">
+          {{localize 'AZS.npc.sheet.move'}}
+        </div>
+        <div class="opis srodek">
+          {{localize 'AZS.npc.sheet.challenge-rating'}}
+        </div>
+        <div class="opis srodek">
+          {{localize 'AZS.npc.sheet.xp'}}
+        </div>
         <div class="srodek zasob-potwor-2">
           <div class="prawo">
             <input
@@ -109,11 +119,11 @@
     <div class="ramka przeciwnik zdolnosci">
       <div class="srodek" style="padding-top: 2px">
         <h3>
-          Zdolności
+          {{localize 'AZS.npc.sheet.skills.header'}}
           <a
             class="item-create"
             data-type="zdolnoscPrzeciwnika"
-            title='{{localize "AZS.kartaPostaci.dodajPrzedmiot"}}'
+            title='{{localize "AZS.pc.sheet.backpack.add.item"}}'
           >
             <i
               class="fa-regular fa-plus"

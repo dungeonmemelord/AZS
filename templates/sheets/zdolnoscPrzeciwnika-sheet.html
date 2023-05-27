@@ -22,14 +22,17 @@
       />
     </div>
     <div class="srodek-kolumn">
-      <div class="srodek wiekszy-font">Opis</div>
+      <div class="srodek wiekszy-font">
+        {{localize 'AZS.npc.sheet.skills.description.header'}}
+      </div>
       <div style="padding-right: 5px; padding-left: 5px">
         <textarea
           name="data.opis"
           style="background: none; border: none; height: 75px; width: 285px"
-        >
-{{data.opis}}</textarea
-        >
+        >{{>
+          "systems/AZS/templates/partials/description.hbs"
+          description='AZS.npc.sheet.skills.description.default-content'
+        }}</textarea>
       </div>
     </div>
   </div>

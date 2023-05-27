@@ -30,9 +30,15 @@
         grid-template-rows: 1fr 1fr;
       "
     >
-      <div class="srodek wiekszy-font">PP</div>
-      <div class="srodek wiekszy-font">PP max</div>
-      <div class="srodek wiekszy-font">sloty</div>
+      <div class="srodek wiekszy-font">
+        {{localize 'AZS.item.armor.sheet.armor-class.header'}}
+      </div>
+      <div class="srodek wiekszy-font">
+        {{localize 'AZS.item.armor.sheet.max-armor-class.header'}}
+      </div>
+      <div class="srodek wiekszy-font">
+        {{localize 'AZS.item.armor.sheet.slots.header'}}
+      </div>
       <div class="srodek item wiekszy-font">
         <input
           name="data.pp"
@@ -65,14 +71,17 @@
       </div>
     </div>
     <div class="srodek-kolumn">
-      <div class="srodek wiekszy-font">Opis</div>
+      <div class="srodek wiekszy-font">
+        {{localize 'AZS.item.armor.sheet.description.header'}}
+      </div>
       <div style="padding-right: 5px; padding-left: 5px">
         <textarea
           name="data.opis"
           style="background: none; border: none; height: 75px; width: 285px"
-        >
-{{data.opis}}</textarea
-        >
+        >{{>
+          "systems/AZS/templates/partials/description.hbs"
+          description='AZS.item.armor.sheet.description.default-content'
+        }}</textarea>
       </div>
     </div>
   </div>

@@ -19,9 +19,15 @@
       />
     </div>
     <div class="bron-staty">
-      <div class="srodek wiekszy-font">Atak</div>
-      <div class="srodek wiekszy-font">Obrona</div>
-      <div class="srodek wiekszy-font">Typ</div>
+      <div class="srodek wiekszy-font">
+        {{localize 'AZS.item.weapon.sheet.attack.header'}}
+      </div>
+      <div class="srodek wiekszy-font">
+        {{localize 'AZS.item.weapon.sheet.defense.header'}}
+      </div>
+      <div class="srodek wiekszy-font">
+        {{localize 'AZS.item.weapon.sheet.type.header'}}
+      </div>
       <div class="srodek item wiekszy-font">
         <input
           name="system.atak"
@@ -60,7 +66,9 @@
       </div>
     </div>
     <div class="bron-wlasciwosci">
-      <div class="srodek wiekszy-font srodek-kolumn">Cechy</div>
+      <div class="srodek wiekszy-font srodek-kolumn">
+        {{localize 'AZS.item.weapon.sheet.attributes.header'}}
+      </div>
       <div>
         <select class="item-select" name="system.specjalne1">
           {{#select item.system.specjalne1}} {{#each config.bronSpecjalne as
@@ -95,14 +103,17 @@
       </div>
     </div>
     <div class="bron-opis">
-      <div class="srodek wiekszy-font">Opis</div>
+      <div class="srodek wiekszy-font">
+        {{localize 'AZS.item.weapon.sheet.description.header'}}
+      </div>
       <div style="padding-right: 5px; padding-left: 5px">
         <textarea
           name="system.opis"
           style="background: none; border: none; height: 75px; width: 285px"
-        >
-{{item.system.opis}}</textarea
-        >
+        >{{>
+          "systems/AZS/templates/partials/description.hbs"
+          description='AZS.item.weapon.sheet.description.default-content'
+        }}</textarea>
       </div>
     </div>
   </div>

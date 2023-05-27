@@ -128,7 +128,7 @@ export default class AZSActorSheet extends ActorSheet {
   _onItemCreate(event) {
     event.preventDefault();
     const type = event.currentTarget.dataset.type;
-    const name = game.i18n.localize('AZS.kartaPostaci.nowyPrzedmiot');
+    const name = game.i18n.localize('AZS.pc.sheet.backpack.add.item');
 
     const itemData = {
       name,
