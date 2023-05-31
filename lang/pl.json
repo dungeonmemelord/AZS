@@ -20,7 +20,11 @@
       "dexterity": "sprawność",
       "magic": "magia",
       "speed": "szybkość",
-      "move": "ruch"
+      "move": "ruch",
+      "test.strength": "Test Siły",
+      "test.dexterity": "Test Sprawności",
+      "test.magic": "Test Magii",
+      "test.speed": "Test Szybkości"
     },
     "pc.sheet.skills": {
       "header": "Biegłości"
@@ -39,6 +43,18 @@
       "header": "Plecak",
       "add.item": "Dodaj przedmiot",
       "slots": "Sloty"
+    },
+    "pc.modal.roll": {
+      "attributes.advantage.button-label": "Ułatwienie",
+      "attributes.normal.button-label": "Normalny",
+      "attributes.disadvantage.button-label": "Utrudnienie",
+      "skills.title": "{skillName} Test",
+      "flavor.attributes": "{type} | {modifier}",
+      "flavor.skills": "{skillName}<br>Poziom Postaci ({pcLevel}) | {attributeName} ({attributeValue})",
+      "get-extra-xp.title": "Zdobywasz PD",
+      "get-extra-xp.content": "Dopisz 25PD za wyrzucenie {value} na kości",
+      "get-extra-xp.label": "OK",
+      "skills.attributes-dropdown-title": "Atrybuty"
     },
     "item.sheet": {
       "description.header": "Opis",

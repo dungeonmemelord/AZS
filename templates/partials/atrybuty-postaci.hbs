@@ -52,8 +52,9 @@
   </div>
   <a
     class='atrybut-roll opis padding-lewo'
-    data-roll='d20+{{actor.system.sila}}'
-    data-label='Test siły'
+    data-modifier='{{actor.system.sila}}'
+    data-title='{{localize "AZS.pc.sheet.attributes.test.strength"}}'
+    data-type='strength'
   >
     {{localize 'AZS.pc.sheet.attributes.strength'}}
   </a>
@@ -70,8 +71,9 @@
   </div>
   <a
     class='atrybut-roll opis padding-lewo'
-    data-roll='d20+{{actor.system.sprawnosc}}'
-    data-label='Test sprawności'
+    data-modifier='{{actor.system.sprawnosc}}'
+    data-title='{{localize "AZS.pc.sheet.attributes.test.dexterity"}}'
+    data-type='dexterity'
   >
     {{localize 'AZS.pc.sheet.attributes.dexterity'}}
   </a>
@@ -88,8 +90,9 @@
   </div>
   <a
     class='atrybut-roll opis padding-lewo'
-    data-roll='d20+{{actor.system.magia}}'
-    data-label='Test magii'
+    data-modifier='{{actor.system.magia}}'
+    data-title='{{localize "AZS.pc.sheet.attributes.test.magic"}}'
+    data-type='magic'
   >
     {{localize 'AZS.pc.sheet.attributes.magic'}}
   </a>
@@ -106,8 +109,9 @@
   </div>
   <a
     class='atrybut-roll opis padding-lewo'
-    data-roll='d20+{{actor.system.szybkosc}}'
-    data-label='Test szybkości'
+    data-modifier='{{actor.system.szybkosc}}'
+    data-title='{{localize "AZS.pc.sheet.attributes.test.speed"}}'
+    data-type='speed'
   >
     {{localize 'AZS.pc.sheet.attributes.speed'}}
   </a>

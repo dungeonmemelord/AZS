@@ -1,3 +1,5 @@
+import { isClickableElement } from '../utils/is-clickable-element.js';
+
 export default class AZSActorSheet extends ActorSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
@@ -10,6 +12,9 @@ export default class AZSActorSheet extends ActorSheet {
   get template() {
     return `systems/AZS/templates/sheets/${this.actor.type}-sheet.html`;
   }
+
+  #attributesSelector = '.atrybuty';
+  #skillsSelector = '.lista-bieglosci';
 
   getData() {
     const baseData = super.getData();
@@ -41,33 +46,17 @@ export default class AZSActorSheet extends ActorSheet {
   }
 
   // TODO: Add https://testing-library.com/ and write test emulating clicking
-  activateListeners(html) {
-    html.find('.item-create').click(this._onItemCreate.bind(this));
-    html.find('.item-edit').click(this._onItemEdit.bind(this));
-    html.find('.item-delete').click(this._onItemDelete.bind(this));
+  activateListeners($html) {
+    const html = $html.get(0);
+    this.#attachRollAttributesListener(html);
+    this.#attachRollSkillsListener(html);
 
-    html.find('.atrybut-roll').click(this._onAtrybutRoll.bind(this));
-    html.find('.rzut-na-bieglosc').click(this._onBiegloscRoll.bind(this));
-    html.find('.rzut-na-skarb').click(this._onSkarbRoll.bind(this));
+    $html.find('.item-create').click(this._onItemCreate.bind(this));
+    $html.find('.item-edit').click(this._onItemEdit.bind(this));
+    $html.find('.item-delete').click(this._onItemDelete.bind(this));
+    $html.find('.rzut-na-skarb').click(this._onSkarbRoll.bind(this));
 
-    super.activateListeners(html);
-  }
-
-  _onAtrybutRoll(event) {
-    event.preventDefault();
-    const element = event.currentTarget;
-    const dataset = element.dataset;
-
-    if (dataset.roll) {
-      const label = dataset.label ? `${dataset.label}` : '';
-      const roll = new Roll(dataset.roll, this.actor.getRollData());
-      roll.toMessage({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        flavor: label,
-        rollMode: game.settings.get('core', 'rollMode'),
-      });
-      return roll;
-    }
+    super.activateListeners($html);
   }
 
   _onBiegloscRoll(event) {
@@ -153,5 +142,33 @@ export default class AZSActorSheet extends ActorSheet {
     const itemId = element.closest('.item').dataset.itemId;
 
     return this.actor.deleteEmbeddedDocuments('Item', [itemId]);
+  }
+
+  #attachRollAttributesListener(html) {
+    const rollAttributeButton = html.querySelector(this.#attributesSelector);
+
+    rollAttributeButton?.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      if (!isClickableElement(event.target)) {
+        return;
+      }
+
+      this.actor.rollAbility(event.target.dataset);
+    });
+  }
+
+  #attachRollSkillsListener(html) {
+    const rollSkillButton = html.querySelector(this.#skillsSelector);
+
+    rollSkillButton?.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      if (!isClickableElement(event.target)) {
+        return;
+      }
+
+      this.actor.rollSkill(event.target.dataset);
+    });
   }
 }
