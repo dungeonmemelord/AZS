@@ -1,5 +1,12 @@
 {
   "rules": {
+    "selector-class-pattern": [
+      "^([a-z]+([a-z0-9]*[-_])?)+(__[a-z]+([a-z0-9]*[-_])?)*(--[a-z]+([a-z0-9]*[-_])?)*$",
+      {
+        "message": "Selector should follow BEM naming convention",
+        "severity": "warning"
+      }
+    ],
     "at-rule-no-unknown": null,
     "color-no-invalid-hex": true,
     "declaration-block-no-redundant-longhand-properties": [
