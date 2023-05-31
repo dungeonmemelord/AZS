@@ -428,6 +428,14 @@ input[type=checkbox]:checked + .czekbox2::after {
   max-height: 100%;
 }
 
+.skill-template {
+  margin-block-end: 20px;
+}
+.skill-template .skill-template__pick-tools-ability {
+  width: 100%;
+  text-transform: capitalize;
+}
+
 .torba-na-lupy-content {
   width: 200px;
   display: grid;

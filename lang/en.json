@@ -20,7 +20,11 @@
       "dexterity": "dexterity",
       "magic": "magic",
       "speed": "speed",
-      "move": "move"
+      "move": "move",
+      "test.strength": "Strength Check",
+      "test.dexterity": "Dexterity Check",
+      "test.magic": "Magic Check",
+      "test.speed": "Speed Check"
     },
     "pc.sheet.skills": {
       "header": "Skills"
@@ -39,6 +43,18 @@
       "header": "Backpack",
       "add.item": "Add Item",
       "slots": "Slots"
+    },
+    "pc.modal.roll": {
+      "attributes.advantage.button-label": "Advantage",
+      "attributes.normal.button-label": "Normal",
+      "attributes.disadvantage.button-label": "Disadvantage",
+      "skills.title": "{skillName} Test",
+      "flavor.attributes": "{type} | {modifier}",
+      "flavor.skills": "{skillName}<br>PC Level ({pcLevel}) | {attributeName} ({attributeValue})",
+      "get-extra-xp.title": "Extra XP",
+      "get-extra-xp.content": "You get 25XP for rolling {value} on dice",
+      "get-extra-xp.label": "OK",
+      "skills.attributes-dropdown-title": "Attribute"
     },
     "item.sheet": {
       "description.header": "Description",
