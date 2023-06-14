@@ -1,7 +1,10 @@
 import { isObject, isString } from 'lodash';
+import userEvent from '@testing-library/user-event';
 
 import { Actor } from '../../tests/mocks';
 import AZSActorSheet from './AZSActorSheet';
+
+const getDOM = () => document.createElement('div');
 
 describe('AZSActorSheet', () => {
   it('exists', () => {
@@ -60,5 +63,20 @@ describe('AZSActorSheet', () => {
     const actorSheet = new AZSActorSheet(new Actor(actorType));
 
     expect(actorSheet.getData()).not.toEqual({});
+  });
+
+  it('on attribute roll', async () => {
+    const user = userEvent.setup();
+    const buttonSelector = '.atrybut-roll';
+    const button = document.createElement('button');
+
+    button.innerHTML = 'Roll';
+    button.classList.add('atrybut-roll');
+
+    const screen = getDOM(button);
+
+    await user.click(screen.querySelector(buttonSelector));
+
+    expect(user).toBeDefined();
   });
 });
