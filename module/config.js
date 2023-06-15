@@ -61,11 +61,6 @@ AZS.bronSpecjalne = {
   bezsily: 'nie używa siły',
 };
 
-AZS.kartaPostaci = {
-  nowyPrzedmiot: 'AZS.kartaPostaci.nowyPrzedmiot',
-  dodajPrzedmiot: 'AZS.kartaPostaci.dodajPrzedmiot',
-};
-
 AZS.typBieglosci = {
   umiejetnosc: 'AZS.typBieglosci.umiejetnosc',
   czar: 'AZS.typBieglosci.czar',

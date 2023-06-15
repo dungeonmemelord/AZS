@@ -1,13 +1,22 @@
 <div class='bieglosci_partial'>
-  <h3>Biegłości</h3>
+  <h3>
+    {{localize 'AZS.pc.sheet.skills.header'}}
+  </h3>
   <section class='lista-bieglosci'>
     {{#each bieglosci as |bieglosc|}}
       <div class='item padding-lewo' data-item-id='{{id}}'>
         <a
           class='rzut-na-bieglosc'
-          data-roll='d20+@atrybut+@poziom'
-          data-label='{{system.opis}}'
-          data-typ='{{system.typBieglosci}}'
+          {{#if bieglosc.system.attribute}}
+            data-attribute-value='{{getProperty actor.system bieglosc.system.attribute}}'
+          {{else}}
+            data-attribute-value='{{actor.system.sprawnosc}}'
+          {{/if}}
+          data-description='{{system.opis}}'
+          data-pc-level="{{actor.system.poziom}}"
+          data-skill-name="{{name}}"
+          data-skill-type='{{system.typBieglosci}}'
+          data-modifier=''
         >{{name}}</a>
         <a class='item-delete'>
           <i class='fa-regular fa-xmark'></i>

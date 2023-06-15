@@ -2,7 +2,9 @@
   <div
     class='zasoby label opis srodek'
     style='padding-top: 10px;'
-  >Amunicja</div>
+  >
+    {{localize 'AZS.pc.sheet.resources.ammo.header'}}
+  </div>
   <div class='zasobInputDiv'><input
       class='input-zasob prawo'
       name='system.amunicja.value'
@@ -17,7 +19,9 @@
     class='lewo'
     style='padding-top: 4px;'
   >{{actor.system.amunicja.max}}</div>
-  <div class='zasoby label opis srodek'>Pancerz</div>
+  <div class='zasoby label opis srodek'>
+    {{localize 'AZS.pc.sheet.resources.armor.header'}}
+  </div>
   <div class='zasobInputDiv'><input
       class='input-zasob prawo'
       name='system.pp.value'
@@ -37,8 +41,11 @@
       maxlength='1'
       size='1'
     /></div>
-  <div class='zasoby label opis srodek'>Pochodnia</div>
-  <div class='zasobInputDiv'><input
+  <div class='zasoby label opis srodek'>
+    {{localize 'AZS.pc.sheet.resources.torch.header'}}
+  </div>
+  <div class='zasobInputDiv'>
+    <input
       class='input-zasob prawo'
       name='system.pochodnia.value'
       type='text'
@@ -46,18 +53,28 @@
       data-dtype='Number'
       maxlength='1'
       size='1'
-    /></div>
+    />
+  </div>
   <div class='srodek' style='padding-top: 4px;'>/</div>
   <div
     class='lewo'
     style='padding-top: 4px;'
-  >{{actor.system.pochodnia.max}}</div>
-  <div class='zasoby label opis srodek'>Rana</div>
-  <div class='zasoby label srodek'><label><input
+  >
+    {{actor.system.pochodnia.max}}
+  </div>
+  <div class='zasoby label opis srodek'>
+    {{localize 'AZS.pc.sheet.resources.wound.header'}}
+  </div>
+  <div class='zasoby label srodek'>
+    <label>
+      <input
         name='system.rana'
         type='checkbox'
         {{checked actor.system.rana}}
-      /><span class='czekbox2'><i
-          class='opis fa-regular fa-hand'
-        ></i></span></label></div>
+      />
+      <span class='czekbox2'>
+        <i class='opis fa-regular fa-hand'></i>
+      </span>
+    </label>
+  </div>
 </div>

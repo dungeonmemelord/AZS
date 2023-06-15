@@ -1,5 +1,103 @@
 {
   "AZS": {
+    "pc.sheet": {
+      "name": "Imię",
+      "archetype": "Artchetyp",
+      "kin": "Rasa"
+    },
+    "pc.sheet.notes": {
+      "header": "Biografia postaci"
+    },
+    "pc.sheet.level": {
+      "header": "Poziom",
+      "xp": "PD"
+    },
+    "pc.sheet.attributes": {
+      "header": "Atrybuty",
+      "life": "życie",
+      "mana": "mana",
+      "strength": "siła",
+      "dexterity": "sprawność",
+      "magic": "magia",
+      "speed": "szybkość",
+      "move": "ruch",
+      "test.strength": "Test Siły",
+      "test.dexterity": "Test Sprawności",
+      "test.magic": "Test Magii",
+      "test.speed": "Test Szybkości"
+    },
+    "pc.sheet.skills": {
+      "header": "Biegłości"
+    },
+    "pc.sheet.resources": {
+      "header": "Zasoby",
+      "ammo.header": "Amunicja",
+      "armor.header": "Pancerz",
+      "torch.header": "Pochodnia",
+      "wound.header": "Rana",
+      "supplies.header": "Zapasy",
+      "tools.header": "Narzędzia",
+      "components.header": "Komponenty"
+    },
+    "pc.sheet.backpack": {
+      "header": "Plecak",
+      "add.item": "Dodaj przedmiot",
+      "slots": "Sloty"
+    },
+    "pc.modal.roll": {
+      "attributes.advantage.button-label": "Ułatwienie",
+      "attributes.normal.button-label": "Normalny",
+      "attributes.disadvantage.button-label": "Utrudnienie",
+      "skills.title": "{skillName} Test",
+      "flavor.attributes": "{type} | {modifier}",
+      "flavor.skills": "{skillName}<br>Poziom Postaci ({pcLevel}) | {attributeName} ({attributeValue})",
+      "get-extra-xp.title": "Zdobywasz PD",
+      "get-extra-xp.content": "Dopisz 25PD za wyrzucenie {value} na kości",
+      "get-extra-xp.label": "OK",
+      "skills.attributes-dropdown-title": "Atrybuty"
+    },
+    "item.sheet": {
+      "description.header": "Opis",
+      "description.default-content": "Opis Przedmiotu"
+    },
+    "item.weapon.sheet": {
+      "attack.header": "Atak",
+      "defense.header": "Obrona",
+      "type.header": "Typ",
+      "attributes.header": "Cechy",
+      "description.header": "Opis",
+      "description.default-content": "Opis Broni"
+    },
+    "item.armor.sheet": {
+      "armor-class.header": "PP",
+      "max-armor-class.header": "PP max",
+      "slots.header": "Sloty",
+      "description.header": "Opis",
+      "description.default-content": "Opis Zbroi"
+    },
+    "item.spell-book.sheet": {
+      "header": "Czar",
+      "description.header": "Opis",
+      "description.default-content": "Opis Zaklęcia"
+    },
+    "treasure-dice.sheet": {
+      "formula.header": "Formuła rzutu"
+    },
+    "npc.sheet": {
+      "life": "Życie",
+      "armor": "Pancerz",
+      "move": "Ruch",
+      "challenge-rating": "SW",
+      "xp": "PD"
+    },
+    "npc.sheet.skills": {
+      "header": "Zdolności",
+      "description.header": "Opis",
+      "description.default-content": "Opis Zdolności"
+    },
+    "loot-bag.sheet": {
+      "header": "Kości w torbie"
+    },
     "bieglosc": {
       "brak": "",
       "szermierka": "szermierka",
@@ -66,10 +164,6 @@
       "lotr": "łotr",
       "mag": "mag",
       "podroznik": "podróżnik"
-    },
-    "kartaPostaci": {
-      "dodajPrzedmiot": "Dodaj przedmiot",
-      "nowyPrzedmiot": "Nowy przedmiot"
     },
     "typBieglosci": {
       "umiejetnosc": "umiejętność",

@@ -1,5 +1,103 @@
 {
   "AZS": {
+    "pc.sheet": {
+      "name": "Name",
+      "archetype": "Archetype",
+      "kin": "Kin"
+    },
+    "pc.sheet.notes": {
+      "header": "Biography"
+    },
+    "pc.sheet.level": {
+      "header": "Level",
+      "xp": "XP"
+    },
+    "pc.sheet.attributes": {
+      "header": "Attributes",
+      "life": "life",
+      "mana": "mana",
+      "strength": "strength",
+      "dexterity": "dexterity",
+      "magic": "magic",
+      "speed": "speed",
+      "move": "move",
+      "test.strength": "Strength Check",
+      "test.dexterity": "Dexterity Check",
+      "test.magic": "Magic Check",
+      "test.speed": "Speed Check"
+    },
+    "pc.sheet.skills": {
+      "header": "Skills"
+    },
+    "pc.sheet.resources": {
+      "header": "Resources",
+      "ammo.header": "Ammo",
+      "armor.header": "Armor",
+      "torch.header": "Torch",
+      "wound.header": "Wound",
+      "supplies.header": "Supplies",
+      "tools.header": "Tools",
+      "components.header": "Components"
+    },
+    "pc.sheet.backpack": {
+      "header": "Backpack",
+      "add.item": "Add Item",
+      "slots": "Slots"
+    },
+    "pc.modal.roll": {
+      "attributes.advantage.button-label": "Advantage",
+      "attributes.normal.button-label": "Normal",
+      "attributes.disadvantage.button-label": "Disadvantage",
+      "skills.title": "{skillName} Test",
+      "flavor.attributes": "{type} | {modifier}",
+      "flavor.skills": "{skillName}<br>PC Level ({pcLevel}) | {attributeName} ({attributeValue})",
+      "get-extra-xp.title": "Extra XP",
+      "get-extra-xp.content": "You get 25XP for rolling {value} on dice",
+      "get-extra-xp.label": "OK",
+      "skills.attributes-dropdown-title": "Attribute"
+    },
+    "item.sheet": {
+      "description.header": "Description",
+      "description.default-content": "Item Description"
+    },
+    "item.weapon.sheet": {
+      "attack.header": "Attack",
+      "defense.header": "Defense",
+      "type.header": "Type",
+      "attributes.header": "Attributes",
+      "description.header": "Description",
+      "description.default-content": "Weapon Description"
+    },
+    "item.armor.sheet": {
+      "armor-class.header": "AC",
+      "max-armor-class.header": "AC max",
+      "slots.header": "Slots",
+      "description.header": "Description",
+      "description.default-content": "Armor Description"
+    },
+    "item.spell-book.sheet": {
+      "header": "Spell",
+      "description.header": "Description",
+      "description.default-content": "Spell Description"
+    },
+    "treasure-dice.sheet": {
+      "formula.header": "Formula"
+    },
+    "npc.sheet": {
+      "life": "Life",
+      "armor": "Armor",
+      "move": "Move",
+      "challenge-rating": "CR",
+      "xp": "XP"
+    },
+    "npc.sheet.skills": {
+      "header": "Skills",
+      "description.header": "Description",
+      "description.default-content": "Skill Description"
+    },
+    "loot-bag.sheet": {
+      "header": "Dice in the bag"
+    },
     "bieglosc": {
       "brak": "",
       "szermierka": "szermierka",
@@ -47,33 +145,29 @@
       "magiczna": "magiczna"
     },
     "tom": {
-      "czar": "czar"
+      "czar": "spell"
     },
     "zbroja": {
-      "pancerz": "pancerz",
+      "pancerz": "armor",
       "pp": "PP",
       "ppmax": "PP max"
     },
     "ogolne": {},
     "rasa": {
-      "czlowiek": "człowiek",
+      "czlowiek": "human",
       "elf": "elf",
-      "ork": "ork",
-      "krasnolud": "krasnolud"
+      "ork": "orc",
+      "krasnolud": "dwarf"
     },
     "pochodzenie": {
-      "wojownik": "wojownik",
-      "lotr": "łotr",
-      "mag": "mag",
-      "podroznik": "podróżnik"
-    },
-    "kartaPostaci": {
-      "dodajPrzedmiot": "Dodaj przedmiot",
-      "nowyPrzedmiot": "Nowy przedmiot"
+      "wojownik": "warrior",
+      "lotr": "rouge",
+      "mag": "wizard",
+      "podroznik": "adventurer"
     },
     "typBieglosci": {
-      "umiejetnosc": "umiejętność",
-      "czar": "czar"
+      "umiejetnosc": "skill",
+      "czar": "spell"
     }
   }
 }
