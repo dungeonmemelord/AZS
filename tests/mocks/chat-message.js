@@ -1,3 +1,3 @@
 export const ChatMessage = {
-  getSpeaker: jest.fn(),
+  getSpeaker: jest.fn(({ actor }) => ({ actor })),
 };

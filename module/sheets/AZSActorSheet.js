@@ -150,11 +150,9 @@ export default class AZSActorSheet extends ActorSheet {
     rollAttributeButton?.addEventListener('click', (event) => {
       event.preventDefault();
 
-      if (!isClickableElement(event.target)) {
-        return;
+      if (isClickableElement(event.target)) {
+        this.actor.rollAbility(event.target.dataset);
       }
-
-      this.actor.rollAbility(event.target.dataset);
     });
   }
 
@@ -164,11 +162,9 @@ export default class AZSActorSheet extends ActorSheet {
     rollSkillButton?.addEventListener('click', (event) => {
       event.preventDefault();
 
-      if (!isClickableElement(event.target)) {
-        return;
+      if (isClickableElement(event.target)) {
+        this.actor.rollSkill(event.target.dataset);
       }
-
-      this.actor.rollSkill(event.target.dataset);
     });
   }
 }

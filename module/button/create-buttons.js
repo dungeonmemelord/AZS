@@ -1,19 +1,18 @@
 import { buttonFormula, buttonTypes } from './index.js';
 
 export const createButtons = ({
+  doRoll,
   createButtonLabel,
-  roll,
   flavor,
   actor,
   modifier,
 }) => {
+  if (!doRoll) {
+    throw new Error('doRoll is not a function');
+  }
+
   const nameToType = (name) => ({
     type: name,
-  });
-
-  const addFormula = (o) => ({
-    ...o,
-    formula: buttonFormula[o.type],
   });
 
   const addLabel = (o) => ({
@@ -21,10 +20,15 @@ export const createButtons = ({
     label: createButtonLabel(o.type),
   });
 
+  const addFormula = (o) => ({
+    ...o,
+    formula: buttonFormula[o.type],
+  });
+
   const addRoll = (o) => ({
     ...o,
     callback: () =>
-      roll({
+      doRoll({
         actor,
         flavor,
         formula: o.formula,

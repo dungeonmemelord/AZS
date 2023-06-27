@@ -5,7 +5,7 @@ import {
   createButtonLabel,
   createButtons,
 } from '../button';
-import { roll } from '../roll';
+import { doRoll } from '../do-roll';
 jest.mock('./get-extra-xp.js');
 
 const i18nPath = 'AZS.pc.modal.roll.attributes.{label}.button-label';
@@ -13,6 +13,7 @@ describe('Button', () => {
   it('should generate buttons', () => {
     const { advantage, normal, disadvantage } = createButtons({
       createButtonLabel,
+      doRoll,
     });
 
     expect(advantage).toBeDefined();
@@ -23,6 +24,7 @@ describe('Button', () => {
   it('should buttons have type', () => {
     const { advantage, normal, disadvantage } = createButtons({
       createButtonLabel,
+      doRoll,
     });
 
     expect(advantage.type).toBe(buttonTypes.advantage);
@@ -33,6 +35,7 @@ describe('Button', () => {
   it('should buttons have label', () => {
     const { advantage, normal, disadvantage } = createButtons({
       createButtonLabel,
+      doRoll,
     });
 
     expect(advantage.label).toBe(i18nPath.replace('{label}', 'advantage'));
@@ -45,6 +48,7 @@ describe('Button', () => {
   it('should button have formula', () => {
     const { advantage, normal, disadvantage } = createButtons({
       createButtonLabel,
+      doRoll,
     });
 
     expect(advantage.formula).toBe(buttonFormula.advantage);
@@ -53,20 +57,20 @@ describe('Button', () => {
   });
 
   it('should button callback called wit given parameters', () => {
-    const roll = jest.fn();
+    const doRoll = jest.fn();
     const actor = 'advantage';
     const flavor = 'flavor.advantage';
     const { advantage } = createButtons({
       createButtonLabel,
-      roll,
+      doRoll,
       flavor,
       actor,
     });
 
     advantage.callback();
 
-    expect(roll).toBeCalled();
-    expect(roll).toBeCalledWith(
+    expect(doRoll).toBeCalled();
+    expect(doRoll).toBeCalledWith(
       expect.objectContaining({
         actor: 'advantage',
         flavor: 'flavor.advantage',
@@ -80,7 +84,7 @@ describe('Button', () => {
     const flavor = () => 'flavor.advantage';
     const { advantage } = createButtons({
       createButtonLabel,
-      roll,
+      doRoll,
       flavor,
       actor,
     });
