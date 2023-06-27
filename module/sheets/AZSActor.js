@@ -1,5 +1,5 @@
 import { createButtonLabel, createButtons } from '../button/index.js';
-import { roll } from '../roll.js';
+import { doRoll } from '../do-roll.js';
 
 const attributesTypes = Object.freeze({
   pl: {
@@ -68,7 +68,7 @@ export class AZSActor extends Actor {
 
     const buttons = createButtons({
       createButtonLabel,
-      roll,
+      doRoll,
       flavor,
       actor,
       modifier,
@@ -111,7 +111,7 @@ export class AZSActor extends Actor {
 
     const buttons = createButtons({
       createButtonLabel,
-      roll,
+      doRoll,
       flavor,
       actor,
       modifier: Number(attributeValue) + Number(pcLevel),
