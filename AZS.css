@@ -292,17 +292,14 @@ h3 {
   border: black;
   display: inline-block;
   padding: 3px;
-  /* background: url("unchecked.png") no-repeat left center; */
-  /* padding-left: 15px; */
 }
 
 input[type=checkbox]:checked + .checkbox {
   position: relative;
-  /* background-image: url("checked.png"); */
 }
 
 input[type=checkbox]:checked + .checkbox::after {
-  content: "\f00d"; /* this is your text. You can also use UTF-8 character codes as I do here */
+  content: "\f00d";
   font-family: FontAwesome, serif;
   left: 4px;
   position: absolute;
@@ -312,11 +309,10 @@ input[type=checkbox]:checked + .checkbox::after {
 
 input[type=checkbox]:checked + .czekbox2 {
   position: relative;
-  /* background-image: url("checked.png"); */
 }
 
 input[type=checkbox]:checked + .czekbox2::after {
-  content: "\f043"; /* this is your text. You can also use UTF-8 character codes as I do here */
+  content: "\f043";
   font-family: FontAwesome, serif;
   left: 2px;
   position: absolute;
