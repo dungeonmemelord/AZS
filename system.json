@@ -18,9 +18,7 @@
       "discord": "iliketoasts#4440"
     }
   ],
-  "esmodules": [
-    "AZS.js"
-  ],
+  "esmodules": ["AZS.js"],
   "styles": ["AZS.css"],
   "background": "systems/AZS/assets/tlo.png",
   "packs": [
