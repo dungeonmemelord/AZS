@@ -16,6 +16,8 @@ Pamiętaj o tym, że ścieżki instalacji mogą się zmienić w przyszłości. P
 
 ## TODOs List
 
+Korzystamy w projekcie z aplikacji Trello, więc poproś o dostęp do tablicy.
+
 ## Git
 
 ## HTML
