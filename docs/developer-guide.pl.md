@@ -20,6 +20,24 @@ Korzystamy w projekcie z aplikacji Trello, więc poproś o dostęp do tablicy.
 
 ## Git
 
+W projekcie korzystamy z [GitFlow].
+
+[GitFlow] łatwo jest zainicjalizować w [GitKraken].
+
+Najwygodniej się korzysta z git używając [GitKraken]. Naprawdę świetny kompan w używaniu git'a.
+
+### ssh
+
+Warto wygenerować klucze dla ssh. Można to zrobić bezpośrednio w [GitKraken].
+
+- https://www.gitkraken.com/learn/git/tutorials/how-git-ssh-works
+
+### Podstawowe komendy dla git
+
+Zajrzyj do przewodnika z linku:
+
+- https://www.gitkraken.com/pdfs/git-basics-cheat-sheet
+
 ## HTML
 
 ### Handlebars
@@ -59,3 +77,6 @@ w internecie.
 ### RunJS
 
 ### GitKraken
+
+[GitKraken]: https://www.gitkraken.com/
+[GitFlow]: https://danielkummer.github.io/git-flow-cheatsheet/index.pl_PL.html
