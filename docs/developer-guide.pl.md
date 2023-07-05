@@ -24,6 +24,24 @@ Korzystamy w projekcie z aplikacji Trello, więc poproś o dostęp do tablicy.
 
 ### Handlebars
 
+Handlebars to prosty język szablonów.
+
+Używa Template'a i Input Object do generowania HTML lub innych formatów tekstowych.
+Szablony Handlebars wyglądają jak zwykły tekst z osadzonymi wyrażeniami Handlebars.
+
+```handlebars
+<p>{{firstname}} {{lastname}}</p>
+```
+
+Wyrażenie Handlebars to wyrażenie otoczone podwójnymi nawiasami, jak: `{{wyrażenie Handlebars}}`.
+Podczas wykonywania szablonu wyrażenia te są zastępowane wartościami z Input Object.
+
+W razie wątpliwości zajrzyj do [dokumentacji](https://handlebarsjs.com/api-reference/), ewentualnie
+skorzystaj z [StackOverflow](https://stackoverflow.com/search?q=handelbars) lub po prostu wyszukaj
+w internecie.
+
+- https://handlebarsjs.com/api-reference/
+
 ## CSS
 
 ### SCSS
