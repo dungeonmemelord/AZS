@@ -76,7 +76,11 @@ w internecie.
 
 ### RunJS
 
+[RunJS] to aplikacja przydatna w eksperymentowaniu na kodzie JS lub TypeScript. Jest opcja darmowa.
+Płatna nie jest droga. Płaci się tylko raz. Warto rozważyć dla dodatkowych feature'ów.
+
 ### GitKraken
 
 [GitKraken]: https://www.gitkraken.com/
 [GitFlow]: https://danielkummer.github.io/git-flow-cheatsheet/index.pl_PL.html
+[RunJS]: https://runjs.app/
