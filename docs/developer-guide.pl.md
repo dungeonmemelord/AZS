@@ -74,6 +74,26 @@ w internecie.
 
 ### WebStorm
 
+### Neovim
+
+Jest wiele sposobów na zaczęcie z Neovim.
+
+#### Przemyslaw Szelenberer
+
+Przeszedłem przez wszystkie trzy sposoby i w zasadzie moja konfiguracja to ich wypadkowa.
+
+IMO najpierw sprój od [0 to LSP: Neovim RC from scrath]. Bardzo lekka konfiguracja. Ma wiele przyjemnych elementów.
+
+Kolejna konfiguracja jaką sprobowałem była [Effective Neovim: Instant IDE].
+
+No i ostatnia na liście: [LazyVim | 🚀 Getting Started].
+
+Możliwe, że to jest dystrybucja Neovima. Jeszcze jestem dość świerzy w temacie Neovima i jego kofigurowania.
+
+- [LazyVim | 🚀 Getting Started]
+- [Effective Neovim: Instant IDE]
+- [0 to LSP: Neovim RC from scrath]
+
 ### RunJS
 
 [RunJS] to aplikacja przydatna w eksperymentowaniu na kodzie JS lub TypeScript. Jest opcja darmowa.
@@ -84,3 +104,6 @@ Płatna nie jest droga. Płaci się tylko raz. Warto rozważyć dla dodatkowych 
 [GitKraken]: https://www.gitkraken.com/
 [GitFlow]: https://danielkummer.github.io/git-flow-cheatsheet/index.pl_PL.html
 [RunJS]: https://runjs.app/
+[0 to LSP: Neovim RC from scrath]: https://youtu.be/w7i4amO_zaE
+[Effective Neovim: Instant IDE]: https://youtu.be/stqUbv-5u2s
+[LazyVim | 🚀 Getting Started]: https://www.lazyvim.org/
