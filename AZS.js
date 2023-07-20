@@ -12,4 +12,5 @@ Hooks.once('init', async function () {
     ItemSheet,
   });
   preloadHandlebarsModules();
+  registerSystemSettings();
 });
