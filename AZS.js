@@ -14,6 +14,7 @@ async function preloadHandlebarsTemplates() {
     'systems/AZS/templates/partials/zdolnosci-przeciwnika.hbs',
   ];
 
+  // TODO: Czy potrzebujemy zwracać efekt działania loadTemplate()?
   return loadTemplates(templatePaths);
 }
 
