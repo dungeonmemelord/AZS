@@ -1,8 +1,8 @@
-import { Settings } from './settings';
+import { settings } from './settings';
 
 const i18n = {
   localize: (label) => label,
   format: (label, value) => ({ label, value }),
 };
 
-export const game = { i18n, settings: new Settings() };
+export const game = { i18n, settings };

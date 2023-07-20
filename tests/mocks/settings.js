@@ -1,4 +1,4 @@
-export class Settings {
+class Settings {
   constructor() {
     this.settings = {};
   }
@@ -20,3 +20,5 @@ export class Settings {
     }
   }
 }
+
+export const settings = new Settings();
