@@ -20,16 +20,19 @@ async function preloadHandlebarsTemplates() {
 
 Hooks.once('init', async function () {
   console.log('AZS | Wczytywanie systemu Advanced Zabić smoka');
-  Handlebars.registerHelper('getProperty', (obj, property) => obj[property]);
+  // Record Configuration Values
   CONFIG.AZS = AZS;
   CONFIG.Actor.entityClass = AZSActor;
   CONFIG.Actor.documentClass = AZSActor;
 
+  // Register sheets
   Items.unregisterSheet('core', ItemSheet);
   Items.registerSheet('AZS', AZSItemSheet, { makeDefault: true });
 
   Actors.unregisterSheet('core', ActorSheet);
   Actors.registerSheet('AZS', AZSActorSheet, { makeDefault: true });
 
+  // Preload Handlebars helpers & partials
+  Handlebars.registerHelper('getProperty', (obj, property) => obj[property]);
   await preloadHandlebarsTemplates();
 });
