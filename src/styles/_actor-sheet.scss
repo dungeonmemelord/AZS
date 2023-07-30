@@ -23,6 +23,7 @@ h3 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    word-wrap: normal;
   }
 
   &.poziom {
@@ -101,6 +102,11 @@ h3 {
       font-size: 1em;
       margin: auto;
       width: 50px;
+    }
+    .input-slot {
+      font-size: 1em;
+      margin: auto;
+      width: 30px;
     }
 
     &.input-zasob {
@@ -231,6 +237,7 @@ input[type='checkbox']:checked + .checkbox::after {
   position: absolute;
   top: 4px;
   font-size: 25px;
+
 }
 
 input[type='checkbox']:checked + .czekbox2 {
@@ -240,7 +247,7 @@ input[type='checkbox']:checked + .czekbox2 {
 input[type='checkbox']:checked + .czekbox2::after {
   content: '\f043';
   font-family: FontAwesome, serif;
-  left: 2px;
+  left: 12px;
   position: absolute;
   top: 10px;
   font-size: 15px;

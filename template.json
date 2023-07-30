@@ -7,7 +7,10 @@
       "rasa": "",
       "poziom": "1",
       "pd": "0",
-      "sloty": "4",
+      "sloty":{
+        "value": 0,
+        "max":4
+      },
 
       "sprawnosc": "1",
       "sila": "1",
@@ -55,7 +58,8 @@
       "rana": false,
       "zloto": "0",
 
-      "opis": "blablabla"
+      "opis": ""
+
     },
     "przeciwnik": {
       "zycie": {

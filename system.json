@@ -1,13 +1,11 @@
 {
   "id": "AZS",
-  "name": "AZS",
   "title": "Zabic Smoka!",
   "description": "Zabic Smoka do FoundryVTT",
-  "minimumCoreVersion": 10,
   "version": "1.0.9",
   "compatibility": {
     "minimum": "10",
-    "verified": "11",
+    "verified": "10",
     "maximum": "11"
   },
   "authors": [
@@ -15,106 +13,165 @@
       "name": "Wojciech Rosiński",
       "url": "https://iliketoasts.itch.io",
       "email": "iliketoasts@gmail.com",
-      "discord": "iliketoasts#4440"
+      "discord": "iliketoasts#4440",
+      "flags": {}
     }
   ],
   "esmodules": [
     "AZS.js"
   ],
-  "styles": ["AZS.css"],
+  "styles": [
+    "AZS.css"
+  ],
   "background": "systems/AZS/assets/tlo.png",
   "packs": [
     {
       "label": "Kości skarbów",
       "type": "Item",
       "name": "kosci-skarbow",
-      "path": "packs/kosci-skarbow.db",
-      "private": false
+      "path": "packs/kosci-skarbow",
+      "system": "AZS",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "label": "Broń",
       "type": "Item",
       "name": "bron",
-      "path": "packs/bron.db",
-      "private": false
+      "path": "packs/bron",
+      "system": "AZS",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "label": "Zbroje",
       "type": "Item",
       "name": "zbroje",
-      "path": "packs/zbroje.db",
-      "private": false
+      "path": "packs/zbroje",
+      "system": "AZS",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "label": "Umiejętności",
       "type": "Item",
       "name": "umiejetnosci",
-      "path": "packs/umiejetnosci.db",
-      "private": false
+      "path": "packs/umiejetnosci",
+      "system": "AZS",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "label": "Czary",
       "type": "Item",
       "name": "czary",
-      "path": "packs/czary.db",
-      "private": false
+      "path": "packs/czary",
+      "system": "AZS",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "label": "Przedmioty",
       "type": "Item",
       "name": "przedmioty",
-      "path": "packs/przedmioty.db",
-      "private": false
+      "path": "packs/przedmioty",
+      "system": "AZS",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "label": "Torba z łupem",
       "type": "Actor",
       "name": "torba-z-lupem",
-      "path": "packs/torba-z-lupem.db",
-      "private": false
+      "path": "packs/torba-z-lupem",
+      "system": "AZS",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "label": "Skarby",
       "type": "RollTable",
       "name": "skarby",
-      "path": "packs/skarby.db",
-      "private": false
+      "path": "packs/skarby",
+      "system": "AZS",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "label": "Tworzenie postaci",
       "type": "RollTable",
       "name": "tworzenie-postaci",
-      "path": "packs/tworzenie-postaci.db",
-      "private": false
+      "path": "packs/tworzenie-postaci",
+      "system": "AZS",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "label": "Handouty",
       "type": "Scene",
       "name": "handouty",
-      "path": "packs/handouty.db",
-      "private": false
+      "path": "packs/handouty",
+      "system": "AZS",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "label": "Demo",
       "type": "Adventure",
       "name": "demo",
-      "path": "packs/demo.db",
-      "private": false
+      "path": "packs/demo",
+      "system": "AZS",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     }
   ],
   "languages": [
     {
       "lang": "en",
       "name": "English",
-      "path": "lang/en.json"
+      "path": "lang/en.json",
+      "flags": {}
     },
     {
       "lang": "pl",
       "name": "Polski",
-      "path": "lang/pl.json"
+      "path": "lang/pl.json",
+      "flags": {}
     }
   ],
-  "socket": false,
   "initiative": "(1d6)*@initD + @szybkosc",
   "gridDistance": 1,
   "gridUnits": "m",

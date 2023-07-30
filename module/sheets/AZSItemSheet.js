@@ -21,5 +21,6 @@ export default class AZSItemSheet extends ItemSheet {
       data: baseData.item.system,
       config: CONFIG.AZS,
     };
+    x
   }
 }

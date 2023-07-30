@@ -1,4 +1,5 @@
 import { isClickableElement } from '../utils/is-clickable-element.js';
+import { checkinventory } from '../utils/chek-inventory.js';
 
 export default class AZSActorSheet extends ActorSheet {
   static get defaultOptions() {
@@ -18,13 +19,35 @@ export default class AZSActorSheet extends ActorSheet {
 
   getData() {
     const baseData = super.getData();
-
+    let actortype= baseData.actor.type
+    if (actortype=="postac"){
+      var si=Number(baseData.actor.system.sila);
+      const bs=3;
+      var maxslot = si + bs;
+      baseData.actor.system.sloty.max = maxslot; // obliczanie maksymalnego udźwigu
+      const itemy= baseData.items;
+      let n=0;
+      let a=0;
+      itemy.forEach((element) => {
+        if (element.type != "bieglosc"){
+          if(element.type == "zbroja"){
+            a=element.system.sloty;
+            n=n+a;
+          }
+          else{
+            n=n+1;
+          }
+        };
+      });
+      baseData.actor.system.sloty.value=n;//oblicznanie ilości aktualnie posiadancyh przedmiotów
+    };
     return {
       owner: this.actor.isOwner,
       editable: this.isEditable,
       actor: baseData.actor,
       data: baseData.actor.system,
       config: CONFIG.AZS,
+
       bieglosci: baseData.actor.items.filter(function (item) {
         return item.type === 'bieglosc';
       }),
@@ -43,6 +66,7 @@ export default class AZSActorSheet extends ActorSheet {
         return item.type === 'zdolnoscPrzeciwnika';
       }),
     };
+
   }
 
   // TODO: Add https://testing-library.com/ and write test emulating clicking
@@ -57,6 +81,7 @@ export default class AZSActorSheet extends ActorSheet {
     $html.find('.rzut-na-skarb').click(this._onSkarbRoll.bind(this));
 
     super.activateListeners($html);
+
   }
 
   _onBiegloscRoll(event) {
@@ -79,6 +104,7 @@ export default class AZSActorSheet extends ActorSheet {
           rollMode: game.settings.get('core', 'rollMode'),
         });
         return roll;
+
       } else {
         const RollData = {
           atrybut: this.actor.system.magia,

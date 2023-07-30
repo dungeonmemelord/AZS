@@ -63,22 +63,26 @@
     {{actor.system.pochodnia.max}}
   </div>
   <div class='zasoby label opis srodek'>
-    {{localize 'AZS.pc.sheet.resources.wound.header'}}
+     {{localize 'AZS.pc.sheet.resources.wound.header'}}
   </div>
-  <div class='zasoby label srodek'>
-    <label>
-      <input
+
+  <div class='zasobInputDiv'>
+      <label><input
+        class='input-zasob srodek'
+        style='padding-left: 10px;'
         name='system.rana'
         type='checkbox'
         {{checked actor.system.rana}}
       />
       <span class='czekbox2'>
-        <i class='opis fa-regular fa-hand'></i>
-      </span>
-    </label>
-    <input
-      class='input-zasob prawo'
+        <i class='opis fa-regular fa-hand' style='padding-left: 10px;'></i>
+        </span></label>
+   </div>
+   <div class='srodek' >SW</div>
+    <div class='zasobInputDiv'><input
+      class='input-zasob-2 prawo'
       name='system.ranasw.value'
+      style="padding-bottom: 0.8em;"
       type='text'
       value='{{actor.system.ranasw.value}}'
       data-dtype='Number'

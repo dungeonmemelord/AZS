@@ -318,7 +318,7 @@ input[type=checkbox]:checked + .czekbox2 {
 input[type=checkbox]:checked + .czekbox2::after {
   content: "\f043"; /* this is your text. You can also use UTF-8 character codes as I do here */
   font-family: FontAwesome, serif;
-  left: 2px;
+  left: 12px;
   position: absolute;
   top: 10px;
   font-size: 15px;

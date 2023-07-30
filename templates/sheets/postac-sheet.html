@@ -4,7 +4,9 @@
       <div><h3>{{localize 'AZS.pc.sheet.name'}}</h3></div>
       <div><h3>{{localize 'AZS.pc.sheet.archetype'}}</h3></div>
       <div><h3>{{localize 'AZS.pc.sheet.kin'}}</h3></div>
-      <div class="srodek opis">{{actor.name}}</div>
+      <div class="srodek opis">
+        <input name="name" type="text" value="{{actor.name}}" />
+      </div>
       <div class="srodek">
         <select
           name="system.pochodzenie"

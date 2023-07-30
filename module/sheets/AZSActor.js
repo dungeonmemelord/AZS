@@ -1,5 +1,8 @@
 import { createButtonLabel, createButtons } from '../button/index.js';
 import { roll } from '../roll.js';
+/**
+ *
+ */
 
 const attributesTypes = Object.freeze({
   pl: {
@@ -14,7 +17,11 @@ const attributesTypes = Object.freeze({
     magic: 'magic',
     speed: 'speed',
   },
+
 });
+
+
+
 
 const getSelectedText = (text, skillType) => {
   const magic =
@@ -57,7 +64,39 @@ const renderSkillTemplate = ({ description, skillType }) => {
 };
 
 export class AZSActor extends Actor {
-  rollAbility(dataset) {
+  /** @override */
+
+  create(data, options = {}) {
+    data.prototypeToken = data.prototypeToken || {};
+    let defaults = {};
+    if (data.type === "postac") {
+      defaults = {
+        actorLink: true,
+        disposition: 1,
+        vision: true,
+      };
+    } else if (data.type === "torbaNaLup") {
+      defaults = {
+        actorLink: false,
+        disposition: 0,
+        vision: false,
+      };
+    } else if (data.type === "przeciwnik") {
+      defaults = {
+        actorLink: false,
+        disposition: -1,
+        vision: false,
+      };
+    }
+
+    mergeObject(data.prototypeToken, defaults, { overwrite: false });
+    return super.create(data, options);
+  }
+
+
+
+
+        rollAbility(dataset) {
     const actor = this;
     const { modifier, type, title } = dataset;
     const flavor = () =>
@@ -126,4 +165,5 @@ export class AZSActor extends Actor {
 
     new Dialog(dialogData).render(true);
   }
+
 }

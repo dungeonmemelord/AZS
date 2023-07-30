@@ -17,6 +17,9 @@ async function preloadHandlebarsTemplates() {
   return loadTemplates(templatePaths);
 }
 
+
+
+
 Hooks.once('init', async function () {
   console.log('AZS | Wczytywanie systemu Advanced Zabić smoka');
   Handlebars.registerHelper('getProperty', (obj, property) => obj[property]);
@@ -32,3 +35,22 @@ Hooks.once('init', async function () {
 
   await preloadHandlebarsTemplates();
 });
+function registerSystemSettings(){
+game.setting.register("AZS","systemMigrationVersion", {
+  CONFIG: false,
+  scope: "world",
+  type: String,
+  default: ""
+});
+};
+registerSystemSettings();
+Hooks.once("ready", function () {
+  if (!game.user.isGM) {
+    return;
+  }
+  const currentVersion = game.settings.get("AZS", "systemMigrationVersion");
+  const NEEDS_MIGRATION_VERSION = 0.01;
+
+  //const needsMigration = !currentVersion || isNewerVersion(NEEDS_MIGRATION_VERSION, currentVersion);
+  console.log(currentVersion)
+ });
