@@ -1,17 +1,18 @@
 export const preloadHandlebarsTemplates = async () => {
-  const templatePaths = [
-    'systems/AZS/templates/partials/description.hbs',
-    'systems/AZS/templates/partials/atrybuty-postaci.hbs',
-    'systems/AZS/templates/partials/bieglosci-postaci.hbs',
-    'systems/AZS/templates/partials/zasoby-postaci.hbs',
-    'systems/AZS/templates/partials/zasoby2-postaci.hbs',
-    'systems/AZS/templates/partials/plecak-postaci.hbs',
-    'systems/AZS/templates/partials/zdolnosci-przeciwnika.hbs',
+  const path = 'systems/AZS/templates/partials';
+  const paths = [
+    `${path}/description.hbs`,
+    `${path}/atrybuty-postaci.hbs`,
+    `${path}/bieglosci-postaci.hbs`,
+    `${path}/zasoby-postaci.hbs`,
+    `${path}/zasoby2-postaci.hbs`,
+    `${path}/plecak-postaci.hbs`,
+    `${path}/zdolnosci-przeciwnika.hbs`,
   ];
 
   try {
     // INFO: https://foundryvtt.com/api/v10/modules/client.html#loadTemplates
-    await loadTemplates(templatePaths);
+    await loadTemplates(paths);
   } catch (error) {
     console.error(error);
   }
