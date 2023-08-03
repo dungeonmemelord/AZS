@@ -24,15 +24,17 @@ const recordConfigurationValues = () => {
   CONFIG.Actor.documentClass = AZSActor;
 };
 
-Hooks.once('init', async function () {
-  recordConfigurationValues();
-
-  // Register sheets
+const registerSheets = () => {
   Items.unregisterSheet('core', ItemSheet);
   Items.registerSheet('AZS', AZSItemSheet, { makeDefault: true });
 
   Actors.unregisterSheet('core', ActorSheet);
   Actors.registerSheet('AZS', AZSActorSheet, { makeDefault: true });
+};
+
+Hooks.once('init', async function () {
+  recordConfigurationValues();
+  registerSheets();
 
   // Preload Handlebars helpers & partials
   Handlebars.registerHelper('getProperty', (obj, property) => obj[property]);
