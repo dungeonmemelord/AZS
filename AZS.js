@@ -2,7 +2,33 @@ import { AZS } from './module/config.js';
 import { AZSActor } from './module/sheets/AZSActor.js';
 import { registerSheets } from './module/sheets/register-sheets.js';
 
-async function preloadHandlebarsTemplates() {
+const recordConfigurationValues = () => {
+  CONFIG.AZS = AZS;
+  CONFIG.Actor.entityClass = AZSActor;
+  CONFIG.Actor.documentClass = AZSActor;
+};
+
+Hooks.once('init', async function () {
+  recordConfigurationValues();
+  registerSheets();
+  preloadHandlebarsModules();
+});
+
+const preloadHandlebarsModules = async () => {
+  preloadHandlebarsPartials();
+
+  try {
+    await preloadHandlebarsTemplates();
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+const preloadHandlebarsPartials = () => {
+  Handlebars.registerHelper('getProperty', (obj, property) => obj[property]);
+};
+
+const preloadHandlebarsTemplates = async () => {
   const templatePaths = [
     'systems/AZS/templates/partials/description.hbs',
     'systems/AZS/templates/partials/atrybuty-postaci.hbs',
@@ -13,21 +39,9 @@ async function preloadHandlebarsTemplates() {
     'systems/AZS/templates/partials/zdolnosci-przeciwnika.hbs',
   ];
 
-  // TODO: Czy potrzebujemy zwracać efekt działania loadTemplate()?
-  return loadTemplates(templatePaths);
-}
-
-const recordConfigurationValues = () => {
-  CONFIG.AZS = AZS;
-  CONFIG.Actor.entityClass = AZSActor;
-  CONFIG.Actor.documentClass = AZSActor;
+  try {
+    await loadTemplates(templatePaths);
+  } catch (error) {
+    console.error(error);
+  }
 };
-
-Hooks.once('init', async function () {
-  recordConfigurationValues();
-  registerSheets();
-
-  // Preload Handlebars helpers & partials
-  Handlebars.registerHelper('getProperty', (obj, property) => obj[property]);
-  await preloadHandlebarsTemplates();
-});
