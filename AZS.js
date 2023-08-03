@@ -4,6 +4,12 @@ import { preloadHandlebarsModules } from './module/handlebars/preload-modules.js
 
 Hooks.once('init', async function () {
   recordConfigurationValues();
-  registerSheets();
+  registerSheets({
+    // INFO: https://foundryvtt.com/api/v10/classes/client.ActorSheet.html
+    ActorSheet,
+
+    // INFO: https://foundryvtt.com/api/v10/classes/client.ItemSheet.html
+    ItemSheet,
+  });
   preloadHandlebarsModules();
 });
