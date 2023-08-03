@@ -19,7 +19,6 @@ async function preloadHandlebarsTemplates() {
 }
 
 Hooks.once('init', async function () {
-  console.log('AZS | Wczytywanie systemu Advanced Zabić smoka');
   // Record Configuration Values
   CONFIG.AZS = AZS;
   CONFIG.Actor.entityClass = AZSActor;
