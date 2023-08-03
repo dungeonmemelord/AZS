@@ -25,11 +25,18 @@ const recordConfigurationValues = () => {
 };
 
 const registerSheets = () => {
-  Items.unregisterSheet('core', ItemSheet);
-  Items.registerSheet('AZS', AZSItemSheet, { makeDefault: true });
+  const registerActorSheets = () => {
+    Actors.unregisterSheet('core', ActorSheet);
+    Actors.registerSheet('AZS', AZSActorSheet, { makeDefault: true });
+  };
 
-  Actors.unregisterSheet('core', ActorSheet);
-  Actors.registerSheet('AZS', AZSActorSheet, { makeDefault: true });
+  const registerItemSheets = () => {
+    Items.unregisterSheet('core', ItemSheet);
+    Items.registerSheet('AZS', AZSItemSheet, { makeDefault: true });
+  };
+
+  registerActorSheets();
+  registerItemSheets();
 };
 
 Hooks.once('init', async function () {
