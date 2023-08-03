@@ -1,7 +1,6 @@
 import { AZS } from './module/config.js';
-import AZSItemSheet from './module/sheets/AZSItemSheet.js';
-import AZSActorSheet from './module/sheets/AZSActorSheet.js';
 import { AZSActor } from './module/sheets/AZSActor.js';
+import { registerSheets } from './module/sheets/register-sheets.js';
 
 async function preloadHandlebarsTemplates() {
   const templatePaths = [
@@ -22,21 +21,6 @@ const recordConfigurationValues = () => {
   CONFIG.AZS = AZS;
   CONFIG.Actor.entityClass = AZSActor;
   CONFIG.Actor.documentClass = AZSActor;
-};
-
-const registerSheets = () => {
-  const registerActorSheets = () => {
-    Actors.unregisterSheet('core', ActorSheet);
-    Actors.registerSheet('AZS', AZSActorSheet, { makeDefault: true });
-  };
-
-  const registerItemSheets = () => {
-    Items.unregisterSheet('core', ItemSheet);
-    Items.registerSheet('AZS', AZSItemSheet, { makeDefault: true });
-  };
-
-  registerActorSheets();
-  registerItemSheets();
 };
 
 Hooks.once('init', async function () {
