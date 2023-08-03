@@ -18,11 +18,14 @@ async function preloadHandlebarsTemplates() {
   return loadTemplates(templatePaths);
 }
 
-Hooks.once('init', async function () {
-  // Record Configuration Values
+const recordConfigurationValues = () => {
   CONFIG.AZS = AZS;
   CONFIG.Actor.entityClass = AZSActor;
   CONFIG.Actor.documentClass = AZSActor;
+};
+
+Hooks.once('init', async function () {
+  recordConfigurationValues();
 
   // Register sheets
   Items.unregisterSheet('core', ItemSheet);
