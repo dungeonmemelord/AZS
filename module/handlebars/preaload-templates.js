@@ -10,6 +10,7 @@ export const preloadHandlebarsTemplates = async () => {
   ];
 
   try {
+    // INFO: https://foundryvtt.com/api/v10/modules/client.html#loadTemplates
     await loadTemplates(templatePaths);
   } catch (error) {
     console.error(error);
