@@ -1,5 +1,5 @@
 import { preloadHandlebarsPartials } from './preload-partials.js';
-import { preloadHandlebarsTemplates } from './preaload-templates.js';
+import { preloadHandlebarsTemplates } from './preload-templates.js';
 
 export const preloadHandlebarsModules = async () => {
   preloadHandlebarsPartials();

@@ -1,8 +1,5 @@
+import { user } from './user';
 import { settings } from './settings';
+import { i18n } from './i18n';
 
-const i18n = {
-  localize: (label) => label,
-  format: (label, value) => ({ label, value }),
-};
-
-export const game = { i18n, settings };
+export const game = { user, i18n, settings };

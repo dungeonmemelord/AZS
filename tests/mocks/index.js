@@ -1,6 +1,7 @@
 export * from './actor';
 export * from './actor-sheet';
 export * from './chat-message';
+export * from './CONST';
 export * from './dialog';
 export * from './game';
 export * from './item';

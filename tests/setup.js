@@ -3,6 +3,7 @@ import {
   Actor,
   ActorSheet,
   ChatMessage,
+  CONST,
   Dialog,
   game,
   ItemSheet,
@@ -21,3 +22,4 @@ global.mergeObject = mergeObject;
 global.CONFIG = {
   AZS: null,
 };
+global.CONST = CONST;
