@@ -1,34 +1,15 @@
-import { AZS } from './module/config.js';
-import AZSItemSheet from './module/sheets/AZSItemSheet.js';
-import AZSActorSheet from './module/sheets/AZSActorSheet.js';
-import { AZSActor } from './module/sheets/AZSActor.js';
-
-async function preloadHandlebarsTemplates() {
-  const templatePaths = [
-    'systems/AZS/templates/partials/description.hbs',
-    'systems/AZS/templates/partials/atrybuty-postaci.hbs',
-    'systems/AZS/templates/partials/bieglosci-postaci.hbs',
-    'systems/AZS/templates/partials/zasoby-postaci.hbs',
-    'systems/AZS/templates/partials/zasoby2-postaci.hbs',
-    'systems/AZS/templates/partials/plecak-postaci.hbs',
-    'systems/AZS/templates/partials/zdolnosci-przeciwnika.hbs',
-  ];
-
-  return loadTemplates(templatePaths);
-}
+import { recordConfigurationValues } from './module/record-configuration-values.js';
+import { registerSheets } from './module/sheets/register-sheets.js';
+import { preloadHandlebarsModules } from './module/handlebars/preload-modules.js';
 
 Hooks.once('init', async function () {
-  console.log('AZS | Wczytywanie systemu Advanced Zabić smoka');
-  Handlebars.registerHelper('getProperty', (obj, property) => obj[property]);
-  CONFIG.AZS = AZS;
-  CONFIG.Actor.entityClass = AZSActor;
-  CONFIG.Actor.documentClass = AZSActor;
+  recordConfigurationValues();
+  registerSheets({
+    // INFO: https://foundryvtt.com/api/v10/classes/client.ActorSheet.html
+    ActorSheet,
 
-  Items.unregisterSheet('core', ItemSheet);
-  Items.registerSheet('AZS', AZSItemSheet, { makeDefault: true });
-
-  Actors.unregisterSheet('core', ActorSheet);
-  Actors.registerSheet('AZS', AZSActorSheet, { makeDefault: true });
-
-  await preloadHandlebarsTemplates();
+    // INFO: https://foundryvtt.com/api/v10/classes/client.ItemSheet.html
+    ItemSheet,
+  });
+  preloadHandlebarsModules();
 });
