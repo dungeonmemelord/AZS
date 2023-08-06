@@ -45,7 +45,11 @@ module.exports = {
     mergeObject: true,
     CONFIG: true,
     game: true,
+    Items: true,
     ItemSheet: true,
     Actor: true,
+    Actors: true,
+    loadTemplates: true,
+    Handlebars: true,
   },
 };
